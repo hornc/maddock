@@ -81,8 +81,7 @@ In order to entertain themselves, as is their custom on this journey, they decid
 The delicate yet unmotivated bill and account collector, Q________ waits for the chatter to subside and begins her tale...
 
 > ### The Bill And Account Collector's Tale
-Twenty-three optimistic travellers make their way by carriage towards *The I____ L_____* Inn.
-It is very stormy.
-...
+>Twenty-three optimistic travellers make their way by carriage towards *The I____ L_____* Inn. It is very stormy.
+>...
 
 
