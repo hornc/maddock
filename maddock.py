@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-NaNoGenMo 2021: Þæt Maddock
+NaNoGenMo 2021: Þys Maddock
 
 
 """
@@ -13,7 +13,7 @@ from random import choice
 from maddock.characters import Character, moods
 from maddock.inn import Inn
 
-professions = 'occupations.json'
+professions = 'maddock/data/occupations.json'
 
 
 TRAVEL = """*(description of approach to the Inn)
@@ -47,7 +47,9 @@ INN = """
 
 trav_adj = ['weary', 'intrepid', 'lusty', 'brave', 'foolhardy', 'optimistic', 'eager', 'browbeaten']
 method = ['foot', 'horse', 'carriage', 'train', 'barge', 'sea', 'ocean going vessel', 'coach', 'camel', 'mule']
-
+to_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
+            'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twenty-one',
+            'twenty-two', 'twenty-three', 'twenty-four']
 
 def movements():
     movements = ['walks', 'strides', 'saunters', 'sashays', 'slinks', 'slithers', 'bounds', 'traipses', 'stumbles', 'catapults', 'zips',
@@ -66,7 +68,7 @@ def group(characters):
 
 def travel(characters, inn):
     print(TRAVEL)
-    print(" %d %s travellers make their way by %s towards *%s* Inn." % (len(characters), random.choice(trav_adj), random.choice(method), inn.name))
+    print("%s %s travellers make their way by %s towards *%s* Inn." % (to_words[len(characters)].capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
     print("It is %s." % (inn.weather.desc()))
     print(group(characters))
     for i in range(0, random.randint(0, int(len(characters) * 0.3333))):
@@ -90,14 +92,17 @@ def the_inn(characters, inn):
     innkeeper(characters, inn)
     party_sit(characters, inn)
 
+
 def inn_interact(characters, inn):
     print('The travelers interact with the Inn in an interesting and satisfying way.')
     print('Close by, or far away, a %s makes a sound, is seen, or unobservedly does something characteristic yet poignant.' % inn.animal)
+
 
 def innkeeper(characters, inn):
     print(f'"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
     print('The innkeeper, %s, has a %s personality, and some worldly advice to impart (if the mood takes %s).' % (inn.keeper.name, inn.keeper.personality, inn.keeper.pro))
     print('"Grab yourselves a table, and I\'ll be with you shortly to take orders..."')
+
 
 def party_sit(characters, inn):
     print(f'The weary travellers sit at {inn.table}.')
@@ -114,10 +119,17 @@ def party_sit(characters, inn):
 
 def tell_tale(teller, characters):
     inn = Inn()
-    print("The %s waits for the chatter to subside and begins %s tale...\n" % (c.dtitle, c.pos))
-    print(" ## The %s's Tale\n" % c.title.title())
     travel(characters, inn)
     the_inn(characters, inn)
+
+    characters = characters[:-1]
+    if characters:
+        next_teller = choice(characters)
+        print("The %s waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
+        print(" ## The %s's Tale\n" % next_teller.title.title())
+    else:
+        next_teller = None
+    return (next_teller, characters)
 
 
 if __name__ == '__main__':
@@ -128,10 +140,10 @@ if __name__ == '__main__':
     #print('# Þæt Maddock')
     print('# Þys Maddock')
     print('### a NaNoGenMo 2021 simulated, recursive tale.')
-    for c in characters:
-        tell_tale(c, characters)
+    print('*{INTRO}*\n\n')
+    teller = characters[0]
+    while teller:
+        teller, characters = tell_tale(teller, characters)
 
     print('\n\n ... RESOLUTION for the final storyteller, %s' % '{someone}')
-
-
 
