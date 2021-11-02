@@ -113,8 +113,8 @@ def party_sit(characters, inn):
     interactions(characters, inn)
     print('Possibly, something notable happens. What is the outcome?')
     print('Someone may be called away, or storm off, or otherwise be excused.')
-    print(f'Presently the Innkeeper (or possibly another staff member) {movements()} over to take their orders.')
-    print('Available goods are stated, questioned, and chosen, consisting of food and / or drinks. There is indecision, and certainty.')
+    print(f'Presently the Innkeeper (or possibly another staff member such as the {inn.staff()} or {inn.staff()}) {movements()} over to take their orders.')
+    print(f'Available {inn.menu()} are listed, questioned, and chosen, comprising and/or consiting of food and / or drinks. There is indecision, and certainty.')
     print('Once all orders are made, the group settles in to wait. Drinks may arrive, but the food takes time to prepare.')
     print('Something happens in the main room.')
     print('In order to entertain themselves, as is their custom on this journey, they decide to pass the time telling stories,',
