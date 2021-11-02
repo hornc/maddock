@@ -57,7 +57,7 @@ class Inn:
 
     def sign(self):
         the, a, b = self.name.replace("'s", '').split()
-        out = "The Inn's sign depicts "
+        out = "the Inn's sign depicts "
         one = "a %s which appears exceedingly %s." % (b, a)
         two = "a very {adj} %s, belonging to a {adj} %s." % (b, a)
         return out + (two if self.possesive else one) 

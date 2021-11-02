@@ -71,14 +71,17 @@ def travel(characters, inn):
     print("%s %s travellers make their way by %s towards *%s* Inn." % (to_words[len(characters)].capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
     print("It is %s." % (inn.weather.desc()))
     print(group(characters))
+    interactions(characters, inn)
+    print('As they near their destination, they notice ', inn.sign(), inn.weather.item_desc('sign'))
+    # Emotional state of the group
+    print('The group feels %s as they approach the entrance to the inn.' % (choice(moods['moods'])))
+
+
+def interactions(characters, inn):
     for i in range(0, random.randint(0, int(len(characters) * 0.3333))):
         print('The', choice(characters).dtitle, ' interacts with the', choice(characters).dtitle,)
         print('It is a', choice(['positive', 'negative', 'neutral']), 'interaction.')
         print('The', choice(characters).dtitle, choice(['looks on in disgust', 'is jealous', 'is amused', 'does not understand']), '.')
-
-    print(inn.sign(), inn.weather.item_desc('sign'))
-    # Emotional state of the group
-    print('The group feels %s as they approach the entrance to the inn.' % (choice(moods['moods'])))
 
 
 def the_inn(characters, inn):
@@ -107,6 +110,7 @@ def innkeeper(characters, inn):
 def party_sit(characters, inn):
     print(f'The weary travellers sit at {inn.table}.')
     print('They have some interactions, and remark upon their situation.')
+    interactions(characters, inn)
     print('Possibly, something notable happens. What is the outcome?')
     print('Someone may be called away, or storm off, or otherwise be excused.')
     print(f'Presently the Innkeeper (or possibly another staff member) {movements()} over to take their orders.')
