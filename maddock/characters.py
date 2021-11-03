@@ -18,6 +18,7 @@ def rname(length=0):
 
 joins = ['', 'yet', 'but', 'and', 'but not so', 'nonetheless', 'and arguably', '-cum-', ]
 
+
 class Character:
     POSSESIVES = ['her', 'his', 'their']
     def __init__(self, occupation):
@@ -27,10 +28,10 @@ class Character:
         self.feature = '{notable feature}'
         self.interest = '{interest}'
         self.outfit = '{outfit}'
+        self.d = ' '.join([choice(moods['moods']), choice(joins), choice(descriptions['descriptions'])])
 
     def desc(self):
-        d = ' '.join([choice(moods['moods']), choice(joins), choice(descriptions['descriptions'])])
-        return d
+        return self.d
 
     @property
     def dtitle(self):

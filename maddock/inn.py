@@ -1,13 +1,16 @@
 import random
 from random import choice
 from string import ascii_uppercase as CAPS
+from maddock import adjectives
 from maddock.characters import rname, moods
+
 
 def article(word):
     # Put this somewhere sensible.......
     if word[0].lower() in 'aeiou':
         return 'an'
     return 'a'
+
 
 class Weather:
     TYPES = ['fair', 'foggy', 'rainy', 'sunny', 'stormy', 'windy', 'blustery']
@@ -36,12 +39,15 @@ class Weather:
     def item_desc(self, item):
         return 'The %s %s %s.' % (item, choice(self.descs[self.type]['verbs']), choice(self.descs[self.type]['desc']))
 
+
 ANIMALS = [
         'cat', 'dog', 'parrot', 'crow', 'raven', 'owl', 'falcon', 'hawk', 'thrush', 'dormouse', 'rat', 'mouse', 'vole', 'cockroach', 'deathwatch beetle',
         'dung beetle', 'fly', 'lac beetle', 'mantis', 'moth', 'horse', 'donkey', 'mule', 'cow', 'ox', 'sheep', 'lamb', ] 
 
+
 STAFF =['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
         'vinter', 'lounge-operative']
+
 
 class Keeper:
     def __init__(self):
@@ -59,15 +65,15 @@ class Inn:
         self.keeper = Keeper()
 
     def sign(self):
-        the, a, b = self.name.replace("'s", '').split()
+        the, a, b = self.name.lower().replace("'s", '').split()
         out = "the Inn's sign depicts "
-        one = "a %s which appears exceedingly %s." % (b, a)
-        two = "a very {adj} %s, belonging to a {adj} %s." % (b, a)
-        return out + (two if self.possesive else one) 
+        descriptive = f"a very {choice(adjectives)} {b}, which appears exceedingly {a}."
+        possesive = f"a very {choice(adjectives)} {b}, belonging to a {choice(adjectives)} {a}."
+        return out + (possesive if self.possesive else descriptive)
 
     @property
     def table(self):
-        adj = choice(moods['moods'])
+        adj = choice(adjectives)
         return f"{article(adj)} {adj} table"
 
     def feature(self):

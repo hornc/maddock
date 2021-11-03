@@ -10,6 +10,7 @@ import json
 import random
 from random import choice
 
+from maddock import adjectives
 from maddock.characters import Character, moods
 from maddock.inn import Inn
 
@@ -103,7 +104,7 @@ def inn_interact(characters, inn):
 
 def innkeeper(characters, inn):
     print(f'"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
-    print('The innkeeper, %s, has a %s personality, and some worldly advice to impart (if the mood takes %s).' % (inn.keeper.name, inn.keeper.personality, inn.keeper.pro))
+    print(f'The innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).')
     print('"Grab yourselves a table, and I\'ll be with you shortly to take orders..."')
 
 
