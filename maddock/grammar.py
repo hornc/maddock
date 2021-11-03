@@ -4,6 +4,10 @@ import tracery
 from tracery.modifiers import base_english
 
 
+with open('maddock/data/adjs.json') as f:
+    adjectives = json.load(f)['adjs']
+
+
 with open('maddock/data/occupations.json', 'r') as f:
         occupations = json.load(f)['occupations']
 

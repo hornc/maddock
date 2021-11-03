@@ -10,9 +10,8 @@ import json
 import random
 from random import choice
 
-from maddock import adjectives
 from maddock.characters import Character
-from maddock.grammar import moods
+from maddock.grammar import adjectives, moods
 from maddock.inn import Inn
 
 professions = 'maddock/data/occupations.json'
@@ -143,7 +142,6 @@ if __name__ == '__main__':
         occupations = json.load(f)
         characters = [Character(c) for c in random.sample(occupations['occupations'], 24)]
 
-    #print('# Þæt Maddock')
     print('# Þys Maddock')
     print('### a NaNoGenMo 2021 simulated, recursive tale.')
     print('*{INTRO}*\n\n')

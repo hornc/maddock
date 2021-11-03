@@ -1,9 +1,8 @@
 import random
 from random import choice
 from string import ascii_uppercase as CAPS
-from maddock import adjectives
 from maddock.characters import rname
-from maddock.grammar import moods
+from maddock.grammar import adjectives, moods
 
 
 def article(word):

@@ -2,7 +2,7 @@ import json
 from random import choice, randrange
 from string import ascii_uppercase as CAPS
 
-from maddock.grammar import descriptions, moods
+from maddock.grammar import descriptions, moods, grammar
 
 
 def rname(length=0):
@@ -10,24 +10,21 @@ def rname(length=0):
     return choice(CAPS) + '_' * (length or randrange(4, 9))
 
 
-joins = ['', 'yet', 'but', 'and', 'but not so', 'nonetheless', 'and arguably', '-cum-', ]
-
-
 class Character:
     POSSESIVES = ['her', 'his', 'their']
     def __init__(self, occupation):
         self.title = occupation
+        self.epithet = grammar.flatten('#epithet#')
         self.pos = choice(self.POSSESIVES)
         self.name = rname()
         self.feature = '{notable feature}'
         self.interest = '{interest}'
         self.outfit = '{outfit}'
-        self.d = ' '.join([choice(moods), choice(joins), choice(descriptions)])
 
     def desc(self):
-        return self.d
+        return self.epithet
 
     @property
     def dtitle(self):
         """ Description + title ('full-name')"""
-        return self.desc() + " " + self.title + ', ' + self.name
+        return self.epithet + " " + self.title + ', ' + self.name
