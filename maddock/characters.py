@@ -2,13 +2,7 @@ import json
 from random import choice, randrange
 from string import ascii_uppercase as CAPS
 
-
-with open('maddock/data/descriptions.json') as f:
-    descriptions = json.load(f)
-
-
-with open('maddock/data/moods.json') as f:
-    moods = json.load(f)
+from maddock.grammar import descriptions, moods
 
 
 def rname(length=0):
@@ -28,7 +22,7 @@ class Character:
         self.feature = '{notable feature}'
         self.interest = '{interest}'
         self.outfit = '{outfit}'
-        self.d = ' '.join([choice(moods['moods']), choice(joins), choice(descriptions['descriptions'])])
+        self.d = ' '.join([choice(moods), choice(joins), choice(descriptions)])
 
     def desc(self):
         return self.d

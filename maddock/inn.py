@@ -2,7 +2,8 @@ import random
 from random import choice
 from string import ascii_uppercase as CAPS
 from maddock import adjectives
-from maddock.characters import rname, moods
+from maddock.characters import rname
+from maddock.grammar import moods
 
 
 def article(word):
@@ -53,7 +54,7 @@ class Keeper:
     def __init__(self):
         self.name = choice([rname(), f'{rname()} the {rname()}', f'{rname()} of {rname()}', f'{rname()}, {rname()} of {rname()}'])
         self.pro = choice(['them', 'her', 'him'])
-        self.personality = choice(moods['moods'])
+        self.personality = choice(moods)
 
 
 class Inn:

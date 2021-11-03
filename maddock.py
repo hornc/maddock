@@ -11,7 +11,8 @@ import random
 from random import choice
 
 from maddock import adjectives
-from maddock.characters import Character, moods
+from maddock.characters import Character
+from maddock.grammar import moods
 from maddock.inn import Inn
 
 professions = 'maddock/data/occupations.json'
@@ -75,7 +76,7 @@ def travel(characters, inn):
     interactions(characters, inn)
     print('As they near their destination, they notice ', inn.sign(), inn.weather.item_desc('sign'))
     # Emotional state of the group
-    print('The group feels %s as they approach the entrance to the inn.' % (choice(moods['moods'])))
+    print('The group feels %s as they approach the entrance to the inn.' % (choice(moods)))
 
 
 def interactions(characters, inn):
