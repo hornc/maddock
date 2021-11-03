@@ -11,7 +11,7 @@ import random
 from random import choice
 
 from maddock.characters import Character
-from maddock.grammar import adjectives, moods
+from maddock.grammar import adjectives, moods, grammar
 from maddock.inn import Inn
 
 professions = 'maddock/data/occupations.json'
@@ -61,10 +61,10 @@ def movements():
 def group(characters):
     # list and describe the party
     l = random.sample(characters, len(characters))
-    out = 'First is the %s %s' % (l[0].desc(), l[0].title)
-    for c in l[1:]:
-        out += ' followed by the %s %s,' % (c.desc(), c.title)
-    return out + '.'
+    #out = grammar.flatten(f'#travel# %s}')
+    travel = grammar.flatten('#travel# %s' + '#fol# %s' * (len(l) - 1)) + '.'
+    subs = tuple([c.atitle for c in l])
+    return travel % subs
 
 
 def travel(characters, inn):
@@ -87,8 +87,8 @@ def interactions(characters, inn):
 
 def the_inn(characters, inn):
     print(INN)
-    print('*INN: ARRIVE ENTER DESCRIBE INN_INTERACT INNKEEP SIT INDOOR_INTERACT ORDER NEXT_STORYTELLER*\n\n')
-    print('*SOME MECHANIC REDUCES THE GROUP BY ONE .........*\n\n')
+    #print('*INN: ARRIVE ENTER DESCRIBE INN_INTERACT INNKEEP SIT INDOOR_INTERACT ORDER NEXT_STORYTELLER*\n\n')
+    #print('*SOME MECHANIC REDUCES THE GROUP BY ONE .........*\n\n')
     print('The %s enters the inn first %s.' % (choice(characters).dtitle, '{description}'))
     print('The %s reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}')
     print('Inside, the inn %s' % inn.description)

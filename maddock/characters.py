@@ -25,6 +25,10 @@ class Character:
         return self.epithet
 
     @property
+    def atitle(self):  # used for default traveller listing
+        return f'the {self.epithet} {self.title}'
+
+    @property
     def dtitle(self):
         """ Description + title ('full-name')"""
         return self.epithet + " " + self.title + ', ' + self.name
