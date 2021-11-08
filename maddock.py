@@ -133,8 +133,9 @@ def tell_tale(teller, characters):
     characters = characters[:-1]
     if characters:
         next_teller = choice(characters)
+        next_teller.tales += 1
         print("The %s waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
-        print(" ## The %s's Tale\n" % next_teller.title.title())
+        print(f" ## The {next_teller.title.title()}'s Tale ({next_teller.tales})\n")
         print("* the teller's enemy is", teller.enemy())
         print("* the teller's friend is", teller.friend(), '\n')
     else:

@@ -18,6 +18,7 @@ class Character:
 
     def __init__(self, occupation):
         self.title = occupation
+        self.tales = 0
         self.epithet = grammar.flatten('#epithet#')
         self.pos = choice(self.POSSESIVES)
         self.name = rname()
