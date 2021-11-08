@@ -1,6 +1,6 @@
 # Þys Maddock
 
-NaNoGenMo 2021
+[NaNoGenMo 2021](https://github.com/NaNoGenMo/2021/issues/33)
 
 This year I am attempting a simulated story generator. In previous NaNoGenMos I've focused on
 methods of text generation through code, where any resulting 'story' is a happy accident, or secondary to some 
