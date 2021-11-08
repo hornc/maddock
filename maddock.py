@@ -138,8 +138,8 @@ def tell_tale(teller, characters):
         next_teller.tales += 1
         print("The %s, waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
         print(f" ## {24-len(characters)}: The {next_teller.title.title()}'s {ordinals[next_teller.tales]}Tale ({next_teller.tales})\n")
-        print("* the teller's enemy is", teller.enemy())
-        print("* the teller's friend is", teller.friend(), '\n')
+        print("* the teller's enemy is", next_teller.enemy(characters))
+        print("* the teller's friend is", next_teller.friend(characters), '\n')
     else:
         next_teller = None
     return (next_teller, characters)
@@ -158,7 +158,8 @@ if __name__ == '__main__':
     print('*{INTRO}*\n\n')
     teller = characters[0]
     while teller:
+        last = teller
         teller, characters = tell_tale(teller, characters)
 
-    print('\n\n ... RESOLUTION for the final storyteller, %s' % '{someone}')
+    print('\n\n ... RESOLUTION for the final storyteller: the %s!' % last.dtitle)
 

@@ -49,11 +49,15 @@ class Character:
     def witness(self, a, b, mood):
         print('The', self.dtitle, ', ', choice(['looks on in disgust', 'is jealous', 'is amused', 'does not understand']), '.')
 
-    def enemy(self):
-        return sorted(self.dispositions.items(), key=lambda x: x[1])[0]
+    def enemy(self, characters):
+        avail = [(c.title, self.dispositions[c.title]) for c in characters if c != self]
+        if avail:
+            return sorted(avail, key=lambda x: x[1])[0]
 
-    def friend(self):
-        return sorted(self.dispositions.items(), key=lambda x: x[1])[-1]
+    def friend(self, characters):
+        avail = [(c.title, self.dispositions[c.title]) for c in characters if c != self]
+        if avail:
+            return sorted(avail, key=lambda x: x[1])[-1]
 
     @property
     def atitle(self):  # used for default traveller listing
