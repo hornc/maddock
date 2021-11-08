@@ -8,7 +8,7 @@ NaNoGenMo 2021: Þys Maddock
 
 import json
 import random
-from random import choice
+from random import choice, sample
 
 from maddock.characters import Character
 from maddock.grammar import adjectives, moods, grammar
@@ -79,10 +79,13 @@ def travel(characters, inn):
 
 
 def interactions(characters, inn):
-    for i in range(0, random.randint(0, int(len(characters) * 0.3333))):
-        print('The', choice(characters).dtitle, ' interacts with the', choice(characters).dtitle,)
-        print('It is a', choice(['positive', 'negative', 'neutral']), 'interaction.')
-        print('The', choice(characters).dtitle, choice(['looks on in disgust', 'is jealous', 'is amused', 'does not understand']), '.')
+    print('***{INTERACTIONS}***')
+    n = random.randint(0, len(characters) // 3)
+    interactors = sample(characters, n * 2)
+    for i in range(0, n, 2):
+        mood = interactors[i].interact(interactors[i + 1])
+        observer = choice(characters)
+        observer.witness(interactors[i], interactors[i + 1], mood)
 
 
 def the_inn(characters, inn):
@@ -132,6 +135,8 @@ def tell_tale(teller, characters):
         next_teller = choice(characters)
         print("The %s waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
         print(" ## The %s's Tale\n" % next_teller.title.title())
+        print("* the teller's enemy is", teller.enemy())
+        print("* the teller's friend is", teller.friend(), '\n')
     else:
         next_teller = None
     return (next_teller, characters)
@@ -141,6 +146,9 @@ if __name__ == '__main__':
     with open(professions, 'r') as f:
         occupations = json.load(f)
         characters = [Character(c) for c in random.sample(occupations['occupations'], 24)]
+
+    for c in characters:
+        c.init_dispositions(characters)
 
     print('# Þys Maddock')
     print('### a NaNoGenMo 2021 simulated, recursive tale.')
