@@ -51,6 +51,8 @@ method = ['foot', 'horse', 'carriage', 'train', 'barge', 'sea', 'ocean going ves
 to_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
             'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twenty-one',
             'twenty-two', 'twenty-three', 'twenty-four']
+ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ']
+
 
 def movements():
     movements = ['walks', 'strides', 'saunters', 'sashays', 'slinks', 'slithers', 'bounds', 'traipses', 'stumbles', 'catapults', 'zips',
@@ -92,8 +94,8 @@ def the_inn(characters, inn):
     print(INN)
     #print('*INN: ARRIVE ENTER DESCRIBE INN_INTERACT INNKEEP SIT INDOOR_INTERACT ORDER NEXT_STORYTELLER*\n\n')
     #print('*SOME MECHANIC REDUCES THE GROUP BY ONE .........*\n\n')
-    print('The %s enters the inn first %s.' % (choice(characters).dtitle, '{description}'))
-    print('The %s reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}')
+    print('The %s, enters the inn first %s.' % (choice(characters).dtitle, '{description}'))
+    print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}')
     print('Inside, the inn %s' % inn.description)
     inn_interact(characters, inn)
     innkeeper(characters, inn)
@@ -108,7 +110,7 @@ def inn_interact(characters, inn):
 def innkeeper(characters, inn):
     print(f'"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
     print(f'The innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).')
-    print('"Grab yourselves a table, and I\'ll be with you shortly to take orders..."')
+    print('"Grab yourselves a table, I\'ll be with you shortly to take orders..."')
 
 
 def party_sit(characters, inn):
@@ -134,8 +136,8 @@ def tell_tale(teller, characters):
     if characters:
         next_teller = choice(characters)
         next_teller.tales += 1
-        print("The %s waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
-        print(f" ## The {next_teller.title.title()}'s Tale ({next_teller.tales})\n")
+        print("The %s, waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
+        print(f" ## {24-len(characters)}: The {next_teller.title.title()}'s {ordinals[next_teller.tales]}Tale ({next_teller.tales})\n")
         print("* the teller's enemy is", teller.enemy())
         print("* the teller's friend is", teller.friend(), '\n')
     else:
