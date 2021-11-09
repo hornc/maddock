@@ -51,7 +51,7 @@ method = ['foot', 'horse', 'carriage', 'train', 'barge', 'sea', 'ocean going ves
 to_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
             'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twenty-one',
             'twenty-two', 'twenty-three', 'twenty-four']
-ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ']
+ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ', 'Seventh ', 'Eighth ', 'Ninth ', 'Tenth ']
 
 
 def movements():
@@ -132,14 +132,18 @@ def tell_tale(teller, characters):
     travel(characters, inn)
     the_inn(characters, inn)
 
-    characters = characters[:-1]
-    if characters:
+    removed = teller.enemy(characters)
+    if removed:
+        print(f"* The current storyteller ({teller.title}) removes the {removed[0].title}.\n")
+        characters.remove(removed[0])
         next_teller = choice(characters)
         next_teller.tales += 1
         print("The %s, waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
         print(f" ## {24-len(characters)}: The {next_teller.title.title()}'s {ordinals[next_teller.tales]}Tale ({next_teller.tales})\n")
-        print("* the teller's enemy is", next_teller.enemy(characters))
-        print("* the teller's friend is", next_teller.friend(characters), '\n')
+        #print("* the teller's enemy is", next_teller.enemy(characters))
+        friend = next_teller.friend(characters)
+        if friend:
+            print(f"* the teller's friend is {friend[0].title} ({friend[1]}).\n")
     else:
         next_teller = None
     return (next_teller, characters)
