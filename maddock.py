@@ -132,11 +132,12 @@ def tell_tale(teller, characters):
     travel(characters, inn)
     the_inn(characters, inn)
 
-    removed = teller.enemy(characters)
-    if removed:
-        print(f"* The current storyteller ({teller.title}) removes the {removed[0].title}.\n")
+    next_teller = teller.friend(characters)
+    if next_teller:
+        next_teller, disp = next_teller
+        print(f"* The current storyteller ({teller.title}) chooses the {next_teller.title} ({disp}) as the next storyteller.\n")
+        removed = next_teller.enemy(characters)
         characters.remove(removed[0])
-        next_teller = choice(characters)
         next_teller.tales += 1
         print("The %s, waits for the chatter to subside and begins %s tale...\n" % (next_teller.dtitle, next_teller.pos))
         print(f" ## {24-len(characters)}: The {next_teller.title.title()}'s {ordinals[next_teller.tales]}Tale ({next_teller.tales})\n")
