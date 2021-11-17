@@ -59,6 +59,10 @@ class Character:
         if avail:
             return sorted(avail, key=lambda x: x[1])[-1]
 
+    def enters(self, inn):
+        enter_desc = '{some description of %s entering inn}' % self.title
+        return 'The %s, enters the inn first. %s.' % (self.dtitle, enter_desc)
+
     @property
     def atitle(self):  # used for default traveller listing
         return f'the {self.epithet} {self.title}'

@@ -45,9 +45,10 @@ ANIMALS = [
         'dung beetle', 'fly', 'lac beetle', 'mantis', 'moth', 'horse', 'donkey', 'mule', 'cow', 'ox', 'sheep', 'lamb', ] 
 
 
-STAFF =['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
+STAFF = ['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
         'vinter', 'lounge-operative']
 
+CROWD = ['is totally empty', 'is almost empty', 'is not very packed', 'is moderately crowded', 'has a reasonable crowd', 'is packed with very rowdy patrons']
 
 class Keeper:
     def __init__(self):
@@ -63,6 +64,9 @@ class Inn:
         self.weather = Weather()
         self.animal = choice(ANIMALS)
         self.keeper = Keeper()
+        self.mantel = ['three coins', 'an onion', 'a small bust of the poet Cinna']
+        self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
+        self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'portrait of a woman', 'portrait of a man'])
 
     def sign(self):
         the, a, b = self.name.lower().replace("'s", '').split()
@@ -92,4 +96,7 @@ class Inn:
 
     @property
     def description(self):
-        return 'is really awesome and well described.'
+        crowd = choice(CROWD)
+        mantel = ' Upon the mantel in the main room, above a roaring fire, are %s. Above it hangs a vicious looking %s. ' % (', '.join(self.mantel), self.weapon)
+        painting = f' By the {self.feature()} hangs a painting of a {self.painting}.'
+        return 'is {describe Inn} really awesome and well described.' + painting + mantel + 'The public room %s.' % crowd

@@ -17,32 +17,33 @@ from maddock.inn import Inn
 professions = 'maddock/data/occupations.json'
 
 
-TRAVEL = """*(description of approach to the Inn)
-(method of travel, horse, foot, carriage, other mechanical)
-(weather, time of day, landscape)
-(emotional theme of the travel)
-(interactions between travellers)
-(some event, notable interaction)
-(distance + time to arrive at the inn)
-(characters exhibit some facet of personality + disposition)*
+TRAVEL = """
+- [ ] (description of approach to the Inn)
+- [x] (method of travel, horse, foot, carriage, other mechanical)
+- [x] (weather, time of day, landscape)
+- [ ] (emotional theme of the travel)
+- [x] (interactions between travellers)
+- [ ] (some event, notable interaction)
+- [ ] (distance + time to arrive at the inn)
+- [ ] (characters exhibit some facet of personality + disposition)
 """
 
 INN = """
-*(arriving at the Inn)
-(description of the Inn, the sign (weather + time of day), building, state, echo emotional theme)
-(entering the Inn)
-(description of interior, number of patrons)
-(characters exhibit some facet of personality + disposition)
-(describe a constant feature of the current Inn)
-(some characters make a modification of the constant feature's state)
-(Interaction, or not, with the proprietor)
-(sit down at a table)
-(order food or drinks)
-(character interactions)
-(events in the Inn room)
-(characters exhibit some facet of personality + disposition)
-(choose a story teller)
-(dispositions adjust)*
+- [x] (arriving at the Inn)
+- [x] (description of the Inn, the sign (weather + time of day), building, state, echo emotional theme)
+- [x] (entering the Inn)
+- [ ] (description of interior, number of patrons)
+- [ ] (characters exhibit some facet of personality + disposition)
+- [ ] (describe a constant feature of the current Inn)
+- [ ] (some characters make a modification of the constant feature's state)
+- [x] (Interaction, or not, with the proprietor)
+- [x] (sit down at a table)
+- [x] (order food or drinks)
+- [x] (character interactions)
+- [ ] (events in the Inn room)
+- [ ] (characters exhibit some facet of personality + disposition)
+- [x] (choose a story teller)
+- [x] (dispositions adjust)
 """
 
 
@@ -92,9 +93,8 @@ def interactions(characters, inn):
 
 def the_inn(characters, inn):
     print(INN)
-    #print('*INN: ARRIVE ENTER DESCRIBE INN_INTERACT INNKEEP SIT INDOOR_INTERACT ORDER NEXT_STORYTELLER*\n\n')
-    #print('*SOME MECHANIC REDUCES THE GROUP BY ONE .........*\n\n')
-    print('The %s, enters the inn first %s.' % (choice(characters).dtitle, '{description}'))
+    first = choice(characters)
+    print(first.enters(inn))
     print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}')
     print('Inside, the inn %s' % inn.description)
     inn_interact(characters, inn)
