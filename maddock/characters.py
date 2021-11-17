@@ -25,6 +25,7 @@ class Character:
         self.feature = '{notable feature}'
         self.interest = '{interest}'
         self.outfit = '{outfit}'
+        self.possesions = []
         self.dispositions = {}
 
     def desc(self):
