@@ -99,4 +99,4 @@ class Inn:
         crowd = choice(CROWD)
         mantel = ' Upon the mantel in the main room, above a roaring fire, are %s. Above it hangs a vicious looking %s. ' % (', '.join(self.mantel), self.weapon)
         painting = f' By the {self.feature()} hangs a painting of a {self.painting}.'
-        return 'is {describe Inn} really awesome and well described.' + painting + mantel + 'The public room %s.' % crowd
+        return 'is {describe Inn} really awesome and well described.' + painting + mantel + '\n\nThe public room %s.' % crowd

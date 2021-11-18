@@ -44,7 +44,7 @@ class Character:
         print('It is a', moods[mood], 'interaction.')
         self.dispositions[other.title] *= mood
         other.dispositions[self.title] *= mood
-        print('***DEBUG DISPOSITIONS:***', self.dispositions)
+        # print('***DEBUG DISPOSITIONS:***', self.dispositions)
         return mood
 
     def witness(self, a, b, mood):

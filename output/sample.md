@@ -1,72 +1,72 @@
- ## 10: The Traffic Technician's Fifth Tale (5)
+ ## 10: The Procurement Clerk's Fifth Tale (5)
 
-* the teller's friend is purchasing agent (0.75).
+* the teller's friend is library assistant (0.75).
+
+Fourteen brave travellers make their way by train towards *The W______'s Z______* Inn.
+It is very fair.
+
+At the fore goes the challenged but not so proud and arguably musical water treatment plant operator. Then the splendid and self-assured planing machine operator, followed by, conscientiously, the teased and plain-speaking actor. Next, the infuriated and arguably level-headed transportation security screener. Doggedly after goes the victorious-cum-awful dancer, spasmodically followed by the recumbent but not so inconsistent animal control worker. Next, subsequently, the cowardly-cum-lifeless but not so distraught library assistant. Spasmodically after is the adored but not so realistic dressing room attendant. Next in the group travels the tender but not so hopeless nonetheless irritable orthotist. Doggedly after approaches the playful-cum-idealistic but strong elevator installer. Doggedly after approaches the close yet ornery but not so paternal procurement clerk, immediately followed by the self-conscious-cum-fine and diligent parts salesperson. Doggedly after approaches the drained-cum-spunky but not so natural singer. Immediately after perambulates the confining but bashful but steady dental laboratory technician.
 
 
-- [ ] (description of approach to the Inn)
-- [x] (method of travel, horse, foot, carriage, other mechanical)
-- [x] (weather, time of day, landscape)
-- [ ] (emotional theme of the travel)
-- [x] (interactions between travellers)
-- [ ] (some event, notable interaction)
-- [ ] (distance + time to arrive at the inn)
-- [ ] (characters exhibit some facet of personality + disposition)
+The tender but not so hopeless nonetheless irritable orthotist, Q_______ , interacts with the splendid and self-assured planing machine operator, N______ .
+It is a positive interaction.
+The cowardly-cum-lifeless but not so distraught library assistant, H______ ,  is jealous .
 
-Fourteen optimistic travellers make their way by ocean going vessel towards *The P____ M________* Inn.
-It is barely fair.
-At the forefront of the party passes the loose and possessive and lovable traffic technician, immediately followed by the justified but not so yearning crafty carpenter. Then travels the confused and arguably pretty recreational vehicle service technician. Next, immediately, the fanciful productive yet interesting barback. Next, the shunned but cordial insurance underwriter. Next, the restless but gullible-cum-love-lorn actuary. Next, the wild yet interesting purchasing agent, soon after followed by the wasted yet keen computer support specialist. Then the flirty and dead but interesting engineering teacher. Next, the affectionate stressed nonetheless hearty foundry coremaker, followed by the responsible but not so indifferent and arguably uncooperative oral surgeon. Then goes, stoically, the terrifying worthy and unmotivated heavy truck driver. Then the fulfilled but not so restricted nonetheless warm exhibit designer. Next, the guilty and silly yet efficient boilermaker.
-***{INTERACTIONS}***
-The affectionate stressed nonetheless hearty foundry coremaker, S_______ , interacts with the restless but gullible-cum-love-lorn actuary, R______ .
-It is a neutral interaction.
-***DEBUG DISPOSITIONS:*** {'refractory materials repairer': 0.5, 'nonfarm animal caretaker': 0.5, 'mining engineer': 0.5, 'interviewer': 0.5, 'fisher': 0.5, 'prosthodontist': 0.5, 'motorboat service technician': 0.5, 'mechanical drafter': 0.75, 'insurance underwriter': 0.5, 'actuary': 0.5, 'elementary school teacher': 0.5, 'purchasing agent': 0.5, 'engineering teacher': 0.5, 'oral surgeon': 0.5, 'carpenter': 0.5, 'boilermaker': 0.5, 'computer support specialist': 0.5, 'recreational vehicle service technician': 0.5, 'barback': 0.5, 'heavy truck driver': 0.5, 'magistrate judge': 0.5, 'traffic technician': 0.5, 'exhibit designer': 0.5}
-The responsible but not so indifferent and arguably uncooperative oral surgeon, I____ ,  looks on in disgust .
-The wild yet interesting purchasing agent, L______ , interacts with the responsible but not so indifferent and arguably uncooperative oral surgeon, I____ .
-It is a negative interaction.
-***DEBUG DISPOSITIONS:*** {'refractory materials repairer': 0.5, 'nonfarm animal caretaker': 0.5, 'mining engineer': 0.5, 'interviewer': 0.5, 'fisher': 0.5, 'prosthodontist': 0.5, 'motorboat service technician': 0.5, 'mechanical drafter': 0.5, 'foundry coremaker': 0.5, 'insurance underwriter': 0.5, 'actuary': 0.75, 'elementary school teacher': 0.5, 'engineering teacher': 0.5, 'oral surgeon': 0.25, 'carpenter': 0.5, 'boilermaker': 0.5, 'computer support specialist': 0.5, 'recreational vehicle service technician': 0.5, 'barback': 0.5, 'heavy truck driver': 0.5, 'magistrate judge': 0.5, 'traffic technician': 0.75, 'exhibit designer': 0.5}
-The responsible but not so indifferent and arguably uncooperative oral surgeon, I____ ,  does not understand .
-As they near their destination, they notice  the Inn's sign depicts a very pronged m________, which appears exceedingly p____. The sign sparkles in the sun.
-The group feels mixed as they approach the entrance to the inn.
 
-- [x] (arriving at the Inn)
-- [x] (description of the Inn, the sign (weather + time of day), building, state, echo emotional theme)
-- [x] (entering the Inn)
-- [ ] (description of interior, number of patrons)
-- [ ] (characters exhibit some facet of personality + disposition)
-- [ ] (describe a constant feature of the current Inn)
-- [ ] (some characters make a modification of the constant feature's state)
-- [x] (Interaction, or not, with the proprietor)
-- [x] (sit down at a table)
-- [x] (order food or drinks)
-- [x] (character interactions)
-- [ ] (events in the Inn room)
-- [ ] (characters exhibit some facet of personality + disposition)
-- [x] (choose a story teller)
-- [x] (dispositions adjust)
+The playful-cum-idealistic but strong elevator installer, K______ , interacts with the infuriated and arguably level-headed transportation security screener, T_____ .
+It is a positive interaction.
+The teased and plain-speaking actor, A________ ,  does not understand .
 
-The loose and possessive and lovable traffic technician, F_____, enters the inn first. {some description of traffic technician entering inn}.
-The restless but gullible-cum-love-lorn actuary, R______, reacts {reaction}. {supplementary reaction from a third individual or the group}
-Inside, the inn is {describe Inn} really awesome and well described. By the door hangs a painting of a blasted landscape. Upon the mantel in the main room, above a roaring fire, are three coins, an onion, a small bust of the poet Cinna. Above it hangs a vicious looking axe. The public room has a reasonable crowd.
+
+
+As they near their destination they notice  the Inn's sign depicts a very insensible z______, belonging to a awsome w______. The sign glints in the sun.
+The group feels blue as they approach the entrance to the inn.
+
+The playful-cum-idealistic but strong elevator installer, K______, enters the inn first. {some description of elevator installer entering inn}.
+The tender but not so hopeless nonetheless irritable orthotist, Q_______, reacts {reaction}. {supplementary reaction from a third individual or the group}.
+
+Inside, the inn is {describe Inn} really awesome and well described. By the fireplace hangs a painting of a pastoral scene. Upon the mantel in the main room, above a roaring fire, are three coins, an onion, a small bust of the poet Cinna. Above it hangs a vicious looking polearm. 
+
+The public room is totally empty.
 The travelers interact with the Inn in an interesting and satisfying way.
-Close by, or far away, a thrush makes a sound, is seen, or unobservedly does something characteristic yet poignant.
-"Oh look, over there by the stairs; there is the innkeeper, looking rather saved. Let us talk to him!" says the restless but gullible-cum-love-lorn actuary, R______.
-The innkeeper, O________ of P_______, has a saved personality, and some indomitable and worldly advice to impart (if the mood takes him).
-"Grab yourselves a table, I'll be with you shortly to take orders..."
-The weary travellers sit at a claptrap table.
+Close by, or far away, a vole makes a sound, is seen, or unobservedly does something characteristic yet poignant.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Oh look, over there by the main room; there is the innkeeper, looking rather tenacious. Let us talk to them!" says the self-conscious-cum-fine and diligent parts salesperson, T________.
+
+The innkeeper, W________ the U____, has a tenacious personality, and some echoing and worldly advice to impart (if the mood takes them).
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Grab yourselves a table, I'll be with you shortly to take orders..."
+
+The weary travellers sit at a nauseous table.
 They have some interactions, and remark upon their situation.
-***{INTERACTIONS}***
-The justified but not so yearning crafty carpenter, Q_____ , interacts with the confused and arguably pretty recreational vehicle service technician, U____ .
+	
+The adored but not so realistic dressing room attendant, A____ , interacts with the self-conscious-cum-fine and diligent parts salesperson, T________ .
 It is a negative interaction.
-***DEBUG DISPOSITIONS:*** {'refractory materials repairer': 0.5, 'nonfarm animal caretaker': 0.5, 'mining engineer': 0.5, 'interviewer': 0.5, 'fisher': 0.5, 'prosthodontist': 0.5, 'motorboat service technician': 0.5, 'mechanical drafter': 0.5, 'foundry coremaker': 0.5, 'insurance underwriter': 0.5, 'actuary': 0.5, 'elementary school teacher': 0.5, 'purchasing agent': 0.5, 'engineering teacher': 0.5, 'oral surgeon': 0.5, 'boilermaker': 0.5, 'computer support specialist': 0.5, 'recreational vehicle service technician': 0.375, 'barback': 0.5, 'heavy truck driver': 0.5, 'magistrate judge': 0.5, 'traffic technician': 0.5, 'exhibit designer': 0.5}
-The wasted yet keen computer support specialist, L_____ ,  looks on in disgust .
+The tender but not so hopeless nonetheless irritable orthotist, Q_______ ,  is amused .
+
+
+The cowardly-cum-lifeless but not so distraught library assistant, H______ , interacts with the teased and plain-speaking actor, A________ .
+It is a negative interaction.
+The close yet ornery but not so paternal procurement clerk, O____ ,  does not understand .
+
+
+
+
 Possibly, something notable happens. What is the outcome?
 Someone may be called away, or storm off, or otherwise be excused.
-Presently the Innkeeper (or possibly another staff member such as the vinter or grounds-keeper) bumbles over to take their orders.
-Available victuals are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.
+
+
+Presently the Innkeeper (or possibly another staff member such as the scullery-hand or bar-staffer) traipses over to take their orders.
+Available swillish slops are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.
 Once all orders are made, the group settles in to wait. Drinks may arrive, but the food takes time to prepare.
+
+
 Something happens in the main room.
+
+
 In order to entertain themselves, as is their custom on this journey, they decide to pass the time telling stories,  and chose from their number one person to tell this evening's tale...
-* The current storyteller (traffic technician) chooses the purchasing agent (0.75) as the next storyteller.
+* The current storyteller (procurement clerk) chooses the library assistant (0.75) as the next storyteller.
 
-The wild yet interesting purchasing agent, L______, waits for the chatter to subside and begins his tale...
+The cowardly-cum-lifeless but not so distraught library assistant, H______, waits for the chatter to subside and begins her tale...
 
- ## 11: The Purchasing Agent's Fifth Tale (5)
+ ## 11: The Library Assistant's Sixth Tale (6)

@@ -8,6 +8,7 @@ NaNoGenMo 2021: Þys Maddock
 
 import json
 import random
+import sys
 from random import choice, sample
 
 from maddock.characters import Character
@@ -16,6 +17,8 @@ from maddock.inn import Inn
 
 professions = 'maddock/data/occupations.json'
 
+DEBUG = False
+INDENT = '&nbsp;' * 6
 
 TRAVEL = """
 - [ ] (description of approach to the Inn)
@@ -71,32 +74,37 @@ def group(characters):
 
 
 def travel(characters, inn):
-    print(TRAVEL)
+    if DEBUG:
+        print(TRAVEL)
     print("%s %s travellers make their way by %s towards *%s* Inn." % (to_words[len(characters)].capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
-    print("It is %s." % (inn.weather.desc()))
+    print("It is %s.\n" % (inn.weather.desc()))
     print(group(characters))
+    print('\n')
     interactions(characters, inn)
-    print('As they near their destination, they notice ', inn.sign(), inn.weather.item_desc('sign'))
+    print('\nAs they near their destination they notice ', inn.sign(), inn.weather.item_desc('sign'))
     # Emotional state of the group
-    print('The group feels %s as they approach the entrance to the inn.' % (choice(moods)))
+    print('The group feels %s as they approach the entrance to the inn.\n' % (choice(moods)))
 
 
 def interactions(characters, inn):
-    print('***{INTERACTIONS}***')
+    if DEBUG:
+        print('***{INTERACTIONS}***')
     n = random.randint(0, len(characters) // 3)
     interactors = sample(characters, n * 2)
     for i in range(0, n, 2):
         mood = interactors[i].interact(interactors[i + 1])
         observer = choice(characters)
         observer.witness(interactors[i], interactors[i + 1], mood)
+        print('\n')
 
 
 def the_inn(characters, inn):
-    print(INN)
+    if DEBUG:
+        print(INN)
     first = choice(characters)
     print(first.enters(inn))
-    print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}')
-    print('Inside, the inn %s' % inn.description)
+    print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}.')
+    print('\nInside, the inn %s' % inn.description)
     inn_interact(characters, inn)
     innkeeper(characters, inn)
     party_sit(characters, inn)
@@ -108,22 +116,22 @@ def inn_interact(characters, inn):
 
 
 def innkeeper(characters, inn):
-    print(f'"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
-    print(f'The innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).')
-    print('"Grab yourselves a table, I\'ll be with you shortly to take orders..."')
+    print(f'\n{INDENT}"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
+    print(f'\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).')
+    print(f'\n{INDENT}"Grab yourselves a table, I\'ll be with you shortly to take orders..."')
 
 
 def party_sit(characters, inn):
-    print(f'The weary travellers sit at {inn.table}.')
-    print('They have some interactions, and remark upon their situation.')
+    print(f'\nThe weary travellers sit at {inn.table}.')
+    print('They have some interactions, and remark upon their situation.\n\t')
     interactions(characters, inn)
-    print('Possibly, something notable happens. What is the outcome?')
+    print('\n\nPossibly, something notable happens. What is the outcome?')
     print('Someone may be called away, or storm off, or otherwise be excused.')
-    print(f'Presently the Innkeeper (or possibly another staff member such as the {inn.staff()} or {inn.staff()}) {movements()} over to take their orders.')
+    print(f'\n\nPresently the Innkeeper (or possibly another staff member such as the {inn.staff()} or {inn.staff()}) {movements()} over to take their orders.')
     print(f'Available {inn.menu()} are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.')
     print('Once all orders are made, the group settles in to wait. Drinks may arrive, but the food takes time to prepare.')
-    print('Something happens in the main room.')
-    print('In order to entertain themselves, as is their custom on this journey, they decide to pass the time telling stories,',
+    print('\n\nSomething happens in the main room.')
+    print('\n\nIn order to entertain themselves, as is their custom on this journey, they decide to pass the time telling stories,',
           ' and chose from their number one person to tell this evening\'s tale...')
 
 
@@ -158,6 +166,8 @@ if __name__ == '__main__':
     for c in characters:
         c.init_dispositions(characters)
 
+    if len(sys.argv) > 1 and sys.argv[1] == '-d':
+        DEBUG = True
     print('# Þys Maddock')
     print('### a NaNoGenMo 2021 simulated, recursive tale.')
     print('*{INTRO}*\n\n')
