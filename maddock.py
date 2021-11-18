@@ -142,6 +142,7 @@ def tell_tale(inn, teller, characters):
 
     next_teller = teller.friend(characters)
     if next_teller:
+        inn.roll()
         next_teller, disp = next_teller
         print(f"* The current storyteller ({teller.title}) chooses the {next_teller.title} ({disp}) as the next storyteller.\n")
         removed = next_teller.enemy(characters)

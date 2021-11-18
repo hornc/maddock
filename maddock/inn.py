@@ -2,7 +2,7 @@ import random
 from random import choice
 from string import ascii_uppercase as CAPS
 from maddock.characters import rname
-from maddock.grammar import adjectives, moods
+from maddock.grammar import adjectives, moods, grammar
 
 
 def article(word):
@@ -120,7 +120,7 @@ class Inn:
         crowd = choice(CROWD)
         
         painting = f' By the {self.feature()} hangs a painting of a {self.painting}.'
-        print(f'\n\nInside, {self.name} is ... really awesome and well described.')
+        print('\n\n' + grammar.flatten('#innside#').replace('XXX', self.name))
         print(painting)
         self.showmantel(characters)
         print(f'\n\nThe public room {crowd}.')
