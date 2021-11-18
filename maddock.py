@@ -104,7 +104,8 @@ def the_inn(characters, inn):
     first = choice(characters)
     print(first.enters(inn))
     print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}.')
-    print('\nInside, the inn %s' % inn.description)
+    #print('\nInside, the inn %s' % inn.description)
+    inn.interact(characters)
     inn_interact(characters, inn)
     innkeeper(characters, inn)
     party_sit(characters, inn)
@@ -135,8 +136,7 @@ def party_sit(characters, inn):
           ' and chose from their number one person to tell this evening\'s tale...')
 
 
-def tell_tale(teller, characters):
-    inn = Inn()
+def tell_tale(inn, teller, characters):
     travel(characters, inn)
     the_inn(characters, inn)
 
@@ -168,13 +168,14 @@ if __name__ == '__main__':
 
     if len(sys.argv) > 1 and sys.argv[1] == '-d':
         DEBUG = True
+    inn = Inn()
     print('# Þys Maddock')
     print('### a NaNoGenMo 2021 simulated, recursive tale.')
     print('*{INTRO}*\n\n')
     teller = characters[0]
     while teller:
         last = teller
-        teller, characters = tell_tale(teller, characters)
+        teller, characters = tell_tale(inn, teller, characters)
 
     print('\n\n ... RESOLUTION for the final storyteller: the %s!' % last.dtitle)
 

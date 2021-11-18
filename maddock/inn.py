@@ -59,14 +59,17 @@ class Keeper:
 
 class Inn:
     def __init__(self):
+        self.mantel = ['one golden sovereign', 'onion', 'small bust of the poet Cinna']
+        self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
+        self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'woman', 'man'])
+        self.roll()
+
+    def roll(self):
         self.possesive = choice(['', "'s"])
         self.name = f'The {rname()}{self.possesive} {rname()}'
         self.weather = Weather()
         self.animal = choice(ANIMALS)
         self.keeper = Keeper()
-        self.mantel = ['three coins', 'an onion', 'a small bust of the poet Cinna']
-        self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
-        self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'portrait of a woman', 'portrait of a man'])
 
     def sign(self):
         the, a, b = self.name.lower().replace("'s", '').split()
@@ -94,9 +97,30 @@ class Inn:
                 'forgettable fare']
         return choice(summary)
 
-    @property
-    def description(self):
+    def showmantel(self, characters):
+        if self.mantel:
+            mantel = ' Upon the mantel in the main room, above a roaring fire, are the following items: one %s.' % (', one '.join(self.mantel))
+        else:
+            mantel = ' There is a roaring fire in the public room. It\'s mantel is bare.'
+        mantel +=  ' Above it hangs a vicious looking %s. ' % self.weapon
+        print(mantel)
+        c = choice(characters)
+        if not c.possesions:
+            i = choice(self.mantel)
+            print(f'The {c.title}, when no one is looking, takes the {i} from the mantel and pockets it.')
+            c.possesions.append(i)
+            self.mantel.remove(i)
+        else:
+            i = choice(c.possesions)
+            print(f'The {c.title} wanders over to take a look, and adds a {i} to the collection of trinkets.')
+            self.mantel.append(i)
+            c.possesions.remove(i)
+
+    def interact(self, characters):
         crowd = choice(CROWD)
-        mantel = ' Upon the mantel in the main room, above a roaring fire, are %s. Above it hangs a vicious looking %s. ' % (', '.join(self.mantel), self.weapon)
+        
         painting = f' By the {self.feature()} hangs a painting of a {self.painting}.'
-        return 'is {describe Inn} really awesome and well described.' + painting + mantel + '\n\nThe public room %s.' % crowd
+        print(f'\n\nInside, {self.name} is ... really awesome and well described.')
+        print(painting)
+        self.showmantel(characters)
+        print(f'\n\nThe public room {crowd}.')
