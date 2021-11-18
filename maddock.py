@@ -69,7 +69,7 @@ def group(characters):
     l = random.sample(characters, len(characters))
     #out = grammar.flatten(f'#travel# %s}')
     travel = grammar.flatten('#travel# %s' + '#fol# %s' * (len(l) - 1)) + '.'
-    subs = tuple([c.atitle for c in l])
+    subs = tuple([c.atitle + c.desc() for c in l])
     return travel % subs
 
 

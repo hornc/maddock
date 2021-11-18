@@ -24,12 +24,20 @@ class Character:
         self.name = rname()
         self.feature = '{notable feature}'
         self.interest = '{interest}'
-        self.outfit = '{outfit}'
+        self.outfit = grammar.flatten('#outfit.a#')
         self.possesions = []
+        for i in range(randrange(0, 4)):
+            self.possesions.append(grammar.flatten('#smallitem#'))
+        print('DEBUG', self.possesions)
         self.dispositions = {}
 
     def desc(self):
-        return self.epithet
+        fidget = self.possesions and f'{grammar.flatten("#itemaction#")} a {choice(self.possesions)}'
+        wearing = f'is wearing {self.outfit}'
+        desc = choice([None, fidget, wearing])
+        if not desc:
+            return ''
+        return f', who {desc}'
 
     def init_dispositions(self, others):
         for other in others:

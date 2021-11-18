@@ -3,6 +3,7 @@ import re
 import tracery
 from tracery.modifiers import base_english
 
+from maddock import smallitems
 
 with open('maddock/data/adjs.json') as f:
     adjectives = json.load(f)['adjs']
@@ -18,7 +19,6 @@ with open('maddock/data/moods.json', 'r') as f:
 
 with open('maddock/data/descriptions.json', 'r') as f:
         descriptions = json.load(f)['descriptions']
-
 
 joins = ['', 'yet', 'but', 'and', 'but not so', 'nonetheless', 'and arguably', '-cum-', ]
 
@@ -52,7 +52,10 @@ rules = {
     'tverb': ['is', 'comes', 'travels', 'goes', 'passes', 'moves', 'proceeds', 'processes', 'perambulates', 'approaches', ],
     'tline': ['line', 'sequence', 'procession', 'order', 'file', 'their #tline#', 'this #adjective# #tline#', 'the group' ],
     'tadj': ['closely', 'immediately', 'subsequently', 'stoically', 'reservedly', 'conscientiously', 'hopefully', 'doggedly', 'spasmodically', 'soon after', ],
+
     }
+
+rules = {**rules, **smallitems.rules}
 
 grammar = tracery.Grammar(rules)
 grammar.add_modifiers(base_english)
