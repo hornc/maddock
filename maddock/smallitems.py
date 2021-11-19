@@ -47,7 +47,7 @@ rules = {
         'smellsound': ['smells', 'sounds'],
         'snag': ['hook', 'exposed nail', 'splintered floor-board', 'coat-stand', 'umbrella, conviniently made available for guests who may have neglected to bring their own'],
         'says': ['quips', 'laughs', 'jokes', 'whispers', 'snarls'],
-        'cleverthing': ['"I\'d like some of that!"', 'I have no idea what that is.'"],
+        'cleverthing': ['"I\'d like some of that!"', 'I have no idea what that is.'],
         
 
         # Inn interior
