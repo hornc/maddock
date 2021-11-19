@@ -1,6 +1,7 @@
 # small items, for loading into pytracery
 
 rules = {
+        'indent': '\n' + '&nbsp;' * 6,
         'smallitem': ['hairbush', 'comb', '#solid# fob', 'snuff-box', '#solid# snuff-box #filled#', '#container# #filled#',
             '#threadform# of #color# #thread#', '#solid# mirror', 'small coin', '#color# glass bead', 'small #solid# disc', 'hair pin', 'pocket knife with a #solid# handle',
             'reliquary housing fragments of the #side# #bone# of #saint#',
@@ -47,7 +48,7 @@ rules = {
         'smellsound': ['smells', 'sounds'],
         'snag': ['hook', 'exposed nail', 'splintered floor-board', 'coat-stand', 'umbrella, conviniently made available for guests who may have neglected to bring their own'],
         'says': ['quips', 'laughs', 'jokes', 'whispers', 'snarls'],
-        'cleverthing': ['"I\'d like some of that!"', 'I have no idea what that is.'],
+        'cleverthing': ['#indent#"I\'d like some of that!"', '#indent#"I have no idea what that is."'],
         
 
         # Inn interior
@@ -61,8 +62,13 @@ rules = {
                 'The #staff# calls for #callthing#',
                 'The #staff# is called away.', '#someone# storms off.', '#someone# is excused',
                 'The #company# remark upon #remarkable#',
+                '#someone.capitalize# #puddleaction# #puddle.a#',
+                '#indent#"Barkeep! What\'s in this food? It tastes like #fluid#!" someone #says# loudly #react#',
+                '#C1# starts talking about their interest #interest# #react#',
                 #Someone may be called away, or storm off, or otherwise be excused.
                 ],
+        'react': ['', '. #someone.capitalize# #react1#', '#innevent# in response', '. #cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
+        'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
         'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper'],
         'callthing': ['silence', 'more beer', 'more wine', 'a mop', 'some food', 'attention', 'assistance', 'last drink orders', 'someone to sing a song', 'their mother', 'a shoulder to cry on'],
 
@@ -81,7 +87,7 @@ rules = {
 # Presently the Innkeeper (or possibly another staff member such as the vinter or pot-scrubber) undulates over to take their orders. Available impressive offerings are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty. Once all orders are made, the group settles in to wait. Drinks may arrive, but the food takes time to prepare.
         'menu': 'Presently the #foodserver# #moves# over to take the #company#\'s orders. #takeorder#',
         'foodserver': ['inkeeper', '#staff#'],
-        'takeorder': 'Available #menusummary# are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty. Once all orders are made, the #company# settles in to wait. Drinks may arrive, but the food takes time to prepare.',
+        'takeorder': 'Available #menusummary# are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.\n\n Once all orders are made, the #company# settles in to wait. Drinks may arrive, but the food takes time to prepare.',
         'menusummary': ['goods', 'victuals', 'bare necessities', 'gourmet offerings', 'foul sounding slops', 'provisions', 'tasty treats', 'servicable foodstuffs', 'sweetmeats', 'hearty pub meals',
                 'pretentious sounding dishes', 'swillish slops', 'delicious delights', 'yummies', 'standard offerings', 'uninspring offerings', 'disapointing selections', 'impressive offerings',
                 'forgettable fare'],
@@ -89,4 +95,13 @@ rules = {
 
         'moves': ['walks', 'strides', 'saunters', 'sashays', 'slinks', 'slithers', 'bounds', 'traipses', 'stumbles', 'catapults', 'zips',
              'bumbles', 'moves', 'charges', 'speeds', 'wriggles', 'undulates', 'sprints', 'shoots', 'scoots', 'dances', 'leaps'],
+
+        # Fluids
+        'puddleaction': ['gingerly steps over', 'narrowly avoids stepping in', 'falls, drunk, into', 'creates', 'mops up', 'draws attention to', 'looks quizically at'],
+        'puddle': 'puddle of #puddleadj1# #fluid#',
+        'puddleadj1': ['', '#puddleadj#', '#puddleadj#', '#puddleadj#', '#puddleadj# and #puddleadj#'],
+        'puddleadj': ['slowly spreading', 'dried', 'deliberately spilled', 'acidentally spilled', 'fresh', 'stale', 'coagulating', 'effervescing', 'quiescent', 'stagnant', 'flowing'],
+        'fluid': ['#fluid# and #fluid#', '#fluid# mixed with a tiny amount of #fluid#', 'piss', 'shit', 'vomit', 'ale', 'wine', 'gin', 'purl', 'mead', 'honey', 'blood', 'ichor', 'rubbing alcohol', 'rainwater', 'seawater', 'slops', 'stew', 'fermenting fruit pulp', 'juice',
+                  'lavender scented unguent', 'roser-water', 'aqua vitae', 'aqua regia', 'formic acid', 'mercury', ],
+
 }
