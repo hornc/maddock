@@ -112,10 +112,10 @@ def the_inn(characters, inn):
 
 
 def inn_interact(characters, inn):
-    print('The travelers interact with the Inn in an interesting and satisfying way.')
-    an = grammar.flatten('#animalsound#')
+    #print('The travelers interact with the Inn in an interesting and satisfying way.')
+    inn.event()
+    an = grammar.flatten('#animalsound#.')
     print(an)
-    #print('Close by, or far away, a %s makes a sound, is seen, or unobservedly does something characteristic yet poignant.' % inn.animal)
 
 
 def innkeeper(characters, inn):
@@ -126,14 +126,13 @@ def innkeeper(characters, inn):
 
 def party_sit(characters, inn):
     print(f'\nThe weary travellers sit at {inn.table}.')
-    print('They have some interactions, and remark upon their situation.\n\t')
+    inn.event()
+    #print('They have some interactions, and remark upon their situation.\n\t')
     interactions(characters, inn)
-    print('\n\nPossibly, something notable happens. What is the outcome?')
-    print('Someone may be called away, or storm off, or otherwise be excused.')
-    print(f'\n\nPresently the Innkeeper (or possibly another staff member such as the {inn.staff()} or {inn.staff()}) {movements()} over to take their orders.')
-    print(f'Available {inn.menu()} are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.')
-    print('Once all orders are made, the group settles in to wait. Drinks may arrive, but the food takes time to prepare.')
-    print('\n\nSomething happens in the main room.')
+    #print('\n\nPossibly, something notable happens. What is the outcome?')
+    inn.event()
+    inn.menu()
+    inn.event()
     print('\n\nIn order to entertain themselves, as is their custom on this journey, they decide to pass the time telling stories,',
           ' and chose from their number one person to tell this evening\'s tale...')
 

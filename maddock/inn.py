@@ -88,14 +88,14 @@ class Inn:
         features = ['fireplace', 'door', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug']
         return choice(features)
 
+    def event(self):
+        print(grammar.flatten('#innevent.capitalize#.'))
+
     def staff(self):
         return choice(STAFF)
 
     def menu(self):
-        summary = ['goods', 'victuals', 'bare necessities', 'gourmet offerings', 'foul sounding slops', 'provisions', 'tasty treats', 'servicable foodstuffs', 'sweetmeats', 'hearty pub meals',
-                'pretentious sounding dishes', 'swillish slops', 'delicious delights', 'yummies', 'standard offerings', 'uninspring offerings', 'disapointing selections', 'impressive offerings',
-                'forgettable fare']
-        return choice(summary)
+        print(grammar.flatten('#menu#'))
 
     def showmantel(self, characters):
         if self.mantel:

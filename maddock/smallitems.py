@@ -56,12 +56,37 @@ rules = {
         'is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
 
+        'innevent': ['#animalsound#', '#innevent#. Additionally, #innevent#', 'A patron spills a drink', 'A small fight breaks out in the corner',
+                'A dog, sitting under a table, gives itself #adjective.a# scratch #andext#',
+                'The #staff# calls for #callthing#',
+                'The #staff# is called away.', '#someone# storms off.', '#someone# is excused',
+                'The #company# remark upon #remarkable#',
+                #Someone may be called away, or storm off, or otherwise be excused.
+                ],
+        'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper'],
+        'callthing': ['silence', 'more beer', 'more wine', 'a mop', 'some food', 'attention', 'assistance', 'last drink orders', 'someone to sing a song', 'their mother', 'a shoulder to cry on'],
+
+        'staff': ['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
+        'vinter', 'lounge-operative'],
+        'remarkable': ['their situation', 'the weather', 'the journey so far', 'their surroundings', '#someone#', '#someone#\'s manner'],
 
         # Close by, or far away, a raven makes a sound, is seen, or unobservedly does something characteristic yet poignant.
-        'animalsound': '#andistance# #animal.a# #andoes#.',
+        'animalsound': '#andistance# #animal.a# #andoes#',
         'andistance': ['Off in the distance,', 'Nearby', 'Seemingly emanating from an upstairs room,',],
         'andoes': ['makes #adjective.a# sound #andext#', 'is heard by the #company#', 'makes its presence felt #andext#'],
         'andext': ['', 'as if it were #adjective#',],
         'animal': ['cat', 'dog', 'parrot', 'crow', 'raven', 'owl', 'falcon', 'hawk', 'thrush', 'dormouse', 'rat', 'mouse', 'vole', 'cockroach', 'deathwatch beetle',
         'dung beetle', 'fly', 'lac beetle', 'mantis', 'moth', 'horse', 'donkey', 'mule', 'cow', 'ox', 'sheep', 'lamb', ],
+
+# Presently the Innkeeper (or possibly another staff member such as the vinter or pot-scrubber) undulates over to take their orders. Available impressive offerings are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty. Once all orders are made, the group settles in to wait. Drinks may arrive, but the food takes time to prepare.
+        'menu': 'Presently the #foodserver# #moves# over to take the #company#\'s orders. #takeorder#',
+        'foodserver': ['inkeeper', '#staff#'],
+        'takeorder': 'Available #menusummary# are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty. Once all orders are made, the #company# settles in to wait. Drinks may arrive, but the food takes time to prepare.',
+        'menusummary': ['goods', 'victuals', 'bare necessities', 'gourmet offerings', 'foul sounding slops', 'provisions', 'tasty treats', 'servicable foodstuffs', 'sweetmeats', 'hearty pub meals',
+                'pretentious sounding dishes', 'swillish slops', 'delicious delights', 'yummies', 'standard offerings', 'uninspring offerings', 'disapointing selections', 'impressive offerings',
+                'forgettable fare'],
+
+
+        'moves': ['walks', 'strides', 'saunters', 'sashays', 'slinks', 'slithers', 'bounds', 'traipses', 'stumbles', 'catapults', 'zips',
+             'bumbles', 'moves', 'charges', 'speeds', 'wriggles', 'undulates', 'sprints', 'shoots', 'scoots', 'dances', 'leaps'],
 }
