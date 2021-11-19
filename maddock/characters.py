@@ -17,7 +17,7 @@ class Character:
     POSSESIVES = ['her', 'his', 'their']
 
     def __init__(self, occupation):
-        self.title = occupation
+        self.title = f'**{occupation}**'
         self.tales = 0
         self.epithet = grammar.flatten('#epithet#')
         self.pos = choice(self.POSSESIVES)
@@ -69,8 +69,8 @@ class Character:
             return sorted(avail, key=lambda x: x[1])[-1]
 
     def enters(self, inn):
-        enter_desc = '{some description of %s entering inn}' % self.title
-        return 'The %s, enters the inn first. %s.' % (self.dtitle, enter_desc)
+        content = grammar.flatten('#goinginn#')
+        return content % f'The {self.dtitle},'
 
     @property
     def atitle(self):  # used for default traveller listing

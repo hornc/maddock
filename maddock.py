@@ -113,7 +113,9 @@ def the_inn(characters, inn):
 
 def inn_interact(characters, inn):
     print('The travelers interact with the Inn in an interesting and satisfying way.')
-    print('Close by, or far away, a %s makes a sound, is seen, or unobservedly does something characteristic yet poignant.' % inn.animal)
+    an = grammar.flatten('#animalsound#')
+    print(an)
+    #print('Close by, or far away, a %s makes a sound, is seen, or unobservedly does something characteristic yet poignant.' % inn.animal)
 
 
 def innkeeper(characters, inn):
