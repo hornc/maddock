@@ -133,8 +133,7 @@ def party_sit(characters, inn):
     inn.event()
     inn.menu()
     inn.event()
-    print('\n\nIn order to entertain themselves, as is their custom on this journey, they decide to pass the time telling stories,',
-          ' and chose from their number one person to tell this evening\'s tale...')
+    print(grammar.flatten('#nexttale#'))
 
 
 def tell_tale(inn, teller, characters):

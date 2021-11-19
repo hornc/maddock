@@ -102,7 +102,8 @@ class Inn:
             mantel = ' Upon the mantel in the main room, above a roaring fire, are the following items: one %s.' % (', one '.join(self.mantel))
         else:
             mantel = ' There is a roaring fire in the public room. It\'s mantel is bare.'
-        mantel +=  ' Above it hangs a vicious looking %s. ' % self.weapon
+        #mantel +=  ' Above it hangs a vicious looking %s. ' % self.weapon
+        mantel += grammar.flatten('#weapon#').replace('((WEAPON))', self.weapon)
         print(mantel)
         c = choice(characters)
         if not c.possesions:
