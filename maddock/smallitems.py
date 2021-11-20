@@ -90,7 +90,7 @@ rules = {
                        'The inscription upon it is unfortunately obscured by what looks like stains of #fluid#',],
         'ldetail': ['', 'which Chekhov #obtained# #wtime# the #wfrom# #date#'],
         'innfamily': ['the innkeeper', 'the innkeeper\'s #closerelation#'],
-        'wstory': 'VVV#indent#"This #WEAPON# used to belong to my #wperson# #wname#."',
+        'wstory': 'VVV\n#indent#"This #WEAPON# used to belong to my #wperson# #wname#.\n\n"',
         'wperson': ['#closerelation#','#closerelation#', '#closerole#',
                     '#wperson#\'s #wperson#',
                     '#wperson# who got it from their #wperson#',

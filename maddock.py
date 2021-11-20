@@ -11,7 +11,7 @@ import random
 import sys
 from random import choice, sample
 
-from maddock.characters import Character
+from maddock.characters import Character, interact
 from maddock.grammar import adjectives, moods, grammar
 from maddock.inn import Inn
 
@@ -92,10 +92,8 @@ def interactions(characters, inn):
     n = random.randint(0, len(characters) // 3)
     interactors = sample(characters, n * 2)
     for i in range(0, n, 2):
-        mood = interactors[i].interact(interactors[i + 1])
         observer = choice(characters)
-        observer.witness(interactors[i], interactors[i + 1], mood)
-        print('\n')
+        interact(interactors[i], interactors[i + 1], observer)
 
 
 def the_inn(characters, inn):

@@ -13,6 +13,14 @@ def rname(length=0):
     return choice(CAPS) + '_' * (length or randrange(4, 9))
 
 
+def interact(c1, c2, observer=None):
+    """ Plays out an interaction between 2 Characters, and one optional observer."""
+    mood = c1.interact(c2)
+    if observer:
+        observer.witness(c1, c1, mood)
+    print('\n')
+
+
 class Character:
     POSSESIVES = ['her', 'his', 'their']
 
