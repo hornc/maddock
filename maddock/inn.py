@@ -58,7 +58,8 @@ class Keeper:
 
 
 class Inn:
-    def __init__(self):
+    def __init__(self, characters):
+        self.characters = characters
         self.mantel = ['one golden sovereign', 'onion', 'small bust of the poet Cinna']
         self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
         self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'woman', 'man'])
@@ -89,7 +90,11 @@ class Inn:
         return choice(features)
 
     def event(self):
-        print(grammar.flatten('#innevent.capitalize#.'))
+        e = grammar.flatten('#innevent.capitalize#.')
+        c = choice(self.characters)
+        e = e.replace('((C1))', c.dtitle)
+        e = e.replace('((interest))', c.interest)
+        print(e)
 
     def staff(self):
         return choice(STAFF)
@@ -102,7 +107,6 @@ class Inn:
             mantel = ' Upon the mantel in the main room, above a roaring fire, are the following items: one %s.' % (', one '.join(self.mantel))
         else:
             mantel = ' There is a roaring fire in the public room. It\'s mantel is bare.'
-        #mantel +=  ' Above it hangs a vicious looking %s. ' % self.weapon
         mantel += grammar.flatten('#weapon#').replace('((WEAPON))', self.weapon)
         print(mantel)
         c = choice(characters)
@@ -130,7 +134,4 @@ class Inn:
     def innkeeper(self, characters):
         output = grammar.flatten('#addressinnkeeper#')
         print(output)
-        #print(f'\n{INDENT}"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
-        #print(f'\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).')
-        #print(f'\n{INDENT}"Grab yourselves a table, I\'ll be with you shortly to take orders..."')
 

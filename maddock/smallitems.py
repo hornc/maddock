@@ -30,7 +30,8 @@ rules = {
         # Item actions
         'itemaction': ['fidgets with', 'nervously clutches', '#adverb# brandishes', 'is preocupied with', 'idly tosses in the air', 'chews distractedly on'],
 
-
+        # Character Interests
+        'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', '#adjective# psycho-geography', 'French literature', 'the health problems of others'],
 
         # Clothing
         'outfit': ['#cadj# #citem#', '#cadj# #citem# made of #quality# #cmaterial#'],
@@ -64,11 +65,11 @@ rules = {
         'innevent': ['#animalsound#', '#innevent#. Additionally, #innevent#', 'A patron spills a drink', 'A small fight breaks out in the corner',
                 'A dog, sitting under a table, gives itself #adjective.a# scratch #andext#',
                 'The #staff# calls for #callthing#',
-                'The #staff# is called away.', '#someone# storms off.', '#someone# is excused',
+                'The #staff# is called away', '#someone# storms off', '#someone# is excused',
                 'The #company# remark upon #remarkable#',
                 '#someone.capitalize# #puddleaction# #puddle.a#',
                 '#indent#"Barkeep! What\'s in this food? It tastes like #fluid#!" someone #says# loudly #react#',
-                '#C1# starts talking about their interest #interest# #react#',
+                'The #C1#, starts talking about their interest in #interest#. #react#',
                 #Someone may be called away, or storm off, or otherwise be excused.
                 ],
         'react': ['', '. #someone.capitalize# #react1#', '#innevent# in response', '. #cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
@@ -90,7 +91,7 @@ rules = {
                        'The inscription upon it is unfortunately obscured by what looks like stains of #fluid#',],
         'ldetail': ['', 'which Chekhov #obtained# #wtime# the #wfrom# #date#'],
         'innfamily': ['the innkeeper', 'the innkeeper\'s #closerelation#'],
-        'wstory': 'VVV\n#indent#"This #WEAPON# used to belong to my #wperson# #wname#.\n\n"',
+        'wstory': 'VVV\n#indent#"This #WEAPON# used to belong to my #wperson# #wname#."\n\n',
         'wperson': ['#closerelation#','#closerelation#', '#closerole#',
                     '#wperson#\'s #wperson#',
                     '#wperson# who got it from their #wperson#',
@@ -105,7 +106,7 @@ rules = {
         'closerole': ['doctor', 'commanding officer', 'lieutenant', 'captain', 'priest', 'confessor', 'acquaintance', 'cook', 'bondsman', 'servant', 'comrade-in-arms'],
         'closerelation': ['father', 'mother', 'brother', 'sister', 'lover', 'spouse', 'grandfather', 'grandmother', 'uncle', 'aunt', 'cousin'],
         'wname': ['whose name was Chekhov', 'whose name is unfortunately long forgotten',
-                  'who is commonly known, in #compass# parts, as Chekhov',
+                  'who is commonly known, in #compass# parts at least, as Chekhov',
                   'who went by the name of "Chekhov"'],
         'madj': ['tragic', 'joyous', 'victorious', 'horrendous', 'famed', 'fabled', 'renowned', 'last', 'first', 'disasterous', 'ill-fated', 'botched', 'bungled', 'decisive', 'virtuous'],
         'date': ['', ', which occurred in the year of the #dateevent#'],
@@ -130,7 +131,7 @@ rules = {
         'menunresponse': 'The #company# look dissapointed, but order their drinks.',
         'menuyes': '#indent# #menuysays#\n #menuyresponse#', 
         'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #distance# of these walls!"',],
-        'menuyresponse': 'The #company# order food',
+        'menuyresponse': 'The #company# order food.',
         'num': ['three', 'twenty', 'one hundered', 'four-hunnerd-an\' twen\'y summint', 'more than I can count'],
         'distance': ['feet', 'leagues', 'miles', 'counties', 'spans',],
 
@@ -158,8 +159,10 @@ rules = {
         # Addressing the Innkeeper
         'addressinnkeeper': '#addrik# #descinnk# #respinnk#',
         'addrik': '#indent#"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.',
-        'descinnk': '\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).',
-        'respinnk': ['#indent#"#respa#, #respb#..."', 'Withour a word, the innkeeper imaptiently waves the #company# to a table.'],
+        'descinnk': '\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some #inndchoice# #inndimpart# to impart.',
+        'inndimpart': ['advice', 'news', 'rumours', 'moralising', 'complaints'],
+        'inndchoice': ['choice adjectives and', '#adjective#', 'and #inndchoice#', 'worldly', '#adjective# #adjective#'],
+        'respinnk': ['#indent#"#respa#, #respb#..."', 'The suddenly, without a word, the innkeeper impatiently waves the #company# to a table.'],
         'respa': ['Sit down over there', 'Grab yourselves a table', 'Be seated', 'Get ye gone'],
         'respb': ['I\'ll be with you shortly to take orders', 'I\'ll send someone over to take your orders'],
 }

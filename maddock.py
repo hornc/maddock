@@ -98,7 +98,8 @@ def the_inn(characters, inn):
     print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}.')
     #print('\nInside, the inn %s' % inn.description)
     inn.interact(characters)
-    inn.event()
+    for i in range(random.randint(1, 7)):
+         inn.event()
     print(grammar.flatten('#animalsound#.'))
     inn.innkeeper(characters)
     party_sit(characters, inn)
@@ -149,7 +150,7 @@ if __name__ == '__main__':
 
     if len(sys.argv) > 1 and sys.argv[1] == '-d':
         DEBUG = True
-    inn = Inn()
+    inn = Inn(characters)
     print('# Þys Maddock')
     print('### a NaNoGenMo 2021 simulated, recursive tale.')
     print('*{INTRO}*\n\n')

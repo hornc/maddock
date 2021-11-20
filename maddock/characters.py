@@ -31,7 +31,7 @@ class Character:
         self.pos = choice(self.POSSESIVES)
         self.name = rname()
         self.feature = '{notable feature}'
-        self.interest = '{interest}'
+        self.interest = grammar.flatten('#cinterest#')
         self.outfit = grammar.flatten('#outfit.a#')
         self.possesions = []
         for i in range(randrange(0, 4)):
@@ -78,6 +78,7 @@ class Character:
 
     def enters(self, inn):
         content = grammar.flatten('#goinginn#')
+        content = content.replace('((C1outfit))', self.outfit)
         return content % f'The {self.dtitle},'
 
     @property
