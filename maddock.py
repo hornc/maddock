@@ -58,12 +58,6 @@ to_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eigh
 ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ', 'Seventh ', 'Eighth ', 'Ninth ', 'Tenth ', 'Eleventh', 'Twelfth ', 'Thirteenth ']
 
 
-def movements():
-    movements = ['walks', 'strides', 'saunters', 'sashays', 'slinks', 'slithers', 'bounds', 'traipses', 'stumbles', 'catapults', 'zips',
-             'bumbles', 'moves', 'charges', 'speeds', 'wriggles', 'undulates', 'sprints', 'shoots', 'scoots', 'dances', 'leaps']
-    return choice(movements)
-
-
 def group(characters):
     # list and describe the party
     l = random.sample(characters, len(characters))
