@@ -5,7 +5,7 @@ with open('maddock/data/towns.txt', 'r') as f:
 
 rules = {
         'placename': towns,
-        'indent': '\n' + '&nbsp;' * 6,
+        'indent': '\n\n' + '&nbsp;' * 6,
         'smallitem': ['hairbush', 'comb', '#solid# fob', 'snuff-box', '#solid# snuff-box #filled#', '#container# #filled#',
             '#threadform# of #color# #thread#', '#solid# mirror', 'small coin', '#color# glass bead', 'small #solid# disc', 'hair pin', 'pocket knife with a #solid# handle',
             'reliquary housing fragments of the #side# #bone# of #saint#',
@@ -125,8 +125,8 @@ rules = {
         'foodserver': ['inkeeper', '#staff#'],
         'takeorder': ['#menuyes#', '#menuno#'],
         'menuno': ['#indent# #menunsays#\n #menunresponse#',],
-        'menunsays': ['"#menunreason#, you\'ll have to order drinks. What\'ll it be?"',],
-        'menunreason': ['Kitchen\'s closed', 'Cook\'s dead', 'We\'re all out of food, sorry', 'I don\'t think you lot\'ll have the stomach for our local fare'],
+        'menunsays': ['#indent# "#menunreason#, you\'ll just have to order drinks. What\'ll it be?"\n',],
+        'menunreason': ['Kitchen\'s closed', 'Cook\'s dead', 'We\'re all out of food, sorry', 'I don\'t think you lot\'ll have the stomach for our #compass# fare'],
         'menunresponse': 'The #company# look dissapointed, but order their drinks.',
         'menuyes': '#indent# #menuysays#\n #menuyresponse#', 
         'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #distance# of these walls!"',],
@@ -152,8 +152,14 @@ rules = {
                   'lavender scented unguent', 'roser-water', 'aqua vitae', 'aqua regia', 'formic acid', 'mercury', ],
 
 
-
         'nexttale': '\n\nIn order to entertain themselves, #ntsub#, the #company# decide to pass the time telling stories, and chose from their number one person to tell this evening\'s tale...',
         'ntsub': ['as is their custom on this journey', 'as they have done every evening previously', 'as tradition dictates', 'since no other alternatives are on offer', 'because the night is young'],
 
+        # Addressing the Innkeeper
+        'addressinnkeeper': '#addrik# #descinnk# #respinnk#',
+        'addrik': '#indent#"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.',
+        'descinnk': '\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).',
+        'respinnk': ['#indent#"#respa#, #respb#..."', 'Withour a word, the innkeeper imaptiently waves the #company# to a table.'],
+        'respa': ['Sit down over there', 'Grab yourselves a table', 'Be seated', 'Get ye gone'],
+        'respb': ['I\'ll be with you shortly to take orders', 'I\'ll send someone over to take your orders'],
 }

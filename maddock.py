@@ -98,22 +98,10 @@ def the_inn(characters, inn):
     print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}.')
     #print('\nInside, the inn %s' % inn.description)
     inn.interact(characters)
-    inn_interact(characters, inn)
-    innkeeper(characters, inn)
-    party_sit(characters, inn)
-
-
-def inn_interact(characters, inn):
-    #print('The travelers interact with the Inn in an interesting and satisfying way.')
     inn.event()
-    an = grammar.flatten('#animalsound#.')
-    print(an)
-
-
-def innkeeper(characters, inn):
-    print(f'\n{INDENT}"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
-    print(f'\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).')
-    print(f'\n{INDENT}"Grab yourselves a table, I\'ll be with you shortly to take orders..."')
+    print(grammar.flatten('#animalsound#.'))
+    inn.innkeeper(characters)
+    party_sit(characters, inn)
 
 
 def party_sit(characters, inn):

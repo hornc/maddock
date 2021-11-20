@@ -118,6 +118,7 @@ class Inn:
             c.possesions.remove(i)
 
     def interact(self, characters):
+        """ Initial interaction with the inn after characters pass the entrance."""
         crowd = choice(CROWD)
         
         painting = f' By the {self.feature()} hangs a painting of a {self.painting}.'
@@ -125,3 +126,11 @@ class Inn:
         print(painting)
         self.showmantel(characters)
         print(f'\n\nThe public room {crowd}.')
+
+    def innkeeper(self, characters):
+        output = grammar.flatten('#addressinnkeeper#')
+        print(output)
+        #print(f'\n{INDENT}"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.')
+        #print(f'\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some {choice(adjectives)} and worldly advice to impart (if the mood takes {inn.keeper.pro}).')
+        #print(f'\n{INDENT}"Grab yourselves a table, I\'ll be with you shortly to take orders..."')
+
