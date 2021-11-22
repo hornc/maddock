@@ -16,11 +16,13 @@ def rname(length=0):
 def interact(c1, c2, observer=None):
     """ Plays out an interaction between 2 Characters, and one optional observer."""
     #print('**DEBUG : INTERACT**')
-    kind = choice(['item', 'talk', 'generic'])
+    kind = choice(['item', 'talk', 'outfit', 'generic'])
     #print(f"It's a {kind} interaction.")
     if kind == 'talk':
         result = c1.interact_talk(c2)
-    if kind == 'item':
+    elif kind == 'outfit':
+        result = c1.interact_outfit(c2)
+    elif kind == 'item':
         result = c1.interact_item(c2)
     else:
         result = c1.interact(c2)
@@ -91,6 +93,19 @@ class Character:
         interaction = interaction.replace('((i2))', str(i2))
         print(interaction)
         return 1.5
+
+    def interact_outfit(self, other):
+        mood = choice([0.5, 1.5])
+        if mood == 0.5:
+            interaction = grammar.flatten('#outfitneg#')
+        else:
+            interaction = grammar.flatten('#outfitpos#')
+        interaction = interaction.replace('((C1))', self.dtitle)
+        interaction = interaction.replace('((C2))', other.dtitle)
+        interaction = interaction.replace('((C1outfit))', self.outfit)
+        interaction = interaction.replace('((C2outfit))', other.outfit)
+        print(interaction)
+        return mood
 
     def interact_talk(self, other):
         interaction = grammar.flatten('#talk#')

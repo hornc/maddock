@@ -174,6 +174,11 @@ rules = {
 
         'neutral': ['The #C2short# appears nonplussed.'],
 
+        # Outfit
+        'outfitneg': 'The #C1# insults the #C2#\'s #C2outfit#.',
+        'outfitpos': 'The #C1# compliments the #C2#\'s #C2outfit#. #outfitpos2#"',
+        'outfitpos2': ['', '#indent#"Your #C2outfit# is so much more #adjective# than my meager #C1outfit#!"\n\n'],
+
         # Witness
         'witness': ['The #C1# observes this interaction and #wreact#.', 'The #C1#, looks on in disgust.'],
         'wreact': ['is jealous', 'is amused', 'does not understand'],
