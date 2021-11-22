@@ -4,7 +4,7 @@ from string import ascii_uppercase as CAPS
 
 from maddock.grammar import descriptions, moods, grammar
 
-
+DISPOSITIONS = {0.5: 'negative', 1: 'neutral', 1.5: 'positive'}
 NEUTRAL = 0.5
 
 
@@ -15,9 +15,17 @@ def rname(length=0):
 
 def interact(c1, c2, observer=None):
     """ Plays out an interaction between 2 Characters, and one optional observer."""
-    mood = c1.interact(c2)
+    #print('**DEBUG : INTERACT**')
+    kind = choice(['item', 'talk', 'generic'])
+    #print(f"It's a {kind} interaction.")
+    if kind == 'talk':
+        result = c1.interact_talk(c2)
+    if kind == 'item':
+        result = c1.interact_item(c2)
+    else:
+        result = c1.interact(c2)
     if observer:
-        observer.witness(c1, c1, mood)
+        observer.witness(c1, c2, result)
     print('\n')
 
 
@@ -56,15 +64,50 @@ class Character:
     def interact(self, other):
         print('The', self.dtitle, ', interacts with the', other.dtitle, '.')
         mood = choice([0.5, 1, 1.5])
-        moods = {0.5: 'negative', 1: 'neutral', 1.5: 'positive'}
-        print('It is a', moods[mood], 'interaction.')
+        print('It is a', DISPOSITIONS[mood], 'interaction.')
         self.dispositions[other.title] *= mood
         other.dispositions[self.title] *= mood
         # print('***DEBUG DISPOSITIONS:***', self.dispositions)
         return mood
 
+    def interact_item(self, other):
+        i1 = bool(self.possesions) and choice(self.possesions)
+        i2 = bool(other.possesions) and choice(other.possesions)
+        if not i1:
+            interaction = grammar.flatten('#get#')
+        elif not i2:
+            interaction = grammar.flatten('#give#')
+        else:
+            interaction = grammar.flatten('#swap#')
+        if i2:
+            self.possesions.append(i2)
+            other.possesions.remove(i2)
+        if i1:
+            other.possesions.append(i1)
+            self.possesions.remove(i1)
+        interaction = interaction.replace('((C1))', self.dtitle)
+        interaction = interaction.replace('((C2))', other.dtitle)
+        interaction = interaction.replace('((i1))', str(i1))
+        interaction = interaction.replace('((i2))', str(i2))
+        print(interaction)
+        return 1.5
+
+    def interact_talk(self, other):
+        interaction = grammar.flatten('#talk#')
+        mood = choice([0.5, 1, 1.5])
+        responses = {0.5: '#talkneg#', 1: '#neutral#', 1.5: '#talkpos#'}
+        interaction += grammar.flatten(responses[mood])
+        interaction = interaction.replace('((C1))', self.dtitle)
+        interaction = interaction.replace('((C2))', other.dtitle)
+        interaction = interaction.replace('((C2short))', other.title)
+        interaction = interaction.replace('((interest))', self.interest)
+        print(interaction)
+        return mood
+
     def witness(self, a, b, mood):
-        print('The', self.dtitle, ', ', choice(['looks on in disgust', 'is jealous', 'is amused', 'does not understand']), '.')
+        response = grammar.flatten('#witness#')
+        response = response.replace('((C1))', self.dtitle)
+        print(response)
 
     def enemy(self, characters):
         avail = [(c, self.dispositions[c.title]) for c in characters if c != self]

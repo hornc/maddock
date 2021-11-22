@@ -57,9 +57,9 @@ rules = {
         
 
         # Inn interior
-        'innside': ['#inntro# #is# #innadj#.'],
+        'innside': ['#inntro# #inn_is# #innadj#.'],
         'inntro': ['The interior of XXX', ],
-        'is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
+        'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
 
         'innevent': ['#animalsound#', '#innevent#. Additionally, #innevent#', 'A patron spills a drink', 'A small fight breaks out in the corner',
@@ -165,4 +165,20 @@ rules = {
         'respinnk': ['#indent#"#respa#, #respb#..."', 'The suddenly, without a word, the innkeeper impatiently waves the #company# to a table.'],
         'respa': ['Sit down over there', 'Grab yourselves a table', 'Be seated', 'Get ye gone'],
         'respb': ['I\'ll be with you shortly to take orders', 'I\'ll send someone over to take your orders'],
+
+
+        # Character interactions
+        'talk': 'The #C1#, talks to the #C2#, about #interest#.',
+        'talkpos': ['The #C2short# listens attentively and responds with vigorous enthusiasm.' '#indent#"I have had a great curiosity about #interest# since the days of my youth, when I studied in #placename#. This is exceptionally enlightening!" effusively exudes the #C2short#.\n'],
+        'talkneg': ['The #C2short# looks exceedingly bored.', '#indent#"Really? You dare talk to me about #interest#?"',],
+
+        'neutral': ['The #C2short# appears nonplussed.'],
+
+        # Witness
+        'witness': ['The #C1# observes this interaction and #wreact#.', 'The #C1#, looks on in disgust.'],
+        'wreact': ['is jealous', 'is amused', 'does not understand'],
+
+        'swap': 'The ((C1)) swaps a ((i1)) for the ((C2))\'s, ((i2)).',
+        'give': 'The ((C1)) gives a ((i1)) to the ((C2)).',
+        'get': 'The ((C1)) is given a ((i2)) by the ((C2)).',
 }
