@@ -3,7 +3,7 @@ import re
 import tracery
 from tracery.modifiers import base_english
 
-from maddock import smallitems
+from maddock import rules as madrules
 
 with open('maddock/data/adjs.json') as f:
     adjectives = json.load(f)['adjs']
@@ -55,7 +55,7 @@ rules = {
 
     }
 
-rules = {**rules, **smallitems.rules}
+rules = {**rules, **madrules.rules}
 
 grammar = tracery.Grammar(rules)
 grammar.add_modifiers(base_english)
