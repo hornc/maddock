@@ -91,7 +91,7 @@ rules = {
                        'The inscription upon it is unfortunately obscured by what looks like stains of #fluid#',],
         'ldetail': ['', 'which Chekhov #obtained# #wtime# the #wfrom# #date#'],
         'innfamily': ['the innkeeper', 'the innkeeper\'s #closerelation#'],
-        'wstory': 'VVV\n#indent#"This #WEAPON# used to belong to my #wperson# #wname#."\n\n',
+        'wstory': '\n#indent#"This #WEAPON# used to belong to my #wperson# #wname#."\n\n',
         'wperson': ['#closerelation#','#closerelation#', '#closerole#',
                     '#wperson#\'s #wperson#',
                     '#wperson# who got it from their #wperson#',
@@ -130,9 +130,9 @@ rules = {
         'menunreason': ['Kitchen\'s closed', 'Cook\'s dead', 'We\'re all out of food, sorry', 'I don\'t think you lot\'ll have the stomach for our #compass# fare'],
         'menunresponse': 'The #company# look dissapointed, but order their drinks.',
         'menuyes': '#indent# #menuysays#\n #menuyresponse#', 
-        'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #distance# of these walls!"',],
+        'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #num# #distance# of these walls!"',],
         'menuyresponse': 'The #company# order food.',
-        'num': ['three', 'twenty', 'one hundered', 'four-hunnerd-an\' twen\'y summint', 'more than I can count'],
+        'num': ['three', 'twenty', 'one hundered', 'four-hunnerd-an\' twen\'y summint', 'more than I can count', 'some number of', 'many', 'a fair few', 'much more than #num#'],
         'distance': ['feet', 'leagues', 'miles', 'counties', 'spans',],
 
             #'Available #menusummary# are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.\n\n Once all orders are made, the #company# settles in to wait. Drinks may arrive, but the food takes time to prepare.',
@@ -177,7 +177,7 @@ rules = {
         # Outfit
         'outfitneg': 'The #C1# insults the #C2#\'s #C2outfit#.',
         'outfitpos': 'The #C1# compliments the #C2#\'s #C2outfit#. #outfitpos2#"',
-        'outfitpos2': ['', '#indent#"Your #C2outfit# is so much more #adjective# than my meager #C1outfit#!"\n\n'],
+        'outfitpos2': ['', '#indent#"Your #C2outfit# is so much more #adjective# than my meager #C1outfit#!" #says# the #C1title#.\n\n'],
 
         # Witness
         'witness': ['The #C1# observes this interaction and #wreact#.', 'The #C1#, looks on in disgust.'],

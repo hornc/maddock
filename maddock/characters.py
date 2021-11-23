@@ -90,6 +90,8 @@ class Character:
         if i1:
             other.possesions.append(i1)
             self.possesions.remove(i1)
+        if not i2:
+            i2 = 'consoling hug'
         interaction = self.interaction_replace(interaction, other)
         interaction = interaction.replace('((i1))', str(i1))
         interaction = interaction.replace('((i2))', str(i2))
