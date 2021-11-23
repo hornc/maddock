@@ -186,4 +186,9 @@ rules = {
         'swap': 'The ((C1)) swaps a ((i1)) for the ((C2))\'s, ((i2)).',
         'give': 'The ((C1)) gives a ((i1)) to the ((C2)).',
         'get': 'The ((C1)) is given a ((i2)) by the ((C2)).',
+
+        # Songs
+        'goodsong': 'The ((C2)) listens, enraputured by the ((C1title))\'s #adjective# voice.',
+        'badsong': '#indent#"Cease your #adjective# caterwauling!", #says# the ((C2)), interupting the ((C1title)) rudely.',
+
 }

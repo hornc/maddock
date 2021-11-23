@@ -3,6 +3,7 @@ from random import choice, randrange
 from string import ascii_uppercase as CAPS
 
 from maddock.grammar import descriptions, moods, grammar
+from maddock.song import getsong
 
 DISPOSITIONS = {0.5: 'negative', 1: 'neutral', 1.5: 'positive'}
 NEUTRAL = 0.5
@@ -16,7 +17,7 @@ def rname(length=0):
 def interact(c1, c2, observer=None):
     """ Plays out an interaction between 2 Characters, and one optional observer."""
     #print('**DEBUG : INTERACT**')
-    kind = choice(['item', 'talk', 'outfit', 'generic'])
+    kind = choice(['item', 'talk', 'song', 'outfit', 'generic'])
     #print(f"It's a {kind} interaction.")
     if kind == 'talk':
         result = c1.interact_talk(c2)
@@ -24,6 +25,8 @@ def interact(c1, c2, observer=None):
         result = c1.interact_outfit(c2)
     elif kind == 'item':
         result = c1.interact_item(c2)
+    elif kind == 'song':
+        result = c1.interact_song(c2)
     else:
         result = c1.interact(c2)
     if observer:
@@ -87,8 +90,7 @@ class Character:
         if i1:
             other.possesions.append(i1)
             self.possesions.remove(i1)
-        interaction = interaction.replace('((C1))', self.dtitle)
-        interaction = interaction.replace('((C2))', other.dtitle)
+        interaction = self.interaction_replace(interaction, other)
         interaction = interaction.replace('((i1))', str(i1))
         interaction = interaction.replace('((i2))', str(i2))
         print(interaction)
@@ -100,11 +102,21 @@ class Character:
             interaction = grammar.flatten('#outfitneg#')
         else:
             interaction = grammar.flatten('#outfitpos#')
-        interaction = interaction.replace('((C1))', self.dtitle)
-        interaction = interaction.replace('((C2))', other.dtitle)
-        interaction = interaction.replace('((C1outfit))', self.outfit)
-        interaction = interaction.replace('((C2outfit))', other.outfit)
+        interaction = self.interaction_replace(interaction, other)
         print(interaction)
+        return mood
+
+    def interact_song(self, other):
+        mood = choice([0.5, 1.5])
+        song = getsong(10)
+        if mood == 1.5:
+            response = grammar.flatten('#goodsong#')
+        else:
+            song = song[:20] + '...'
+            response = grammar.flatten('#badsong#')
+        print(f"The {self.dtitle}, begins to sing:\n\n{song}")
+        response = self.interaction_replace(response, other)
+        print(response)
         return mood
 
     def interact_talk(self, other):
@@ -112,12 +124,21 @@ class Character:
         mood = choice([0.5, 1, 1.5])
         responses = {0.5: '#talkneg#', 1: '#neutral#', 1.5: '#talkpos#'}
         interaction += grammar.flatten(responses[mood])
-        interaction = interaction.replace('((C1))', self.dtitle)
-        interaction = interaction.replace('((C2))', other.dtitle)
-        interaction = interaction.replace('((C2short))', other.title)
-        interaction = interaction.replace('((interest))', self.interest)
+        interaction = self.interaction_replace(interaction, other)
         print(interaction)
         return mood
+
+    def interaction_replace(self, s, other):
+        """Takes an interaction string and replaces character specific subs."""
+        s = s.replace('((C1))', self.dtitle)
+        s = s.replace('((C2))', other.dtitle)
+        s = s.replace('((C1title))', self.title)
+        s = s.replace('((C2short))', other.title)
+        s = s.replace('((C2title))', other.title)
+        s = s.replace('((interest))', self.interest)
+        s = s.replace('((C1outfit))', self.outfit)
+        s = s.replace('((C2outfit))', other.outfit)
+        return s
 
     def witness(self, a, b, mood):
         response = grammar.flatten('#witness#')
