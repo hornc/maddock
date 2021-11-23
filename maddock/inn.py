@@ -60,7 +60,7 @@ class Keeper:
 class Inn:
     def __init__(self, characters):
         self.characters = characters
-        self.mantel = ['one golden sovereign', 'onion', 'small bust of the poet Cinna']
+        self.mantel = ['one golden sovereign', 'small bust of the poet Cinna', 'apple', 'maggot (Rhagoletis pomonella) writhing spasmodically outside the soft flesh of its preferred substrat,']
         self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
         self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'woman', 'man'])
         self.roll()

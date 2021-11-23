@@ -132,7 +132,7 @@ rules = {
         'menuyes': '#indent# #menuysays#\n #menuyresponse#', 
         'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #num# #distance# of these walls!"',],
         'menuyresponse': 'The #company# order food.',
-        'num': ['three', 'twenty', 'one hundered', 'four-hunnerd-an\' twen\'y summint', 'more than I can count', 'some number of', 'many', 'a fair few', 'much more than #num#'],
+        'num': ['three', 'one score', 'five score', 'three score and six', 'more than I can count', 'some number of', 'many', 'a fair few', 'much more than #num#'],
         'distance': ['feet', 'leagues', 'miles', 'counties', 'spans',],
 
             #'Available #menusummary# are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.\n\n Once all orders are made, the #company# settles in to wait. Drinks may arrive, but the food takes time to prepare.',
