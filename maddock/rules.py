@@ -6,7 +6,7 @@ with open('maddock/data/towns.txt', 'r') as f:
 rules = {
         'placename': towns,
         'indent': '\n\n' + '&nbsp;' * 6,
-        'smallitem': ['hairbush', 'comb', '#solid# fob', 'snuff-box', '#solid# snuff-box #filled#', '#container# #filled#',
+        'smallitem': ['hairbush', 'comb', '#solid# fob', '#solid# snuff-box', '#solid# snuff-box #filled#', '#container# #filled#',
             '#threadform# of #color# #thread#', '#solid# mirror', 'small coin', '#color# glass bead', 'small #solid# disc', 'hair pin', 'pocket knife with a #solid# handle',
             'reliquary housing fragments of the #side# #bone# of #saint#',
             ],
@@ -160,7 +160,7 @@ rules = {
         'puddleadj1': ['', '#puddleadj#', '#puddleadj#', '#puddleadj#', '#puddleadj# and #puddleadj#'],
         'puddleadj': ['slowly spreading', 'dried', 'deliberately spilled', 'acidentally spilled', 'fresh', 'stale', 'coagulating', 'effervescing', 'quiescent', 'stagnant', 'flowing'],
         'fluid': ['#fluid# and #fluid#', '#fluid# mixed with a tiny amount of #fluid#', 'piss', 'shit', 'vomit', 'ale', 'wine', 'gin', 'purl', 'mead', 'honey', 'blood', 'ichor', 'rubbing alcohol', 'rainwater', 'seawater', 'slops', 'stew', 'fermenting fruit pulp', 'juice',
-                  'lavender scented unguent', 'roser-water', 'aqua vitae', 'aqua regia', 'formic acid', 'mercury', ],
+                  'lavender scented unguent', 'rose-water', 'aqua vitae', 'aqua regia', 'formic acid', 'mercury', ],
 
 
         'nexttale': '\n\nIn order to entertain themselves, #ntsub#, the #company# decide to pass the time telling stories, and chose from their number one person to tell this evening\'s tale...',
