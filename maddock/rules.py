@@ -67,7 +67,7 @@ rules = {
         'innevent': ['#animalsound#', '#innevent#. #innevent#', 'A patron spills #adjective.a# drink #adverb#', 'A small fight breaks out over by the #innloc#',
                 'A #innanimal#, sitting under a table, gives itself #adjective.a# scratch #andext#',
                 'The #staff# calls for #callthing#',
-                'The #staff# is called away', '#someone# storms off', '#someone# is excused',
+                'The #staff# is called away', '#someone# storms off', '#someone# is excused #adverb#',
                 'The #company# remark upon #remarkable#',
                 '#someone.capitalize# #puddleaction# #puddle.a#',
                 '#indent#"Barkeep! What\'s in this food? It tastes like #fluid#!" someone #says# loudly. #react#',
@@ -173,7 +173,7 @@ rules = {
         'descinnk': '\nThe innkeeper, #ik#, has a #ikpersonality# personality, and some #inndchoice# #inndimpart# to impart.',
         'inndimpart': ['advice', 'news', 'rumours', 'moralising', 'complaints'],
         'inndchoice': ['choice adjectives and', '#adjective#', 'and #inndchoice#', 'worldly', '#adjective# #adjective#'],
-        'respinnk': ['#indent#"#respa#, #respb#..."', 'The suddenly, without a word, the innkeeper impatiently waves the #company# to a table.'],
+        'respinnk': ['#indent#"#respa#, #respb#..."', 'Then suddenly, without a word, the innkeeper impatiently waves the #company# to a table.'],
         'respa': ['Sit down over there', 'Grab yourselves a table', 'Be seated', 'Get ye gone'],
         'respb': ['I\'ll be with you shortly to take orders', 'I\'ll send someone over to take your orders'],
 

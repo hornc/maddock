@@ -122,6 +122,13 @@ class Inn:
         print(mantel)
         c = choice(characters)
         if not c.possesions:
+            take = True
+        elif not self.mantel:
+            take = False
+        else:
+            take = choice([True, False])
+
+        if take:
             i = choice(self.mantel)
             print(f'The {c.title}, when no one is looking, takes the {i} from the mantel and pockets it.')
             c.possesions.append(i)
