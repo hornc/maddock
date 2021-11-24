@@ -53,14 +53,15 @@ CROWD = ['is totally empty', 'is almost empty', 'is not very packed', 'is modera
 class Keeper:
     def __init__(self):
         self.name = choice([rname(), f'{rname()} the {rname()}', f'{rname()} of {rname()}', f'{rname()}, {rname()} of {rname()}'])
-        self.pro = choice(['them', 'her', 'him'])
+        self.pro = choice(['them', 'him', 'hir', 'hine', 'hie'])
         self.personality = choice(moods)
 
 
 class Inn:
     def __init__(self, characters):
         self.characters = characters
-        self.mantel = ['one golden sovereign', 'small bust of the poet Cinna', 'apple', 'maggot (Rhagoletis pomonella) writhing spasmodically outside the soft flesh of its preferred substrat,']
+        self.teller = None
+        self.mantel = ['one golden sovereign', 'small bust of the poet Cinna', 'apple', 'maggot (Rhagoletis pomonella) writhing spasmodically outside the soft flesh of its preferred substrate']
         self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
         self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'woman', 'man'])
         self.roll()
@@ -86,14 +87,24 @@ class Inn:
 
     def feature(self):
         """Returns a random feature of the inn."""
-        features = ['fireplace', 'door', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug']
-        return choice(features)
+        return grammar.flatten('#innloc#')
 
     def event(self):
+        chars = self.characters.copy()
+        chars.remove(self.teller)
+        if not chars:
+            return
         e = grammar.flatten('#innevent.capitalize#.')
-        c = choice(self.characters)
-        e = e.replace('((C1))', c.dtitle)
-        e = e.replace('((interest))', c.interest)
+        c1 = choice(chars)
+        chars.remove(c1)
+        if chars:
+            c2 = choice(chars)
+            e = e.replace('((C2))', c2.dtitle)
+            e = e.replace('((C2title))', c2.title)
+        e = e.replace('((C1))', c1.dtitle)
+        e = e.replace('((C1title))', c1.title)
+        e = e.replace('((interest))', c1.interest)
+        e = e.replace('((teller_title))', self.teller.title)
         print(e)
 
     def staff(self):
@@ -132,6 +143,11 @@ class Inn:
         print(f'\n\nThe public room {crowd}.')
 
     def innkeeper(self, characters):
-        output = grammar.flatten('#addressinnkeeper#')
-        print(output)
+        out = grammar.flatten('#addressinnkeeper#')
+        c1 = choice(characters)
+        out = out.replace('((C1))', c1.dtitle)
+        out = out.replace('((ik))', self.keeper.name)
+        out = out.replace('((ikpersonality))', self.keeper.personality)
+        out = out.replace('((ikpro))', self.keeper.pro)
+        print(out)
 

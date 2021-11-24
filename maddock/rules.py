@@ -62,15 +62,15 @@ rules = {
         'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
 
-        'innevent': ['#animalsound#', '#innevent#. Additionally, #innevent#', 'A patron spills a drink', 'A small fight breaks out in the corner',
+        'innevent': ['#animalsound#', '#innevent#. #innevent#', 'A patron spills #adjective.a# drink', 'A small fight breaks out over by the #innloc#',
                 'A dog, sitting under a table, gives itself #adjective.a# scratch #andext#',
                 'The #staff# calls for #callthing#',
                 'The #staff# is called away', '#someone# storms off', '#someone# is excused',
                 'The #company# remark upon #remarkable#',
                 '#someone.capitalize# #puddleaction# #puddle.a#',
-                '#indent#"Barkeep! What\'s in this food? It tastes like #fluid#!" someone #says# loudly #react#',
+                '#indent#"Barkeep! What\'s in this food? It tastes like #fluid#!" someone #says# loudly. #react#',
                 'The #C1#, starts talking about their interest in #interest#. #react#',
-                #Someone may be called away, or storm off, or otherwise be excused.
+                '#interrupt# #int_response#', 
                 ],
         'react': ['', '. #someone.capitalize# #react1#', '#innevent# in response', '. #cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
         'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
@@ -80,6 +80,13 @@ rules = {
         'staff': ['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
         'vinter', 'lounge-operative'],
         'remarkable': ['their situation', 'the weather', 'the journey so far', 'their surroundings', '#someone#', '#someone#\'s manner'],
+
+        # Interrupt the teller
+        'interrupt': ['#indent#"That\'s not how it happened at all!" interrupts the #C1#.',
+                      '#indent#"But... that\'s not how I remember it..." #says# the #C1#.',],
+
+        'int_response': ['The #teller_title# glares witheringly at the #C1title#, indignant at the #adjective# inerruption, then resumes the tale.',
+                         '#indent#"Shush!" #says# the #C2#, "Let the #teller_title# finish the tale!"'],
 
 
         # Weapon
@@ -125,7 +132,7 @@ rules = {
         'menu': 'Presently the #foodserver# #moves# over to take the #company#\'s orders. #takeorder#',
         'foodserver': ['inkeeper', '#staff#'],
         'takeorder': ['#menuyes#', '#menuno#'],
-        'menuno': ['#indent# #menunsays#\n #menunresponse#',],
+        'menuno': ['#menunsays#\n\n #menunresponse#\n\n',],
         'menunsays': ['#indent# "#menunreason#, you\'ll just have to order drinks. What\'ll it be?"\n',],
         'menunreason': ['Kitchen\'s closed', 'Cook\'s dead', 'We\'re all out of food, sorry', 'I don\'t think you lot\'ll have the stomach for our #compass# fare'],
         'menunresponse': 'The #company# look dissapointed, but order their drinks.',
@@ -157,9 +164,10 @@ rules = {
         'ntsub': ['as is their custom on this journey', 'as they have done every evening previously', 'as tradition dictates', 'since no other alternatives are on offer', 'because the night is young'],
 
         # Addressing the Innkeeper
+        'innloc': ['corner', 'fireplace', 'door', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug'],
         'addressinnkeeper': '#addrik# #descinnk# #respinnk#',
-        'addrik': '#indent#"Oh look, over there by the {inn.feature()}; there is the innkeeper, looking rather {inn.keeper.personality}. Let us talk to {inn.keeper.pro}!" says the {choice(characters).dtitle}.',
-        'descinnk': '\nThe innkeeper, {inn.keeper.name}, has a {inn.keeper.personality} personality, and some #inndchoice# #inndimpart# to impart.',
+        'addrik': '#indent#"Oh look, over there by the #innloc#; there is the innkeeper, looking rather #ikpersonality#. Let us talk to #ikpro#!" #says# the #C1#.',
+        'descinnk': '\nThe innkeeper, #ik#, has a #ikpersonality# personality, and some #inndchoice# #inndimpart# to impart.',
         'inndimpart': ['advice', 'news', 'rumours', 'moralising', 'complaints'],
         'inndchoice': ['choice adjectives and', '#adjective#', 'and #inndchoice#', 'worldly', '#adjective# #adjective#'],
         'respinnk': ['#indent#"#respa#, #respb#..."', 'The suddenly, without a word, the innkeeper impatiently waves the #company# to a table.'],
@@ -175,15 +183,15 @@ rules = {
         'neutral': ['The #C2short# appears nonplussed.'],
 
         # Outfit
-        'outfitneg': 'The #C1# insults the #C2#\'s #C2outfit#.',
-        'outfitpos': 'The #C1# compliments the #C2#\'s #C2outfit#. #outfitpos2#"',
+        'outfitneg': 'The #C1#, insults the #C2#\'s #C2outfit#.',
+        'outfitpos': 'The #C1#, compliments the #C2#\'s #C2outfit#. #outfitpos2#',
         'outfitpos2': ['', '#indent#"Your #C2outfit# is so much more #adjective# than my meager #C1outfit#!" #says# the #C1title#.\n\n'],
 
         # Witness
         'witness': ['The #C1# observes this interaction and #wreact#.', 'The #C1#, looks on in disgust.'],
         'wreact': ['is jealous', 'is amused', 'does not understand'],
 
-        'swap': 'The ((C1)) swaps a ((i1)) for the ((C2))\'s, ((i2)).',
+        'swap': 'The ((C1)), and the ((C2)), set down to the business of trading. The ((C1title)) swaps a ((i1)) for the ((C2title))\'s, ((i2)).',
         'give': 'The ((C1)) gives a ((i1)) to the ((C2)).',
         'get': 'The ((C1)) is given a ((i2)) by the ((C2)).',
 

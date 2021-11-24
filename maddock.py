@@ -96,8 +96,6 @@ def the_inn(characters, inn):
     first = choice(characters)
     print(first.enters(inn))
     print(grammar.flatten('#react#'))
-    #print('The %s, reacts {reaction}.' % (choice(characters).dtitle), '{supplementary reaction from a third individual or the group}.')
-    #print('\nInside, the inn %s' % inn.description)
     inn.interact(characters)
     for i in range(random.randint(1, 7)):
          inn.event()
@@ -119,6 +117,7 @@ def party_sit(characters, inn):
 
 
 def tell_tale(inn, teller, characters):
+    inn.teller = teller
     travel(characters, inn)
     the_inn(characters, inn)
 
