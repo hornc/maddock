@@ -71,7 +71,7 @@ def travel(characters, inn):
     if DEBUG:
         print(TRAVEL)
     print("%s %s travellers make their way by %s towards *%s* Inn." % (to_words[len(characters)].capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
-    print("It is %s.\n" % (inn.weather.desc()))
+    print("The weather is %s.\n" % (inn.weather.desc()))
     print(group(characters))
     print('\n')
     interactions(characters, inn)

@@ -35,7 +35,7 @@ def interact(c1, c2, observer=None):
 
 
 class Character:
-    POSSESIVES = ['her', 'his', 'their']
+    POSSESIVES = ['her', 'his', 'their', 'hir']
 
     def __init__(self, occupation):
         self.title = f'**{occupation}**'
@@ -49,7 +49,7 @@ class Character:
         self.possesions = []
         for i in range(randrange(0, 4)):
             self.possesions.append(grammar.flatten('#smallitem#'))
-        print('DEBUG', self.possesions)
+        #print('DEBUG', self.possesions)
         self.dispositions = {}
 
     def desc(self):

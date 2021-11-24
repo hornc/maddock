@@ -61,7 +61,7 @@ class Inn:
     def __init__(self, characters):
         self.characters = characters
         self.teller = None
-        self.mantel = ['one golden sovereign', 'small bust of the poet Cinna', 'apple', 'maggot (Rhagoletis pomonella) writhing spasmodically outside the soft flesh of its preferred substrate']
+        self.mantel = ['golden sovereign', 'small bust of the poet Cinna', 'apple', 'maggot (Rhagoletis pomonella) writhing spasmodically outside the soft flesh of its preferred substrate']
         self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
         self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'woman', 'man'])
         self.roll()

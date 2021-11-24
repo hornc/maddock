@@ -50,7 +50,7 @@ rules = {
         'door': ['rough hewn', 'glass paned', 'sturdy', 'stout', 'ramshackle', 'reinforced', 'suspisiously missing', 'negligently ajar'],
         'hall': ['The #C1#\'s #C1outfit# catches on a #snag#',
                  'The #C1# stops briefly to admire their #C1outfit# in a mirror placed in the entranceway',
-                 'There are #adjective# #smellsound# emanating from the #innloc#. #CR# #says# #cleverthing#',
+                 'There are #adjective# #smellsound# emanating from the #innloc#. #C1# #says# #cleverthing#',
                  'The #company# notice #adjective# marks upon the walls',],
         'smellsound': ['smells', 'sounds'],
         'snag': ['hook', 'exposed nail', 'splintered floor-board', 'coat-stand', 'umbrella, conviniently made available for guests who may have neglected to bring their own'],
@@ -64,8 +64,8 @@ rules = {
         'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
 
-        'innevent': ['#animalsound#', '#innevent#. #innevent#', 'A patron spills #adjective.a# drink', 'A small fight breaks out over by the #innloc#',
-                'A dog, sitting under a table, gives itself #adjective.a# scratch #andext#',
+        'innevent': ['#animalsound#', '#innevent#. #innevent#', 'A patron spills #adjective.a# drink #adverb#', 'A small fight breaks out over by the #innloc#',
+                'A #innanimal#, sitting under a table, gives itself #adjective.a# scratch #andext#',
                 'The #staff# calls for #callthing#',
                 'The #staff# is called away', '#someone# storms off', '#someone# is excused',
                 'The #company# remark upon #remarkable#',
@@ -74,7 +74,7 @@ rules = {
                 'The #C1#, starts talking about their interest in #interest#. #react#',
                 '#interrupt# #int_response#', 
                 ],
-        'react': ['', '. #someone.capitalize# #react1#', '#innevent# in response', '. #cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
+        'react': ['', '. #someone.capitalize# #react1#', '. #cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
         'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
         'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper'],
         'callthing': ['silence', 'more beer', 'more wine', 'a mop', 'some food', 'attention', 'assistance', 'last drink orders', 'someone to sing a song', 'their mother', 'a shoulder to cry on'],
@@ -117,7 +117,7 @@ rules = {
         'wname': ['whose name was Chekhov', 'whose name is unfortunately long forgotten',
                   'who is commonly known, in #compass# parts at least, as Chekhov',
                   'who went by the name of "Chekhov"'],
-        'madj': ['tragic', 'joyous', 'victorious', 'horrendous', 'famed', 'fabled', 'renowned', 'last', 'first', 'disasterous', 'ill-fated', 'botched', 'bungled', 'decisive', 'virtuous'],
+        'madj': ['tragic', 'joyous', 'victorious', 'horrendous', 'famed', 'fabled', 'renowned', 'last', '1irst', 'disasterous', 'ill-fated', 'botched', 'bungled', 'decisive', 'virtuous'],
         'date': ['', ', which occurred in the year of the #dateevent#'],
         'dateevent': ['#adjective# #animal#', "failed #crop# harvest", "bountiful #crop# harvest", "plague of #animal.s#", '#compass# drought'],
         'crop': ['wheat', 'grape', 'maize', 'barley', 'turnip', 'potato', 'chickweed', ''],
@@ -127,8 +127,9 @@ rules = {
         'andistance': ['Off in the distance,', 'Nearby', 'Seemingly emanating from an upstairs room,',],
         'andoes': ['makes #adjective.a# sound #andext#', 'is heard by the #company#', 'makes its presence felt #andext#'],
         'andext': ['', 'as if it were #adjective#',],
-        'animal': ['cat', 'dog', 'parrot', 'crow', 'raven', 'owl', 'falcon', 'hawk', 'thrush', 'dormouse', 'rat', 'mouse', 'vole', 'cockroach', 'deathwatch beetle',
-        'dung beetle', 'fly', 'lac beetle', 'mantis', 'moth', 'horse', 'donkey', 'mule', 'cow', 'ox', 'sheep', 'lamb', ],
+        'animal': ['#innanimal#', '#outanimal#'],
+        'innanimal': ['cat', 'dog', 'fly', 'parrot', 'crow', 'raven', 'owl', 'falcon', 'hawk', 'thrush', 'dormouse', 'rat', 'mouse', 'vole', 'cockroach', 'deathwatch beetle'],
+        'outanimal': ['dung beetle', 'fly', 'lac beetle', 'mantis', 'moth', 'horse', 'donkey', 'mule', 'cow', 'ox', 'sheep', 'lamb', ],
 
 # Presently the Innkeeper (or possibly another staff member such as the vinter or pot-scrubber) undulates over to take their orders. Available impressive offerings are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty. Once all orders are made, the group settles in to wait. Drinks may arrive, but the food takes time to prepare.
         'menu': 'Presently the #foodserver# #moves# over to take the #company#\'s orders. #takeorder#',
@@ -190,15 +191,18 @@ rules = {
         'outfitpos2': ['', '#indent#"Your #C2outfit# is so much more #adjective# than my meager #C1outfit#!" #says# the #C1title#.\n\n'],
 
         # Witness
-        'witness': ['The #C1# observes this interaction and #wreact#.', 'The #C1#, looks on in disgust.'],
+        'witness': ['The #C1# observes this interaction and #wreact#.', 'The #C1#, #observes# in #obsadj#.'],
         'wreact': ['is jealous', 'is amused', 'does not understand'],
+        'observes': ['looks on', 'observes', 'witnesses', 'bears witness', 'eavesdrops',],
+        'obsadj': ['disgust', 'sympathy', 'resignation', 'confusion', 'solidarity', 'anger', 'despair', 'amusement', 'barely contained #adjective# rage', 'abject jealously', ],
 
         'swap': 'The ((C1)), and the ((C2)), set down to the business of trading. The ((C1title)) swaps a ((i1)) for the ((C2title))\'s, ((i2)).',
         'give': 'The ((C1)) gives a ((i1)) to the ((C2)).',
         'get': 'The ((C1)) is given a ((i2)) by the ((C2)).',
 
         # Songs
-        'goodsong': 'The ((C2)) listens, enraputured by the ((C1title))\'s #adjective# voice.',
-        'badsong': '#indent#"Cease your #adjective# caterwauling!", #says# the ((C2)), interupting the ((C1title)) rudely.',
+        'goodsong': 'The ((C2)) listens #adverb#, enraputured by the ((C1title))\'s #adjective# voice.',
+        'badsong': '#indent#"Cease your #adjective# #noise#!", #says# the ((C2)), interupting the ((C1title)) rudely.',
+        'noise': ['caterwauling', 'noise', 'mewling', 'banshee-screeching', 'howling', 'drivel', 'racket'],
 
 }
