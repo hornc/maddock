@@ -28,7 +28,9 @@ rules = {
 
 
         # Item actions
-        'itemaction': ['fidgets with', 'nervously clutches', '#adverb# brandishes', 'is preocupied with', 'idly tosses in the air', 'chews distractedly on'],
+        'itemaction': ['#adverb# fidgets with', 'nervously clutches', '#adverb# brandishes', 'is preocupied with', '#adverb# tosses in the air', '#chews# #adverb# on'],
+        'itemadv': ['idly', 'nervously', 'distractedly', '#adverb#'],
+        'chews': ['chews', 'nibbles', 'sucks',],
 
         # Character Interests
         'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', '#adjective# psycho-geography', 'French literature', 'the health problems of others'],

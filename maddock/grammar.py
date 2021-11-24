@@ -8,6 +8,8 @@ from maddock import rules as madrules
 with open('maddock/data/adjs.json') as f:
     adjectives = json.load(f)['adjs']
 
+with open('maddock/data/adverbs.json') as f:
+    adverbs = json.load(f)['adverbs']
 
 with open('maddock/data/occupations.json', 'r') as f:
         occupations = json.load(f)['occupations']
@@ -37,6 +39,7 @@ my_mods = {'wspace': wspace}
 
 rules = {
     'adjective': adjectives,
+    'adverb': adverbs,
     'epithet': '#epithet1.wspace#',
     'epithet1': '#mood# #join# #human_desc#',
     'mood': ['#mood1#', '#mood1# #join# #mood1#'],
