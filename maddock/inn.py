@@ -53,7 +53,7 @@ CROWD = ['is totally empty', 'is almost empty', 'is not very packed', 'is modera
 class Keeper:
     def __init__(self):
         self.name = choice([rname(), f'{rname()} the {rname()}', f'{rname()} of {rname()}', f'{rname()}, {rname()} of {rname()}'])
-        self.pro = choice(['them', 'him', 'hir', 'hine', 'hie'])
+        self.pro = choice(['them', 'him', 'hir',])
         self.personality = choice(moods)
 
 
