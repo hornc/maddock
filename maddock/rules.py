@@ -50,7 +50,7 @@ rules = {
         'door': ['rough hewn', 'glass paned', 'sturdy', 'stout', 'ramshackle', 'reinforced', 'suspisiously missing', 'negligently ajar'],
         'hall': ['The #C1#\'s #C1outfit# catches on a #snag#',
                  'The #C1# stops briefly to admire their #C1outfit# in a mirror placed in the entranceway',
-                 'There are #adjective# #smellsound# emanating from the #innloc#. #C1# #says# #cleverthing#',
+                 'There are #adjective# #smellsound# emanating from the #innloc#. The #C1# #says# #cleverthing#',
                  'The #company# notice #adjective# marks upon the walls',],
         'smellsound': ['smells', 'sounds'],
         'snag': ['hook', 'exposed nail', 'splintered floor-board', 'coat-stand', 'umbrella, conviniently made available for guests who may have neglected to bring their own'],
@@ -204,5 +204,9 @@ rules = {
         'goodsong': 'The ((C2)) listens #adverb#, enraputured by the ((C1title))\'s #adjective# voice.',
         'badsong': '#indent#"Cease your #adjective# #noise#!", #says# the ((C2)), interupting the ((C1title)) rudely.',
         'noise': ['caterwauling', 'noise', 'mewling', 'banshee-screeching', 'howling', 'drivel', 'racket'],
+
+        # Challenge the Teller
+        'challenge': '#indent#"Oh no, not the #C1# again!" #says# the #C2#, "Let\'s hear the #C3#, instead!" #chagree#',
+        'chagree': 'After some #adjective# discussion and bickering, the #company# agree #adverb# to hear the #C3#, over the #C1#.\n',
 
 }

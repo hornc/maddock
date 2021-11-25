@@ -123,9 +123,12 @@ def tell_tale(inn, teller, characters):
 
     next_teller = teller.friend(characters)
     if next_teller:
-        inn.roll()
         next_teller, disp = next_teller
-        print(f"* The current storyteller ({teller.title}) chooses the {next_teller.title} ({disp}) as the next storyteller.\n")
+        print(f"The {next_teller.title} stands up to be the next storyteller.\n")
+        if next_teller == inn.previous_teller:
+            next_teller = challenge_teller(inn, teller, next_teller, characters)
+        inn.roll()
+
         removed = next_teller.enemy(characters)
         characters.remove(removed[0])
         next_teller.tales += 1
@@ -137,7 +140,28 @@ def tell_tale(inn, teller, characters):
             print(f"* the teller's friend is {friend[0].title} ({friend[1]}).\n")
     else:
         next_teller = None
+    inn.previous_teller = teller
     return (next_teller, characters)
+
+
+def challenge_teller(inn, teller, reject, characters):
+    chars = characters.copy()
+    chars.remove(teller)
+    chars.remove(inn.previous_teller)
+    c = choice(chars)
+    t = choice(chars)
+    response = grammar.flatten('#challenge#')
+    if c == t:
+        # TODO: tidy this hack!
+        response = response.replace('After some', '"Oh, that\'s me!" exclaims the ((C2title)) in surprise. After some')
+    response = response.replace('((C1title))', reject.title)
+    response = response.replace('((C1))', reject.dtitle)
+    response = response.replace('((C2))', c.dtitle)
+    response = response.replace('((C2title))', c.title)
+    response = response.replace('((C3))', t.dtitle)
+    print(response)
+    return t
+
 
 
 if __name__ == '__main__':
