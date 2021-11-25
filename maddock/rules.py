@@ -117,7 +117,7 @@ rules = {
         'wname': ['whose name was Chekhov', 'whose name is unfortunately long forgotten',
                   'who is commonly known, in #compass# parts at least, as Chekhov',
                   'who went by the name of "Chekhov"'],
-        'madj': ['tragic', 'joyous', 'victorious', 'horrendous', 'famed', 'fabled', 'renowned', 'last', '1irst', 'disasterous', 'ill-fated', 'botched', 'bungled', 'decisive', 'virtuous'],
+        'madj': ['tragic', 'joyous', 'victorious', 'horrendous', 'famed', 'fabled', 'renowned', 'last', 'first', 'disasterous', 'ill-fated', 'botched', 'bungled', 'decisive', 'virtuous'],
         'date': ['', ', which occurred in the year of the #dateevent#'],
         'dateevent': ['#adjective# #animal#', "failed #crop# harvest", "bountiful #crop# harvest", "plague of #animal.s#", '#compass# drought'],
         'crop': ['wheat', 'grape', 'maize', 'barley', 'turnip', 'potato', 'chickweed', ''],
