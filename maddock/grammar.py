@@ -22,6 +22,9 @@ with open('maddock/data/moods.json', 'r') as f:
 with open('maddock/data/descriptions.json', 'r') as f:
         descriptions = json.load(f)['descriptions']
 
+with open('maddock/data/ending.txt', 'r') as f:
+        ending = f.read()
+
 joins = ['', 'yet', 'but', 'and', 'but not so', 'nonetheless', 'and arguably', '-cum-', ]
 
 firsts = ['First', 'In the lead', 'At the fore', 'Heading the group', 'Taking the initial position', 'At the forefront of the party', 'Leading, ', 'In first position', ]
@@ -55,7 +58,7 @@ rules = {
     'tverb': ['is', 'comes', 'travels', 'goes', 'passes', 'moves', 'proceeds', 'processes', 'perambulates', 'approaches', ],
     'tline': ['line', 'sequence', 'procession', 'order', 'file', 'their #tline#', 'this #adjective# #tline#', 'the group' ],
     'tadj': ['closely', 'immediately', 'subsequently', 'stoically', 'reservedly', 'conscientiously', 'hopefully', 'doggedly', 'spasmodically', 'soon after', ],
-
+    'ending': ending,
     }
 
 rules = {**rules, **madrules.rules}

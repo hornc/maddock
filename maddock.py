@@ -54,7 +54,7 @@ trav_adj = ['weary', 'intrepid', 'lusty', 'brave', 'foolhardy', 'optimistic', 'e
 method = ['foot', 'horse', 'carriage', 'train', 'barge', 'sea', 'ocean going vessel', 'coach', 'camel', 'mule']
 to_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
             'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twenty-one',
-            'twenty-two', 'twenty-three', 'twenty-four']
+            'twenty-two', 'twenty-three', 'twenty-four', 'one score and five']
 ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ', 'Seventh ', 'Eighth ', 'Ninth ', 'Tenth ', 'Eleventh', 'Twelfth ', 'Thirteenth ']
 
 
@@ -70,7 +70,7 @@ def group(characters):
 def travel(characters, inn):
     if DEBUG:
         print(TRAVEL)
-    print("%s %s travellers make their way by %s towards *%s* Inn." % (to_words[len(characters)].capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
+    print("%s %s travellers make their way by %s towards *%s* Inn." % (to_words[len(characters) + 1].capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
     print("The weather is %s.\n" % (inn.weather.desc()))
     print(group(characters))
     print('\n')
@@ -184,4 +184,5 @@ if __name__ == '__main__':
         teller, characters = tell_tale(inn, teller, characters)
 
     print('\n\n ... RESOLUTION for the final storyteller: the %s!' % last.dtitle)
+    print(grammar.flatten('#ending#'))
 
