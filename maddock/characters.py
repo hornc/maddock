@@ -114,7 +114,7 @@ class Character:
         if mood == 1.5:
             response = grammar.flatten('#goodsong#')
         else:
-            song = song[:20] + '...'
+            song = song[:60] + '...'
             response = grammar.flatten('#badsong#')
         print(f"The {self.dtitle}, begins to sing:\n\n{song}")
         response = self.interaction_replace(response, other)

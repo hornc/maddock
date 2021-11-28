@@ -33,7 +33,8 @@ rules = {
         'chews': ['chews', 'nibbles', 'sucks',],
 
         # Character Interests
-        'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', '#adjective# psycho-geography', 'French literature', 'the health problems of others'],
+        'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', '#adjective# psycho-geography', 'French literature', 'the health problems of others',
+                      'the political history of #location#', '#compass# cuisine', 'the life and exploits of #saint#', 'the #adjective# effects of #snuff#'],
 
         # Clothing
         'outfit': ['#cadj# #citem#', '#cadj# #citem# made of #quality# #cmaterial#'],
@@ -74,7 +75,7 @@ rules = {
                 'The #C1#, starts talking about their interest in #interest#. #react#',
                 '#interrupt# #int_response#', 
                 ],
-        'react': ['', '. #someone.capitalize# #react1#', '. #cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
+        'react': ['', '#someone.capitalize# #react1#', '#cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
         'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
         'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper'],
         'callthing': ['silence', 'more beer', 'more wine', 'a mop', 'some food', 'attention', 'assistance', 'last drink orders', 'someone to sing a song', 'their mother', 'a shoulder to cry on'],
@@ -87,7 +88,7 @@ rules = {
         'interrupt': ['#indent#"That\'s not how it happened at all!" interrupts the #C1#.',
                       '#indent#"But... that\'s not how I remember it..." #says# the #C1#.',],
 
-        'int_response': ['The #teller_title# glares witheringly at the #C1title#, indignant at the #adjective# inerruption, then resumes the tale.',
+        'int_response': ['The #teller_title# (who is the current storyteller) glares witheringly at the #C1title#, indignant at the #adjective# inerruption, then resumes the tale.',
                          '#indent#"Shush!" #says# the #C2#, "Let the #teller_title# finish the tale!"'],
 
 
@@ -191,14 +192,15 @@ rules = {
         'outfitpos2': ['', '#indent#"Your #C2outfit# is so much more #adjective# than my meager #C1outfit#!" #says# the #C1title#.\n\n'],
 
         # Witness
-        'witness': ['The #C1# observes this interaction and #wreact#.', 'The #C1#, #observes# in #obsadj#.'],
+        'witness': ['The #C1#, #observes# and #wreact#.', 'The #C1#, #observes# in #obsadj#.'],
+        'observes': ['observes', 'witnesses', 'looks on', 'notices this', 'registers this interaction', 'cannot help noticing', 'cannot ignore the exchange',
+                     'looks on', 'observes', 'bears witness', 'eavesdrops', 'spies this', 'listens in', 'is a witness to this'],
         'wreact': ['is jealous', 'is amused', 'does not understand'],
-        'observes': ['looks on', 'observes', 'witnesses', 'bears witness', 'eavesdrops',],
         'obsadj': ['disgust', 'sympathy', 'resignation', 'confusion', 'solidarity', 'anger', 'despair', 'amusement', 'barely contained #adjective# rage', 'abject jealously', ],
 
-        'swap': 'The ((C1)), and the ((C2)), set down to the business of trading. The ((C1title)) swaps a ((i1)) for the ((C2title))\'s, ((i2)).',
-        'give': 'The ((C1)) gives a ((i1)) to the ((C2)).',
-        'get': 'The ((C1)) is given a ((i2)) by the ((C2)).',
+        'swap': 'The ((C1)), and the ((C2)), set down to the business of trading. The ((C1title)) swaps a ((i1)) for the ((C2title))\'s ((i2)).',
+        'give': 'The ((C1)), gives a ((i1)) to the ((C2)).',
+        'get': 'The ((C1)), is given a ((i2)) by the ((C2)).',
 
         # Songs
         'goodsong': 'The ((C2)) listens #adverb#, enraputured by the ((C1title))\'s #adjective# voice.',
