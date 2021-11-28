@@ -48,7 +48,7 @@ ANIMALS = [
 STAFF = ['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
         'vinter', 'lounge-operative']
 
-CROWD = ['is totally empty', 'is almost empty', 'is not very packed', 'is moderately crowded', 'has a reasonable crowd', 'is packed with very rowdy patrons']
+CROWD = ['is next to empty', 'is almost empty', 'is barely full', 'is not very packed', 'is moderately crowded', 'has a reasonable crowd', 'is packed with very rowdy patrons']
 
 class Keeper:
     def __init__(self):
@@ -130,10 +130,13 @@ class Inn:
             take = choice([True, False])
 
         if take:
-            i = choice(self.mantel)
-            print(f'The {c.title}, when no one is looking, takes the {i} from the mantel and pockets it.')
-            c.possesions.append(i)
-            self.mantel.remove(i)
+            if self.mantel:
+                i = choice(self.mantel)
+                print(f'The {c.title}, when no one is looking, takes the {i} from the mantel and pockets it.')
+                c.possesions.append(i)
+                self.mantel.remove(i)
+            else:
+                print(f'The {c.title} surreptitiously moves over to the mantel looking for a worthwhile trinket to pocket, but finds in bare. Dissapointed, {c.dtile}, rejoins the party.')
         else:
             i = choice(c.possesions)
             print(f'The {c.title} wanders over to take a look, and adds a {i} to the collection of trinkets.')

@@ -148,6 +148,9 @@ def challenge_teller(inn, teller, reject, characters):
     chars = characters.copy()
     chars.remove(teller)
     chars.remove(inn.previous_teller)
+    if not chars:
+        # no one left to challenge, accept the chosen teller
+        return reject
     c = choice(chars)
     t = choice(chars)
     response = grammar.flatten('#challenge#')
