@@ -63,7 +63,8 @@ class Inn:
         self.teller = None
         self.previous_teller = None
         self.mantel = ['golden sovereign', 'small bust of the poet Cinna', 'apple', 'maggot (Rhagoletis pomonella) writhing spasmodically outside the soft flesh of its preferred substrate']
-        self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'cat o\' nine tails'])
+        self.weapon = choice(['axe', 'sword', 'polearm', 'flail', 'crossbow', 'greatsword', 'battleaxe', 'mace', 'warhammer', 'maul', 'sabre', 'scimitar', 'halberd', 'claymore', 'falchion', 'pike',i
+                              'stiletto', 'gladius'])
         self.painting = choice(['blasted landscape', 'coastal scene', 'pastoral scene', 'woman', 'man'])
         self.roll()
 
