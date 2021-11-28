@@ -113,7 +113,11 @@ class Inn:
         return choice(STAFF)
 
     def menu(self):
-        print(grammar.flatten('#menu#'))
+        r = grammar.flatten('#menu#')
+        c1 = choice(self.characters)
+        #c2 = choice(self.characters)
+        r = c1.interaction_replace(r)
+        print(r)
 
     def showmantel(self, characters):
         if self.mantel:

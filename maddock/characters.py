@@ -16,9 +16,12 @@ def rname(length=0):
 
 def interact(c1, c2, observer=None):
     """ Plays out an interaction between 2 Characters, and one optional observer."""
-    #print('**DEBUG : INTERACT**')
     kind = choice(['item', 'talk', 'song', 'outfit', 'generic'])
-    #print(f"It's a {kind} interaction.")
+    obs = choice(('fore', 'aft'))
+    if observer and obs == 'fore':
+        r = grammar.flatten('#witness_fore#')
+        r = r.replace('((C1))', observer.dtitle)
+        print(r)
     if kind == 'talk':
         result = c1.interact_talk(c2)
     elif kind == 'outfit':
@@ -29,7 +32,7 @@ def interact(c1, c2, observer=None):
         result = c1.interact_song(c2)
     else:
         result = c1.interact(c2)
-    if observer:
+    if observer and obs == 'aft':
         observer.witness(c1, c2, result)
     print('\n')
 
@@ -130,8 +133,10 @@ class Character:
         print(interaction)
         return mood
 
-    def interaction_replace(self, s, other):
+    def interaction_replace(self, s, other=None):
         """Takes an interaction string and replaces character specific subs."""
+        if not other:
+            other = self
         s = s.replace('((C1))', self.dtitle)
         s = s.replace('((C2))', other.dtitle)
         s = s.replace('((C1title))', self.title)
@@ -142,7 +147,7 @@ class Character:
         s = s.replace('((C2outfit))', other.outfit)
         return s
 
-    def witness(self, a, b, mood):
+    def witness(self, a, b, mood=None):
         response = grammar.flatten('#witness#')
         response = response.replace('((C1))', self.dtitle)
         print(response)

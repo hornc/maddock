@@ -104,9 +104,7 @@ def the_inn(characters, inn):
 def party_sit(characters, inn):
     print(f'\nThe weary travellers sit at {inn.table}.')
     inn.event()
-    #print('They have some interactions, and remark upon their situation.\n\t')
     interactions(characters, inn)
-    #print('\n\nPossibly, something notable happens. What is the outcome?')
     inn.event()
     inn.menu()
     inn.event()

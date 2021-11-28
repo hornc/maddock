@@ -141,9 +141,11 @@ rules = {
         'menunsays': ['#indent# "#menunreason#, you\'ll just have to order drinks. What\'ll it be?"\n',],
         'menunreason': ['Kitchen\'s closed', 'Cook\'s dead', 'We\'re all out of food, sorry', 'I don\'t think you lot\'ll have the stomach for our #compass# fare'],
         'menunresponse': 'The #company# look dissapointed, but order their drinks.',
-        'menuyes': '#indent# #menuysays#\n #menuyresponse#', 
+        'menuyes': '#indent# #menuysays#.\n\n #menuyresponse#',
         'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #num# #distance# of these walls!"',],
-        'menuyresponse': 'The #company# order food.',
+        'menuyresponse': ['The #company# order food. #foodevent#', 'Presently the #company# place their orders. #foodevent#'],
+        'foodevent': ['The #C1#, complains about allergies.#indent#"I am very allergic to #fluid#!" the #C1title# #says#. #react#', 'The #C1#, places orders for all the #company#.', 'The #company# order their meals indivdually, it takes a long time.',
+                      '#innevent#. #indent#"#ctexclaim# We are trying to order food!" #says# the #C1#, #adverb#.', ],
         'num': ['three', 'one score', 'five score', 'three score and six', 'more than I can count', 'some number of', 'many', 'a fair few', 'much more than #num#'],
         'distance': ['feet', 'leagues', 'miles', 'counties', 'spans',],
 
@@ -198,12 +200,15 @@ rules = {
         'witness': ['The #C1#, #observes# and #wreact#.', 'The #C1#, #observes# in #obsadj#.'],
         'observes': ['observes', 'witnesses', 'looks on', 'notices this', 'registers this interaction', 'cannot help noticing', 'cannot ignore the exchange',
                      'looks on', 'observes', 'bears witness', 'eavesdrops', 'spies this', 'listens in', 'is a witness to this'],
-        'wreact': ['is jealous', 'is amused', 'does not understand'],
+        'wreact': ['is jealous', 'is amused', 'does not understand', 'dies a little inside', 'modifies their opinions and beliefs accordingly'],
         'obsadj': ['disgust', 'sympathy', 'resignation', 'confusion', 'solidarity', 'anger', 'despair', 'amusement', 'barely contained #adjective# rage', 'abject jealously', ],
 
         'swap': 'The ((C1)), and the ((C2)), set down to the business of trading. The ((C1title)) swaps a ((i1)) for the ((C2title))\'s ((i2)).',
         'give': 'The ((C1)), gives a ((i1)) to the ((C2)).',
         'get': 'The ((C1)), is given a ((i2)) by the ((C2)).',
+
+        'witness_fore': ['The #C1# witnesses #adjective.a# interaction, and #wreact#.', 'In full view of the #C1#, who #wreact# as a result, the following event takes place:',
+                         'The #C1# bears witness to the following #adjective# interaction bewtween two other of the #company#:'],
 
         # Songs
         'goodsong': 'The ((C2)) listens #adverb#, enraputured by the ((C1title))\'s #adjective# voice.',

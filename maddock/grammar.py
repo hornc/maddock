@@ -40,7 +40,7 @@ def wspace(text, *params):
 
 def number(n):
     """Returns the number of characters in words."""
-    to_words = ['zero', 'one', 'a pair', 'a trio', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
+    to_words = ['zero', 'one', 'a pair of', 'a trio of', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
             'thirteen', 'fourteen', 'fifteen', 'four shy of a full score of', 'three shy of a full score of', 'two shy of a full score of', 'one shy of a full score of', 'a full score of', 'one score and one',
             'one score and two', 'one score and three', 'one score and four', 'one score and five']
     return to_words[n]
