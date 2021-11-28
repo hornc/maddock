@@ -52,9 +52,9 @@ INN = """
 
 trav_adj = ['weary', 'intrepid', 'lusty', 'brave', 'foolhardy', 'optimistic', 'eager', 'browbeaten']
 method = ['foot', 'horse', 'carriage', 'train', 'barge', 'sea', 'ocean going vessel', 'coach', 'camel', 'mule']
-to_words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
-            'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twenty-one',
-            'twenty-two', 'twenty-three', 'twenty-four', 'one score and five']
+to_words = ['zero', 'one', 'a pair', 'a trio', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
+            'thirteen', 'fourteen', 'fifteen', 'four shy of a full score of', 'three shy of a full score of', 'two shy of a full score of', 'one shy of a full score of', 'a full score of', 'one score and one',
+            'one score and two', 'one score and three', 'one score and four', 'one score and five']
 ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ', 'Seventh ', 'Eighth ', 'Ninth ', 'Tenth ', 'Eleventh', 'Twelfth ', 'Thirteenth ']
 
 
