@@ -186,6 +186,8 @@ if __name__ == '__main__':
         last = teller
         teller, characters = tell_tale(inn, teller, characters)
 
-    print('\n\n ... RESOLUTION for the final storyteller: the %s!' % last.dtitle)
-    print(grammar.flatten('#ending#'))
+    end = grammar.flatten('#ending#')
+    end = end.replace('((WEAPON))', inn.weapon)
+    end = end.replace('((teller))', last.title)
+    print(end)
 
