@@ -131,7 +131,7 @@ def tell_tale(inn, teller, characters):
         print(f" ## {24-len(characters)}: The {next_teller.title.title()}'s {ordinals[next_teller.tales]}Tale ({next_teller.tales})\n")
         #print("* the teller's enemy is", next_teller.enemy(characters))
         friend = next_teller.friend(characters)
-        if friend:
+        if DEBUG and friend:
             print(f"* the teller's friend is {friend[0].title} ({friend[1]}).\n")
     else:
         next_teller = None
@@ -175,7 +175,7 @@ if __name__ == '__main__':
     inn = Inn(characters)
     print('# Þys Maddock')
     print('### a NaNoGenMo 2021 simulated, recursive tale.')
-    print('*{INTRO}*\n\n')
+    #print('*{INTRO}*\n\n')
     teller = characters[0]
     while teller:
         last = teller

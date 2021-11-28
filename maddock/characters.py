@@ -57,7 +57,7 @@ class Character:
 
     def desc(self):
         fidget = self.possesions and f'{grammar.flatten("#itemaction#")} a {choice(self.possesions)}'
-        wearing = f'is wearing {self.outfit}'
+        wearing = f'is wearing a {self.outfit}'
         desc = choice([None, fidget, wearing])
         if not desc:
             return ''
