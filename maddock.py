@@ -12,7 +12,7 @@ import sys
 from random import choice, sample
 
 from maddock.characters import Character, interact
-from maddock.grammar import adjectives, moods, grammar
+from maddock.grammar import adjectives, moods, grammar, number
 from maddock.inn import Inn
 
 professions = 'maddock/data/occupations.json'
@@ -52,9 +52,6 @@ INN = """
 
 trav_adj = ['weary', 'intrepid', 'lusty', 'brave', 'foolhardy', 'optimistic', 'eager', 'browbeaten']
 method = ['foot', 'horse', 'carriage', 'train', 'barge', 'sea', 'ocean going vessel', 'coach', 'camel', 'mule']
-to_words = ['zero', 'one', 'a pair', 'a trio', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
-            'thirteen', 'fourteen', 'fifteen', 'four shy of a full score of', 'three shy of a full score of', 'two shy of a full score of', 'one shy of a full score of', 'a full score of', 'one score and one',
-            'one score and two', 'one score and three', 'one score and four', 'one score and five']
 ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ', 'Seventh ', 'Eighth ', 'Ninth ', 'Tenth ', 'Eleventh', 'Twelfth ', 'Thirteenth ']
 
 
@@ -70,7 +67,7 @@ def group(characters):
 def travel(characters, inn):
     if DEBUG:
         print(TRAVEL)
-    print("%s %s travellers make their way by %s towards *%s* Inn." % (to_words[len(characters) + 1].capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
+    print("%s %s travellers make their way by %s towards *%s* Inn." % (number(len(characters) + 1).capitalize(), random.choice(trav_adj), random.choice(method), inn.name))
     print("The weather is %s.\n" % (inn.weather.desc()))
     print(group(characters))
     print('\n')

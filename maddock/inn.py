@@ -2,7 +2,7 @@ import random
 from random import choice
 from string import ascii_uppercase as CAPS
 from maddock.characters import rname
-from maddock.grammar import adjectives, moods, grammar
+from maddock.grammar import adjectives, moods, grammar, number
 
 
 def article(word):
@@ -161,5 +161,6 @@ class Inn:
         out = out.replace('((ik))', self.keeper.name)
         out = out.replace('((ikpersonality))', self.keeper.personality)
         out = out.replace('((ikpro))', self.keeper.pro)
+        out = out.replace('((number))', number(len(characters) + 1))
         print(out)
 

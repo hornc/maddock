@@ -89,7 +89,7 @@ rules = {
                       '#indent#"But... that\'s not how I remember it..." #says# the #C1#.',],
 
         'int_response': ['The #teller_title# (who is the current storyteller) glares witheringly at the #C1title#, indignant at the #adjective# inerruption, then resumes the tale.',
-                         '#indent#"Shush!" #says# the #C2#, "Let the #teller_title# finish the tale!"'],
+                         '#indent#"#ctexclaim#" #says# the #C2#, "Let the #teller_title# finish the tale!"'],
 
 
         # Weapon
@@ -170,15 +170,17 @@ rules = {
 
         # Addressing the Innkeeper
         'innloc': ['corner', 'fireplace', 'door', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug'],
-        'addressinnkeeper': '#addrik# #descinnk# #respinnk#',
-        'addrik': '#indent#"Oh look, over there by the #innloc#; there is the innkeeper, looking rather #ikpersonality#. Let us talk to #ikpro#!" #says# the #C1#.',
+        'addressinnkeeper': '\n#addrik# #descinnk# #respinnk#',
+        'addrik': ['#indent#"#ctexclaim# Look over there by the #innloc#; there is the innkeeper, looking rather #ikpersonality#. Let us talk to #ikpro#!" #says# the #C1#.',
+                   'The #company# approach the innkeeper #adverb#, who is busy with something over by the #innloc#.',
+                   '#indent#"#ctexclaim# We are but #number# weary travellers in need of lodging and good cheer!" #says# the #C1#.',],
         'descinnk': '\nThe innkeeper, #ik#, has a #ikpersonality# personality, and some #inndchoice# #inndimpart# to impart.',
         'inndimpart': ['advice', 'news', 'rumours', 'moralising', 'complaints'],
         'inndchoice': ['choice adjectives and', '#adjective#', 'and #inndchoice#', 'worldly', '#adjective# #adjective#'],
         'respinnk': ['#indent#"#respa#, #respb#..."', 'Then suddenly, without a word, the innkeeper impatiently waves the #company# to a table.'],
         'respa': ['Sit down over there', 'Grab yourselves a table', 'Be seated', 'Get ye gone'],
         'respb': ['I\'ll be with you shortly to take orders', 'I\'ll send someone over to take your orders'],
-
+        'ctexclaim': ["A!", "Abyde!", "Alas!", "Aleyn!", "Allas!", "Anne!", "Avoy!", "Brok!", "Crist!", "Ey!", "Fy!", "Gyle!", "Ha!", "Help!", "Ho!", "How!", "I!", "Iame!", "Iape!", "Iesus!", "Ioce!", "Iohn!", "Ioye!", "John!", "Lady!", "Lo!", "Loy!", "Marie!", "Mercy!", "Nay!", "O!", "Out!", "Ow!", "Parde!", "Pees!", "Peter!", "Scot!", "Straw!", "Tehee!", "What!", "Ye!"],
 
         # Character interactions
         'talk': 'The #C1#, talks to the #C2#, about #interest#.',
@@ -209,7 +211,7 @@ rules = {
         'noise': ['caterwauling', 'noise', 'mewling', 'banshee-screeching', 'howling', 'drivel', 'racket'],
 
         # Challenge the Teller
-        'challenge': '#indent#"Oh no, not the #C1# again!" #says# the #C2#, "Let\'s hear the #C3#, instead!" #chagree#',
+        'challenge': '#indent#"#ctexclaim# No! Not the #C1# again!" #says# the #C2#, "Let\'s hear the #C3#, instead!" #chagree#',
         'chagree': 'After some #adjective# discussion and bickering, the #company# agree #adverb# to hear the #C3#, over the #C1#.\n',
 
 }
