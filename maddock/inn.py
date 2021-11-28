@@ -136,7 +136,7 @@ class Inn:
                 c.possesions.append(i)
                 self.mantel.remove(i)
             else:
-                print(f'The {c.title} surreptitiously moves over to the mantel looking for a worthwhile trinket to pocket, but finds in bare. Dissapointed, {c.dtile}, rejoins the party.')
+                print(f'The {c.title} surreptitiously moves over to the mantel looking for a worthwhile trinket to pocket, but finds in bare. Dissapointed, {c.dtitle}, rejoins the party.')
         else:
             i = choice(c.possesions)
             print(f'The {c.title} wanders over to take a look, and adds a {i} to the collection of trinkets.')

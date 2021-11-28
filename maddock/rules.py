@@ -34,7 +34,7 @@ rules = {
 
         # Character Interests
         'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', '#adjective# psycho-geography', 'French literature', 'the health problems of others',
-                      'the political history of #location#', '#compass# cuisine', 'the life and exploits of #saint#', 'the #adjective# effects of #snuff#'],
+                      'the political history of #placename#', '#compass# cuisine', 'the life and exploits of #saint#', 'the #adjective# effects of #snuff#'],
 
         # Clothing
         'outfit': ['#cadj# #citem#', '#cadj# #citem# made of #quality# #cmaterial#'],
@@ -101,7 +101,7 @@ rules = {
                        'The inscription upon it is unfortunately obscured by what looks like stains of #fluid#',],
         'ldetail': ['', 'which Chekhov #obtained# #wtime# the #wfrom# #date#'],
         'innfamily': ['the innkeeper', 'the innkeeper\'s #closerelation#'],
-        'wstory': '\n#indent#"This #WEAPON# used to belong to my #wperson# #wname#."\n\n',
+        'wstory': '\n#indent#"This #WEAPON# used to belong to my #wperson# #wname#."\n\n#weapreact#',
         'wperson': ['#closerelation#','#closerelation#', '#closerole#',
                     '#wperson#\'s #wperson#',
                     '#wperson# who got it from their #wperson#',
@@ -121,7 +121,8 @@ rules = {
         'madj': ['tragic', 'joyous', 'victorious', 'horrendous', 'famed', 'fabled', 'renowned', 'last', 'first', 'disasterous', 'ill-fated', 'botched', 'bungled', 'decisive', 'virtuous'],
         'date': ['', ', which occurred in the year of the #dateevent#'],
         'dateevent': ['#adjective# #animal#', "failed #crop# harvest", "bountiful #crop# harvest", "plague of #animal.s#", '#compass# drought'],
-        'crop': ['wheat', 'grape', 'maize', 'barley', 'turnip', 'potato', 'chickweed', ''],
+        'crop': ['wheat', 'grape', 'maize', 'barley', 'turnip', 'potato', 'chickweed', 'jimsonweed', ''],
+        'weapreact': ['The #company# listen and are #adverb# impressed.', ],
 
         # Close by, or far away, a raven makes a sound, is seen, or unobservedly does something characteristic yet poignant.
         'animalsound': '#andistance# #animal.a# #andoes#',
