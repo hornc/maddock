@@ -179,7 +179,8 @@ rules = {
                   'lavender scented unguent', 'rose-water', 'aqua vitae', 'aqua regia', 'formic acid', 'mercury', ],
 
 
-        'nexttale': '\n\nIn order to entertain themselves, #ntsub#, the #company# decide to pass the time telling stories, and chose from their number one person to tell this evening\'s tale...',
+        'nexttale': '\n\nIn order to entertain themselves, #ntsub#, the #company# decide to pass the time telling stories, and #choose# from their number one individual to tell this evening\'s tale.',
+        'choose': ['choose', 'select', 'pick', 'nominate',],
         'ntsub': ['as is their custom on this journey', 'as they have done every evening previously', 'as tradition dictates', 'since no other alternatives are on offer', 'because the night is young'],
 
         # Addressing the Innkeeper
