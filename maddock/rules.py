@@ -83,7 +83,7 @@ rules = {
                 'The #C1#, starts talking about their interest in #interest#. #react#',
                 'The #C1# begins talking about a past relationship with a #famous# of #placename#, which ended #adverb#. #react#',
                 '#interrupt# #int_response#',
-                'The #staff# enters from outside bearing a #quality# #stackitem# and places it #beside# #stacked#, next to the #innloc#',
+                'The #staff# enters #adverb# from outside bearing a #stackitem# and places it #beside# #stacked#, next to the #innloc#',
                 ],
         'direction': ['', 'and #moves# past the #innloc#', 'and #moves# #adverb# away past the #innloc# towards the #innloc#'],
         'react': ['', '#someone.capitalize# #react1#', '#cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid# than #otherthing#!" #says# #someone#'],
