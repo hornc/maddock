@@ -125,6 +125,7 @@ class Inn:
         else:
             mantel = ' There is a roaring fire in the public room. It\'s mantel is bare.'
         mantel += grammar.flatten('#weapon#').replace('((WEAPON))', self.weapon)
+        mantel = mantel.replace('Cinna', 'Cinna (' + grammar.flatten('#cinnafact#' + ')'))
         print(mantel)
         c = choice(characters)
         if not c.possesions:

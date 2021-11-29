@@ -5,11 +5,14 @@ from tracery.modifiers import base_english
 
 from maddock import rules as madrules
 
+
 with open('maddock/data/adjs.json') as f:
     adjectives = json.load(f)['adjs']
 
+
 with open('maddock/data/adverbs.json') as f:
     adverbs = json.load(f)['adverbs']
+
 
 with open('maddock/data/occupations.json', 'r') as f:
         occupations = json.load(f)['occupations']
@@ -22,14 +25,17 @@ with open('maddock/data/moods.json', 'r') as f:
 with open('maddock/data/descriptions.json', 'r') as f:
         descriptions = json.load(f)['descriptions']
 
+
 with open('maddock/data/ending.txt', 'r') as f:
         ending = f.read()
+
 
 joins = ['', 'yet', 'but', 'and', 'but not so', 'nonetheless', 'and arguably', '-cum-', ]
 
 firsts = ['First', 'In the lead', 'At the fore', 'Heading the group', 'Taking the initial position', 'At the forefront of the party', 'Leading, ', 'In first position', ]
 follows = [', followed by', ', #tadj# followed by', '#follow#, #tadj#,', '. Next,', '. Then #tverb#', '. Then', '. #tadj.capitalize# after #tverb#',
         '. Next in #tline# #tverb#', ]
+
 
 def wspace(text, *params):
     """Fix up extra whitespace + punctuation."""
@@ -38,6 +44,7 @@ def wspace(text, *params):
     text = re.sub(r' -|- ', '-', text)
     return text
 
+
 def number(n):
     """Returns the number of characters in words."""
     to_words = ['zero', 'one', 'a pair of', 'a trio of', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
@@ -45,7 +52,9 @@ def number(n):
             'one score and two', 'one score and three', 'one score and four', 'one score and five']
     return to_words[n]
 
+
 my_mods = {'wspace': wspace}
+
 
 rules = {
     'adjective': adjectives,

@@ -219,4 +219,21 @@ rules = {
         'challenge': '#indent#"#ctexclaim# No! Not the #C1# again!" #says# the #C2#, "Let\'s hear the #C3#, instead!" #chagree#',
         'chagree': 'After some #adjective# discussion and bickering, the #company# agree #adverb# to hear the #C3#, over the #C1#.\n',
 
+
+        # Cinna Facts:
+        'cinnafact': ['not to be confused with #othercinna#, #othercinnafact#', 'the poet', 'the neoteric poet', 'author of the poem "Zmyrna"', 'that is Helvius Cinna, the neoteric poet, not to be confused with #othercinna#, #othercinnafact#',
+                      '#cinnafact2#', '#cinnafact2# and #cinnafact2#'],
+        'cinnafact2': ['who was murdered at the funeral of Julius Caesar after being mistaken for an unrelated #othercinna#, #othercinnafact#',
+                      'of whom Shakespeare wrote in act three of his famous play _Julius Ceasar_: "#shakequote#"',
+                      'author of the poem "Zmyrna"',
+                      'who Ovid included in his list of celebrated erotic poets and writers',
+                      'friend of Catullus',],
+        'othercinna': ['Lucius Cornelius Cinna', 'Lucius Cinna, the politician', 'Lucius Cornelius Cinna' ],
+        'othercinnafact': ['who sought better fortune for himself by joining the failed rebellions of Lepidus and Sertorius', 
+                           'who came from a noble family which had gained prominence during the civil wars of the 80s BC',
+                           'who gave a famous speech in support of the assasination of Julius Ceasar',
+                            '#othercinnafact# and #othercinnafact#', ],
+        'shakequote': ['Truly, my name is Cinna.', 'Tear him to pieces; he\'s a conspirator!!!', 'I am Cinna the poet; I am Cinna the poet!', 'Tear him for his bad verses, tear him for his bad verses!', 'I am not Cinna the conspirator!',
+                       'It is no matter, his name\'s Cinna! Pluck but his name out of his heart, and turn him going!']
+
 }
