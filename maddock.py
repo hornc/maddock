@@ -12,7 +12,7 @@ import sys
 from random import choice, sample
 
 from maddock.characters import Character, interact
-from maddock.grammar import adjectives, moods, grammar, number
+from maddock.grammar import adjectives, cinna, moods, grammar, number
 from maddock.inn import Inn
 
 professions = 'maddock/data/occupations.json'
@@ -58,10 +58,9 @@ ordinals = [' ', ' ', 'Second ', 'Third ', 'Fourth ', 'Fifth ', 'Sixth ', 'Seven
 def group(characters):
     # list and describe the party
     l = random.sample(characters, len(characters))
-    #out = grammar.flatten(f'#travel# %s}')
     travel = grammar.flatten('#travel# %s' + '#fol# %s' * (len(l) - 1)) + '.'
     subs = tuple([c.atitle + c.desc() for c in l])
-    return travel % subs
+    return cinna(travel % subs)
 
 
 def travel(characters, inn):

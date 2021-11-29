@@ -45,6 +45,12 @@ def wspace(text, *params):
     return text
 
 
+def cinna(text, *params):
+    """Add Cinna facts to text."""
+    text = text.replace('Cinna', 'Cinna (' + grammar.flatten('#cinnafact#' + ')'))
+    return text
+
+
 def number(n):
     """Returns the number of characters in words."""
     to_words = ['zero', 'one', 'a pair of', 'a trio of', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
@@ -53,7 +59,7 @@ def number(n):
     return to_words[n]
 
 
-my_mods = {'wspace': wspace}
+my_mods = {'wspace': wspace, 'cinna': cinna}
 
 
 rules = {

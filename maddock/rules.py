@@ -33,8 +33,9 @@ rules = {
         'chews': ['chews', 'nibbles', 'sucks',],
 
         # Character Interests
-        'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', '#adjective# psycho-geography', 'French literature', 'the health problems of others',
-                      'the political history of #placename#', '#compass# cuisine', 'the life and exploits of #saint#', 'the #adjective# effects of #snuff#'],
+        'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', 'breeding #animal#s', '#adjective# psycho-geography', 'French literature', 'the health problems of others',
+                      'the political history of #placename#', '#compass# cuisine', 'the life and exploits of #saint#', 'the #adjective# effects of #snuff#',
+                      'the alchemical properties of #fluid#', ],
 
         # Clothing
         'outfit': ['#cadj# #citem#', '#cadj# #citem# made of #quality# #cmaterial#'],
@@ -65,7 +66,7 @@ rules = {
         'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
         'descinn': 'Over by the #innloc# lies #stacked#',
-        'stacked': ['#stacked# #beside# #stacked#', '#stacked#, #beside# #stacked#', '#stackitem#','#stackitem#','#stackitem#','#stackitem#',],
+        'stacked': ['#stackitem# #beside# #stacked#', '#stackitem#, #beside# #stacked#', '#stackitem#','#stackitem#','#stackitem#',],
         'stackitem': ['some boxes', 'a jar', 'an amphora of #fluid#', 'a crate labelled "#placename#\'s #quality# #produce#"', ],
         'produce': ['#crop#', '#snuff#'],
         'beside': ['beside', 'next to', 'partially obscuring', 'precariously balanced upon', 'sprawling out towards the #innloc#, by #stacked#', 'on top of',],
@@ -79,14 +80,15 @@ rules = {
                 '#someone.capitalize# #puddleaction# #puddle.a# #beside# the #innloc#',
                 '#indent#"Barkeep! What\'s in this food? It tastes like #fluid#!" someone #says# loudly. #react#',
                 'The #C1#, starts talking about their interest in #interest#. #react#',
-                'The #C1# begins talking about past relationship with a #famous# of #placename#. #react#',
+                'The #C1# begins talking about a past relationship with a #famous# of #placename#, which ended #adverb#. #react#',
                 '#interrupt# #int_response#',
                 'The #staff# enters from outside bearing a #quality# #stackitem# and places it #beside# #stacked#, next to the #innloc#',
                 ],
         'direction': ['', 'and #moves# past the #innloc#', 'and #moves# #adverb# away past the #innloc# towards the #innloc#'],
-        'react': ['', '#someone.capitalize# #react1#', '#cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
+        'react': ['', '#someone.capitalize# #react1#', '#cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid# than #otherthing#!" #says# #someone#'],
+        'otherthing': ['have to witness that', 'listen to that', '#adjective# #fluid#', 'think about that nonsense', 'have to deal with your foolishness',],
         'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
-        'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper'],
+        'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper', '#someone# by the #innloc#', '#someone# standing #beside# #someone#'],
         'callthing': ['silence', 'more beer', 'more wine', 'a mop', 'some food', 'attention', 'assistance', 'last drink orders', 'someone to sing a song', 'their mother', 'a shoulder to cry on'],
 
         'staff': ['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
