@@ -35,7 +35,7 @@ rules = {
         # Character Interests
         'cinterest': ['stamp collecting', 'porcupines', 'animal husbandry', 'breeding #animal#s', '#adjective# psycho-geography', 'French literature', 'the health problems of others',
                       'the political history of #placename#', '#compass# cuisine', 'the life and exploits of #saint#', 'the #adjective# effects of #snuff#',
-                      'the alchemical properties of #fluid#', ],
+                      'the alchemical properties of #fluid#', 'the creative output of #persona#'],
 
         # Clothing
         'outfit': ['#cadj# #citem#', '#cadj# #citem# made of #quality# #cmaterial#'],
@@ -45,6 +45,7 @@ rules = {
             'crocodile leather', ],
 
         # Going Inn
+        'style': ' Stylistically, the sign looks as if it were designed by #designed# #designedat# #designedhow#.',
         'company': ['group', 'cavalcade', 'party', 'travellers', 'wanderers', 'troupe', 'company'],
         'goinginn': '%s leads the #company# and enters the inn first, #entry#. #hall#.',
         'entry': ['stooping low to enter via the #doorway#', 'striding gallantly through the #doorway#', 'impatiently beckoning the #company# to follow through the #doorway#'],
@@ -55,7 +56,7 @@ rules = {
                  'There are #adjective# #smellsound# emanating from the #innloc#. The #C1# #says# #cleverthing#',
                  'The #company# notice #adjective# marks upon the walls',],
         'smellsound': ['smells', 'sounds'],
-        'snag': ['hook', 'exposed nail', 'splintered floor-board', 'coat-stand', 'umbrella, conviniently made available for guests who may have neglected to bring their own'],
+        'snag': ['hook', 'exposed nail', 'splintered floor-board', 'coat-stand', 'umbrella, conviniently made available for guests who may have neglected to bring their own', '#stacked#',],
         'says': ['quips', 'laughs', 'jokes', 'whispers', 'snarls'],
         'cleverthing': ['#indent#"I\'d like some of that!"', '#indent#"I have no idea what that is."'],
         
@@ -93,7 +94,7 @@ rules = {
 
         'staff': ['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
         'vinter', 'lounge-operative'],
-        'remarkable': ['their situation', 'the weather', 'the journey so far', 'their surroundings', '#someone#', '#someone#\'s manner', '#someone# who is lurking #adverb# by the #innloc#',],
+        'remarkable': ['the #innloc#', 'their situation', 'the weather', 'the journey so far', 'their surroundings', '#someone#', '#someone#\'s manner', '#someone# who is lurking #adverb# by the #innloc#',],
 
         # Interrupt the teller
         'interrupt': ['#indent#"That\'s not how it happened at all!" interrupts the #C1#.',
@@ -105,7 +106,7 @@ rules = {
 
         # Weapon
         'weapon': '\n\nAbove the mantle hangs a vicious looking #WEAPON#. #wlabel#',
-        'wlabel': ['', 'Next to it is a small #label#. #labelreads#.', 
+        'wlabel': ['Next to it is a small #label#. #labelreads#.', 
                    '#innfamily.capitalize# notices the #company# glancing at the #WEAPON# and #moves# over past the #innloc#, with #adjective.a# gleam. #wstory#'],
         'label': ['label', 'scrap of parchment', 'plaque', 'luggage tag', 'bronze plate', 'inscription carved in marble', 'baked clay tablet'],
         'labelreads': ['It reads: "((WEAPON)) of Chekhov #ldetail#"', 'It reads: "Chekhov\'s ((WEAPON)) #ldetail#"', 
@@ -182,8 +183,16 @@ rules = {
         'ntsub': ['as is their custom on this journey', 'as they have done every evening previously', 'as tradition dictates', 'since no other alternatives are on offer', 'because the night is young'],
 
         # Addressing the Innkeeper
-        'innloc': ['corner', 'fireplace', 'door', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug', '#innloc# next to #stacked#'],
-
+        'innloc': ['corner', 'fireplace', 'door', 'alcove', 'nook', 'rocking chair', 'landing', 'portico', 'balustrade', 'shelf', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug', '#innloc# next to #stacked#',
+        '#architectural#', '#architectural#'],
+        'architectural': ['architecturally interesting #innloc#', '#innloc# which looks as if it were designed #designed# #designedat# #designedhow#',  ],
+        'designed': ['in a collaboration between #persona# and #persona#', 'by #persona#', ],
+        'designedat': ['', 'at a #adjective# #devent# hosted by #persona#',],
+        'devent': ['happening', 'workshop', 'party', 'retreat', 'event', 'baccanalia', 'dinner party', 'tea party', 'high tea', 'guided meditation', 'revolutionary action'],
+        'designedhow': ['while high on #dsubs#', 'under the influence of #dsubs#' ],
+        'dsubs': ['#fluid#', '#snuff#', '#dsubs# and #dsubs#',],
+        'persona': ['Hieronymus Bosch', 'Salvador Dali', 'Jackson Pollock', 'Piet Mondrian', 'Tracy Emin', 'Elizabeth Báthory', 'Martha Stewart', 'Julia Child', 'Abbess Hildegard von Bingen',
+                    'Giovanni Battista Piranesi', 'Zaha Hadid',],
         'addressinnkeeper': '\n#addrik# #descinnk# #respinnk#',
         'addrik': ['#indent#"#ctexclaim# Look over there by the #innloc#; there is the innkeeper, looking rather #ikpersonality#. Let us talk to #ikpro#!" #says# the #C1#.',
                    'The #company# approach the innkeeper #adverb#, who is busy with something over by the #innloc#.',
@@ -234,11 +243,11 @@ rules = {
 
 
         # Cinna Facts:
-        'cinnafact': ['not to be confused with #othercinna#, #othercinnafact#', 'the poet', 'the neoteric poet', 'author of the poem "Zmyrna"', 'that is Helvius Cinna, the neoteric poet, not to be confused with #othercinna#, #othercinnafact#',
+        'cinnafact': ['not to be confused with #othercinna#, #othercinnafact#', 'the poet #cinnafact2#', 'the neoteric poet #cinnafact2#', 'author of the poem "Zmyrna"', 'that is Helvius Cinna, the neoteric poet, not to be confused with #othercinna#, #othercinnafact#',
                       '#cinnafact2#', '#cinnafact2# and #cinnafact2#'],
         'cinnafact2': ['who was murdered at the funeral of Julius Caesar after being mistaken for an unrelated #othercinna#, #othercinnafact#',
                       'of whom Shakespeare wrote in act three of his famous play _Julius Ceasar_: "#shakequote#"',
-                      'author of the poem "Zmyrna"',
+                      'author of the poem "Zmyrna", which was unfortunately not preserved',
                       'who Ovid included in his list of celebrated erotic poets and writers',
                       'friend of Catullus',],
         'othercinna': ['Lucius Cornelius Cinna', 'Lucius Cinna, the politician', 'Lucius Cornelius Cinna' ],

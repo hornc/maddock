@@ -113,7 +113,7 @@ class Character:
 
     def interact_song(self, other):
         mood = choice([0.5, 1.5])
-        song = getsong(10)
+        song = getsong(15)
         if mood == 1.5:
             response = grammar.flatten('#goodsong#')
         else:

@@ -80,7 +80,9 @@ class Inn:
         out = "the Inn's sign depicts "
         descriptive = f"a very {choice(adjectives)} {b}, which appears exceedingly {a}."
         possesive = f"a very {choice(adjectives)} {b}, belonging to a {choice(adjectives)} {a}."
-        return out + (possesive if self.possesive else descriptive)
+        out += possesive if self.possesive else descriptive
+        out += grammar.flatten('#style#')
+        return out
 
     @property
     def table(self):
@@ -123,7 +125,7 @@ class Inn:
         if self.mantel:
             mantel = ' Upon the mantel in the main room, above a roaring fire, are the following items: one %s.' % (', one '.join(self.mantel))
         else:
-            mantel = ' There is a roaring fire in the public room. It\'s mantel is bare.'
+            mantel = ' There is a roaring fire in the public room. Its mantel is bare.'
         mantel += grammar.flatten('#weapon#').replace('((WEAPON))', self.weapon)
         mantel = mantel.replace('Cinna', 'Cinna (' + grammar.flatten('#cinnafact#' + ')'))
         print(mantel)

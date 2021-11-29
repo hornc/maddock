@@ -79,7 +79,7 @@ def travel(characters, inn):
 def interactions(characters, inn):
     if DEBUG:
         print('***{INTERACTIONS}***')
-    n = random.randint(0, len(characters) // 3)
+    n = random.randint(0, len(characters) // 2)
     interactors = sample(characters, n * 2)
     for i in range(0, n, 2):
         observer = choice(characters)
@@ -93,7 +93,7 @@ def the_inn(characters, inn):
     print(first.enters(inn))
     print(grammar.flatten('#react#'))
     inn.interact(characters)
-    for i in range(random.randint(1, 7)):
+    for i in range(random.randint(4, 10)):
          inn.event()
     print(grammar.flatten('#animalsound#.'))
     inn.innkeeper(characters)
