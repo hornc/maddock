@@ -102,7 +102,7 @@ def the_inn(characters, inn):
 
 
 def party_sit(characters, inn):
-    print(f'\nThe weary travellers sit at {inn.table}.')
+    print(f'\nThe weary travellers sit at the {inn.table}.')
     inn.event()
     interactions(characters, inn)
     inn.event()

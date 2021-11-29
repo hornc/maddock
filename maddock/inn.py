@@ -85,7 +85,7 @@ class Inn:
     @property
     def table(self):
         adj = choice(adjectives)
-        return f"{article(adj)} {adj} table"
+        return f"{adj} table"
 
     def feature(self):
         """Returns a random feature of the inn."""

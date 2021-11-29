@@ -67,18 +67,19 @@ rules = {
         'descinn': 'Over by the #innloc# lies #stacked#',
         'stacked': ['#stacked# #beside# #stacked#', '#stacked#, #beside# #stacked#', 'some boxes', 'a jar', 'an amphora of #fluid#', 'a crate labelled "#placename#\'s #quality# #produce#"', ],
         'produce': ['#crop#', '#snuff#'],
-        'beside': ['beside', 'next to', 'partially obscuring', 'precariously balanced upon', 'spreading out over towards the #innloc#, by #stacked#'],
+        'beside': ['beside', 'next to', 'partially obscuring', 'precariously balanced upon', 'sprawling out towards the #innloc#, by #stacked#'],
 
-        'innevent': ['#animalsound#', '#innevent#. #innevent#', 'A patron spills #adjective.a# drink #adverb#', 'A small fight breaks out over by the #innloc#',
-                'A #innanimal#, sitting under a table, gives itself #adjective.a# scratch #andext#',
+        'innevent': ['#animalsound#', '#innevent#. #innevent#', 'A patron #adverb# spills #adjective.a# drink #beside# the #innloc#', 'A small fight breaks out over by the #innloc#',
+                'A #innanimal#, sitting under a table next to the #innloc#, gives itself #adjective.a# scratch #andext#',
                 'The #staff# calls for #callthing#',
-                'The #staff# is called away', '#someone# storms off', '#someone# is excused #adverb#',
+                'The #staff# is called away', '#someone# storms off #direction#', '#someone# is excused #adverb# #direction#',
                 'The #company# remark upon #remarkable#',
-                '#someone.capitalize# #puddleaction# #puddle.a#',
+                '#someone.capitalize# #puddleaction# #puddle.a# #beside# the #innloc#',
                 '#indent#"Barkeep! What\'s in this food? It tastes like #fluid#!" someone #says# loudly. #react#',
                 'The #C1#, starts talking about their interest in #interest#. #react#',
                 '#interrupt# #int_response#', 
                 ],
+        'direction': ['', 'and #moves# past the #innloc#', 'and #moves# #adverb# away past the #innloc# towards the #innloc#'],
         'react': ['', '#someone.capitalize# #react1#', '#cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid#" #says# #someone#'],
         'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
         'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper'],
@@ -86,7 +87,7 @@ rules = {
 
         'staff': ['stable-hand', 'room-attendant', 'grounds-keeper', 'cook', 'scullery-hand', 'bar-staffer', 'assistant-manager', 'pastry-cook', 'pot-scrubber', 'attendant wait-server',
         'vinter', 'lounge-operative'],
-        'remarkable': ['their situation', 'the weather', 'the journey so far', 'their surroundings', '#someone#', '#someone#\'s manner'],
+        'remarkable': ['their situation', 'the weather', 'the journey so far', 'their surroundings', '#someone#', '#someone#\'s manner', '#someone# who is lurking #adverb# by the #innloc#',],
 
         # Interrupt the teller
         'interrupt': ['#indent#"That\'s not how it happened at all!" interrupts the #C1#.',
@@ -99,7 +100,7 @@ rules = {
         # Weapon
         'weapon': '\n\nAbove the mantle hangs a vicious looking #WEAPON#. #wlabel#',
         'wlabel': ['', 'Next to it is a small #label#. #labelreads#.', 
-                   '#innfamily.capitalize# notices the #company# glancing at the #WEAPON# and #moves# over, with #adjective.a# gleam. #wstory#'],
+                   '#innfamily.capitalize# notices the #company# glancing at the #WEAPON# and #moves# over past the #innloc#, with #adjective.a# gleam. #wstory#'],
         'label': ['label', 'scrap of parchment', 'plaque', 'luggage tag', 'bronze plate', 'inscription carved in marble', 'baked clay tablet'],
         'labelreads': ['It reads: "((WEAPON)) of Chekhov #ldetail#"', 'It reads: "Chekhov\'s ((WEAPON)) #ldetail#"', 
                        'The inscription upon it is unfortunately obscured by what looks like stains of #fluid#',],
@@ -175,7 +176,8 @@ rules = {
         'ntsub': ['as is their custom on this journey', 'as they have done every evening previously', 'as tradition dictates', 'since no other alternatives are on offer', 'because the night is young'],
 
         # Addressing the Innkeeper
-        'innloc': ['corner', 'fireplace', 'door', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug'],
+        'innloc': ['corner', 'fireplace', 'door', 'storeroom', 'kitchen', 'stairs', 'window', 'bar', 'counter', 'main room', 'coat rack', 'rug', '#innloc# next to #stacked#'],
+
         'addressinnkeeper': '\n#addrik# #descinnk# #respinnk#',
         'addrik': ['#indent#"#ctexclaim# Look over there by the #innloc#; there is the innkeeper, looking rather #ikpersonality#. Let us talk to #ikpro#!" #says# the #C1#.',
                    'The #company# approach the innkeeper #adverb#, who is busy with something over by the #innloc#.',
@@ -183,7 +185,7 @@ rules = {
         'descinnk': '\nThe innkeeper, #ik#, has a #ikpersonality# personality, and some #inndchoice# #inndimpart# to impart.',
         'inndimpart': ['advice', 'news', 'rumours', 'moralising', 'complaints'],
         'inndchoice': ['choice adjectives and', '#adjective#', 'and #inndchoice#', 'worldly', '#adjective# #adjective#'],
-        'respinnk': ['#indent#"#respa#, #respb#..."', 'Then suddenly, without a word, the innkeeper impatiently waves the #company# to a table.'],
+        'respinnk': ['#indent#"#respa#, #respb#..."', 'Then suddenly, without a word, the innkeeper impatiently waves the #company# to a table, situated near the #innloc#.'],
         'respa': ['Sit down over there', 'Grab yourselves a table', 'Be seated', 'Get ye gone'],
         'respb': ['I\'ll be with you shortly to take orders', 'I\'ll send someone over to take your orders'],
         'ctexclaim': ["A!", "Abyde!", "Alas!", "Aleyn!", "Allas!", "Anne!", "Avoy!", "Brok!", "Crist!", "Ey!", "Fy!", "Gyle!", "Ha!", "Help!", "Ho!", "How!", "I!", "Iame!", "Iape!", "Iesus!", "Ioce!", "Iohn!", "Ioye!", "John!", "Lady!", "Lo!", "Loy!", "Marie!", "Mercy!", "Nay!", "O!", "Out!", "Ow!", "Parde!", "Pees!", "Peter!", "Scot!", "Straw!", "Tehee!", "What!", "Ye!"],
