@@ -45,7 +45,7 @@ rules = {
             'crocodile leather', ],
 
         # Going Inn
-        'style': ' Stylistically, the sign looks as if it were designed by #designed# #designedat# #designedhow#.',
+        'style': ' Stylistically, the sign looks as if it were designed #designed# #designedat# #designedhow#.',
         'company': ['group', 'cavalcade', 'party', 'travellers', 'wanderers', 'troupe', 'company'],
         'goinginn': '%s leads the #company# and enters the inn first, #entry#. #hall#.',
         'entry': ['stooping low to enter via the #doorway#', 'striding gallantly through the #doorway#', 'impatiently beckoning the #company# to follow through the #doorway#'],
