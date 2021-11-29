@@ -60,10 +60,14 @@ rules = {
         
 
         # Inn interior
-        'innside': ['#inntro# #inn_is# #innadj#.'],
+        'innside': ['#inntro# #inn_is# #innadj#. #descinn#.'],
         'inntro': ['The interior of XXX', ],
         'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
+        'descinn': 'Over by the #innloc# lies #stacked#',
+        'stacked': ['#stacked# #beside# #stacked#', '#stacked#, #beside# #stacked#', 'some boxes', 'a jar', 'an amphora of #fluid#', 'a crate labelled "#placename#\'s #quality# #produce#"', ],
+        'produce': ['#crop#', '#snuff#'],
+        'beside': ['beside', 'next to', 'partially obscuring', 'precariously balanced upon', 'spreading out over towards the #innloc#, by #stacked#'],
 
         'innevent': ['#animalsound#', '#innevent#. #innevent#', 'A patron spills #adjective.a# drink #adverb#', 'A small fight breaks out over by the #innloc#',
                 'A #innanimal#, sitting under a table, gives itself #adjective.a# scratch #andext#',
