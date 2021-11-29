@@ -16,7 +16,7 @@ def rname(length=0):
 
 def interact(c1, c2, observer=None):
     """ Plays out an interaction between 2 Characters, and one optional observer."""
-    kind = choice(['item', 'talk', 'song', 'outfit', 'generic'])
+    kind = choice(['item', 'talk', 'song', 'outfit',])
     obs = choice(('fore', 'aft'))
     if observer and obs == 'fore':
         r = grammar.flatten('#witness_fore#')

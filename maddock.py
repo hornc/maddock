@@ -105,7 +105,9 @@ def party_sit(characters, inn):
     inn.event()
     interactions(characters, inn)
     inn.event()
+    inn.event()
     inn.menu()
+    inn.event()
     inn.event()
     print(grammar.flatten('#nexttale#'))
 
