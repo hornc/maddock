@@ -11,7 +11,7 @@ import random
 import sys
 from random import choice, sample
 
-from maddock.characters import Character, interact
+from maddock.characters import Character, interact, rname
 from maddock.grammar import adjectives, cinna, moods, grammar, number
 from maddock.inn import Inn
 
@@ -185,5 +185,6 @@ if __name__ == '__main__':
     end = grammar.flatten('#ending#')
     end = end.replace('((WEAPON))', inn.weapon)
     end = end.replace('((teller))', last.title)
+    end = end.replace('((DESTINATION))', f'{rname()} {rname()}')
     print(end)
 

@@ -3034,7 +3034,7 @@ In order to entertain themselves, as is their custom on this journey, the group 
 
 You listen in silence to the **judge**'s tale. You can't help eyeing the flail above the mantel, dark thoughts running through your mind.
 
-Tomorrow there will be one less traveller on the journey ahead.
+Tomorrow there will be one less traveller on the road to F_____ S_____.
 
 **ÞE END**
 
