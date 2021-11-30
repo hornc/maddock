@@ -64,7 +64,7 @@ rules = {
         # Inn interior
         'innside': ['#inntro# #inn_is# #innadj#. #descinn#.'],
         'inntro': ['The interior of XXX', ],
-        'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
+        'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compels them forward with its', 'repels them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
         'descinn': 'Over by the #innloc# lies #stacked#',
         'stacked': ['#stackitem# #beside# #stacked#', '#stackitem#, #beside# #stacked#', '#stackitem#','#stackitem#','#stackitem#',],

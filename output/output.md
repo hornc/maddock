@@ -53,7 +53,7 @@ The caring-cum-callous-cum-unsophisticated **insurance underwriter**, H____, lea
 
 
 
-The interior of The A_____'s B_____ compells them forward with its warmth. Over by the main room lies an amphora of honey.
+The interior of The A_____'s B_____ compels them forward with its warmth. Over by the main room lies an amphora of honey.
  By the counter hangs a painting of a pastoral scene.
  Upon the mantel in the main room, above a roaring fire, are the following items: one golden sovereign, one small bust of the poet Cinna (the poet who was murdered at the funeral of Julius Caesar after being mistaken for an unrelated Lucius Cornelius Cinna, who gave a famous speech in support of the assasination of Julius Ceasar), one apple, one maggot (Rhagoletis pomonella) writhing spasmodically outside the soft flesh of its preferred substrate.
 
@@ -1211,7 +1211,7 @@ The stimulated and arguably illogical **precious stone worker**, L_____, leads t
 
 
 
-The interior of The G____'s L____ repells them with its darkness. Over by the fireplace lies a jar.
+The interior of The G____'s L____ repels them with its darkness. Over by the fireplace lies a jar.
  By the nook hangs a painting of a pastoral scene.
  There is a roaring fire in the public room. Its mantel is bare.
 
@@ -1522,7 +1522,7 @@ The ignored but not so revered **pesticide handler**, A____, leads the traveller
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"I'd rather consume decrepit seawater than sexier stew!" laughs a bystander
 
 
-The interior of The F______'s N______ repells them with its chasteness. Over by the kitchen lies an amphora of rainwater.
+The interior of The F______'s N______ repels them with its chasteness. Over by the kitchen lies an amphora of rainwater.
  By the rug hangs a painting of a pastoral scene.
  Upon the mantel in the main room, above a roaring fire, are the following items: one pocket knife with a jeweled handle.
 
@@ -2095,7 +2095,7 @@ The blah nonetheless dreary **training and development specialist**, D________, 
 The stable-hand guffaws hysterically
 
 
-The interior of The W_______'s F_____ compells them forward with its warmth. Over by the portico lies a crate labelled "Kostrzyn
+The interior of The W_______'s F_____ compels them forward with its warmth. Over by the portico lies a crate labelled "Kostrzyn
 's expensive lint".
  By the main room hangs a painting of a pastoral scene.
  Upon the mantel in the main room, above a roaring fire, are the following items: one comb.
@@ -2450,7 +2450,7 @@ The surly nonetheless glutinous **nonfarm animal caretaker**, H______, leads the
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"I'd rather consume chipotle rose-water than think about that nonsense!" laughs a bystander
 
 
-The interior of The Y______ G_____ repells them with its coziness. Over by the portico lies a crate labelled "Zakroczym
+The interior of The Y______ G_____ repels them with its coziness. Over by the portico lies a crate labelled "Zakroczym
 's finest jimson-weed", partially obscuring an amphora of purl.
  By the main room hangs a painting of a pastoral scene.
  Upon the mantel in the main room, above a roaring fire, are the following items: one comb.
@@ -2535,7 +2535,7 @@ The frantic but respected **shampooer**, Y_______, leads the cavalcade and enter
 
 
 
-The interior of The G_______'s W_______ repells them with its warmth. Over by the bar lies some boxes.
+The interior of The G_______'s W_______ repels them with its warmth. Over by the bar lies some boxes.
  By the rug hangs a painting of a pastoral scene.
  Upon the mantel in the main room, above a roaring fire, are the following items: one comb, one comb.
 
@@ -2618,7 +2618,7 @@ The blah nonetheless dreary **training and development specialist**, D________, 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"I'd like some of that!" responds the stable-hand by the rocking chair by the architecturally interesting corner
 
 
-The interior of The F_____'s C________ repells them with its chasteness. Over by the bar lies a crate labelled "Racibórz
+The interior of The F_____'s C________ repels them with its chasteness. Over by the bar lies a crate labelled "Racibórz
 's regal lint" partially obscuring an amphora of piss.
  By the stairs hangs a painting of a pastoral scene.
  Upon the mantel in the main room, above a roaring fire, are the following items: one comb.
@@ -2713,7 +2713,7 @@ He slew my knight, and poined ...
 As they near their destination they notice  the Inn's sign depicts a very stoked w________, which appears exceedingly j_______. Stylistically, the sign looks as if it were designed in a collaboration between Elizabeth Báthory and Hieronymus Bosch at a athletic tea party hosted by Zaha Hadid under the influence of snuff. The sign drips in the downpour.
 The group feels ambushed as they approach the entrance to the inn.
 
-The surly nonetheless glutinous **nonfarm animal caretaker**, H______, leads the party and enters the inn first, striding gallantly through the doorway. The troupe notice repellent marks upon the walls.
+The surly nonetheless glutinous **nonfarm animal caretaker**, H______, leads the party and enters the inn first, striding gallantly through the doorway. The troupe notice repelent marks upon the walls.
 
 
 
@@ -2907,7 +2907,7 @@ The capable but worse and arguably exacting **judge**, M____, leads the troupe a
 
 
 
-The interior of The C_____'s T_____ repells them with its darkness. Over by the nook lies an amphora of seawater.
+The interior of The C_____'s T_____ repels them with its darkness. Over by the nook lies an amphora of seawater.
  By the stairs hangs a painting of a pastoral scene.
  There is a roaring fire in the public room. Its mantel is bare.
 
