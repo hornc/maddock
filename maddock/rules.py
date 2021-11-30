@@ -64,7 +64,7 @@ rules = {
         # Inn interior
         'innside': ['#inntro# #inn_is# #innadj#. #descinn#.'],
         'inntro': ['The interior of XXX', ],
-        'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compells them forward with its', 'repells them with its'],
+        'inn_is': ['is the embodiment of', 'appears to be the epitome of', 'suggests', 'compels them forward with its', 'repels them with its'],
         'innadj': ['warmth', 'welcoming #innadj#', '#innadj# and #innadj#', 'coziness', 'darkness', 'dankness', 'smokiness', 'chasteness', 'austerity', 'opulence', 'chaos', 'order'],
         'descinn': 'Over by the #innloc# lies #stacked#',
         'stacked': ['#stackitem# #beside# #stacked#', '#stackitem#, #beside# #stacked#', '#stackitem#','#stackitem#','#stackitem#',],
@@ -83,12 +83,12 @@ rules = {
                 'The #C1#, starts talking about their interest in #interest#. #react#',
                 'The #C1# begins talking about a past relationship with a #famous# of #placename#, which ended #adverb#. #react#',
                 '#interrupt# #int_response#',
-                'The #staff# enters from outside bearing a #quality# #stackitem# and places it #beside# #stacked#, next to the #innloc#',
+                'The #staff# enters #adverb# from outside bearing a #stackitem# and places it #beside# #stacked#, next to the #innloc#',
                 ],
         'direction': ['', 'and #moves# past the #innloc#', 'and #moves# #adverb# away past the #innloc# towards the #innloc#'],
         'react': ['', '#someone.capitalize# #react1#', '#cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid# than #otherthing#!" #says# #someone#'],
         'otherthing': ['have to witness that', 'listen to that', '#adjective# #fluid#', 'think about that nonsense', 'have to deal with your foolishness',],
-        'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
+        'react1': ['nods in agreement', 'looks disapproving', 'guffaws hysterically'],
         'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper', '#someone# by the #innloc#', '#someone# standing #beside# #someone#'],
         'callthing': ['silence', 'more beer', 'more wine', 'a mop', 'some food', 'attention', 'assistance', 'last drink orders', 'someone to sing a song', 'their mother', 'a shoulder to cry on'],
 
@@ -152,7 +152,7 @@ rules = {
         'menuno': ['#menunsays#\n\n #menunresponse#\n\n',],
         'menunsays': ['#indent# "#menunreason#, you\'ll just have to order drinks. What\'ll it be?"\n',],
         'menunreason': ['Kitchen\'s closed', 'Cook\'s dead', 'We\'re all out of food, sorry', 'I don\'t think you lot\'ll have the stomach for our #compass# fare'],
-        'menunresponse': 'The #company# look dissapointed, but order their drinks.',
+        'menunresponse': 'The #company# look disappointed, but order their drinks.',
         'menuyes': '#indent# #menuysays#.\n\n #menuyresponse#',
         'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #num# #distance# of these walls!"',],
         'menuyresponse': ['The #company# order food. #foodevent#', 'Presently the #company# place their orders. #foodevent#'],
@@ -162,8 +162,8 @@ rules = {
         'distance': ['feet', 'leagues', 'miles', 'counties', 'spans',],
 
             #'Available #menusummary# are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.\n\n Once all orders are made, the #company# settles in to wait. Drinks may arrive, but the food takes time to prepare.',
-        'menusummary': ['goods', 'victuals', 'bare necessities', 'gourmet offerings', 'foul sounding slops', 'provisions', 'tasty treats', 'servicable foodstuffs', 'sweetmeats', 'hearty pub meals',
-                'pretentious sounding dishes', 'swillish slops', 'delicious delights', 'yummies', 'standard offerings', 'uninspring offerings', 'disapointing selections', 'impressive offerings',
+        'menusummary': ['goods', 'victuals', 'bare necessities', 'gourmet offerings', 'foul smelling slops', 'provisions', 'tasty treats', 'servicable foodstuffs', 'sweetmeats', 'hearty pub meals',
+                'pretentious sounding dishes', 'swillish slops', 'delicious delights', 'yummies', 'standard offerings', 'uninspiring offerings', 'disappointing selections', 'impressive offerings',
                 'forgettable fare'],
 
 
@@ -179,7 +179,8 @@ rules = {
                   'lavender scented unguent', 'rose-water', 'aqua vitae', 'aqua regia', 'formic acid', 'mercury', ],
 
 
-        'nexttale': '\n\nIn order to entertain themselves, #ntsub#, the #company# decide to pass the time telling stories, and chose from their number one person to tell this evening\'s tale...',
+        'nexttale': '\n\nIn order to entertain themselves, #ntsub#, the #company# decide to pass the time telling stories, and #choose# from their number one individual to tell this evening\'s tale.',
+        'choose': ['choose', 'select', 'pick', 'nominate',],
         'ntsub': ['as is their custom on this journey', 'as they have done every evening previously', 'as tradition dictates', 'since no other alternatives are on offer', 'because the night is young'],
 
         # Addressing the Innkeeper
