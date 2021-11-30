@@ -88,7 +88,7 @@ rules = {
         'direction': ['', 'and #moves# past the #innloc#', 'and #moves# #adverb# away past the #innloc# towards the #innloc#'],
         'react': ['', '#someone.capitalize# #react1#', '#cleverthing# responds #someone#', '\n#indent#"I\'d rather consume #adjective# #fluid# than #otherthing#!" #says# #someone#'],
         'otherthing': ['have to witness that', 'listen to that', '#adjective# #fluid#', 'think about that nonsense', 'have to deal with your foolishness',],
-        'react1': ['nods in agreement', 'looks dissaproving', 'guffaws hysterically'],
+        'react1': ['nods in agreement', 'looks disapproving', 'guffaws hysterically'],
         'someone': ['the #staff#', 'a patron', 'a surly drunk', 'a bystander', 'one of the #company#', 'the innkeeper', '#someone# by the #innloc#', '#someone# standing #beside# #someone#'],
         'callthing': ['silence', 'more beer', 'more wine', 'a mop', 'some food', 'attention', 'assistance', 'last drink orders', 'someone to sing a song', 'their mother', 'a shoulder to cry on'],
 
@@ -152,7 +152,7 @@ rules = {
         'menuno': ['#menunsays#\n\n #menunresponse#\n\n',],
         'menunsays': ['#indent# "#menunreason#, you\'ll just have to order drinks. What\'ll it be?"\n',],
         'menunreason': ['Kitchen\'s closed', 'Cook\'s dead', 'We\'re all out of food, sorry', 'I don\'t think you lot\'ll have the stomach for our #compass# fare'],
-        'menunresponse': 'The #company# look dissapointed, but order their drinks.',
+        'menunresponse': 'The #company# look disappointed, but order their drinks.',
         'menuyes': '#indent# #menuysays#.\n\n #menuyresponse#',
         'menuysays': ['"Right, what do you lot want?"', '"Can I interest you in some #menusummary#?"', '"This is our menu, you won\'t find better fare within #num# #distance# of these walls!"',],
         'menuyresponse': ['The #company# order food. #foodevent#', 'Presently the #company# place their orders. #foodevent#'],
@@ -162,8 +162,8 @@ rules = {
         'distance': ['feet', 'leagues', 'miles', 'counties', 'spans',],
 
             #'Available #menusummary# are listed, questioned, and chosen; comprising and/or consisting of food and / or drinks. There is indecision, and certainty.\n\n Once all orders are made, the #company# settles in to wait. Drinks may arrive, but the food takes time to prepare.',
-        'menusummary': ['goods', 'victuals', 'bare necessities', 'gourmet offerings', 'foul sounding slops', 'provisions', 'tasty treats', 'servicable foodstuffs', 'sweetmeats', 'hearty pub meals',
-                'pretentious sounding dishes', 'swillish slops', 'delicious delights', 'yummies', 'standard offerings', 'uninspring offerings', 'disapointing selections', 'impressive offerings',
+        'menusummary': ['goods', 'victuals', 'bare necessities', 'gourmet offerings', 'foul smelling slops', 'provisions', 'tasty treats', 'servicable foodstuffs', 'sweetmeats', 'hearty pub meals',
+                'pretentious sounding dishes', 'swillish slops', 'delicious delights', 'yummies', 'standard offerings', 'uninspiring offerings', 'disappointing selections', 'impressive offerings',
                 'forgettable fare'],
 
 

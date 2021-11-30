@@ -141,7 +141,7 @@ The unknown yet alarmed yet numb **mediator**, M____, compliments the tormented 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"That's not how it happened at all!" interrupts the aggravated fearful and arguably sneering **law enforcement teacher**, G________. The **travel clerk** (who is the current storyteller) glares witheringly at the **law enforcement teacher**, indignant at the outlaw inerruption, then resumes the tale..
 The stimulated and arguably illogical **precious stone worker**, L_____ begins talking about a past relationship with a Duchess of Świętochłowice
-, which ended loftily. A bystander looks dissaproving.
+, which ended loftily. A bystander looks disapproving.
 Presently the attendant wait-server undulates over to take the company's orders. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "This is our menu, you won't find better fare within three feet of these walls!".
@@ -661,7 +661,7 @@ Presently the pot-scrubber charges over to take the party's orders.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "I don't think you lot'll have the stomach for our distant fare, you'll just have to order drinks. What'll it be?"
 
 
- The travellers look dissapointed, but order their drinks.
+ The travellers look disappointed, but order their drinks.
 
 
 The room-attendant calls for some food.
@@ -1022,7 +1022,7 @@ As they near their destination they notice  the Inn's sign depicts a very regal 
 The group feels bewildered as they approach the entrance to the inn.
 
 The aggravated fearful and arguably sneering **law enforcement teacher**, G________, leads the party and enters the inn first, striding gallantly through the reinforced door. The **law enforcement teacher** stops briefly to admire their odure-stained bathing cosutme made of unparalleled linen in a mirror placed in the entranceway.
-A surly drunk looks dissaproving
+A surly drunk looks disapproving
 
 
 The interior of The R____'s C________ suggests warmth. Over by the balustrade lies some boxes.
@@ -1064,7 +1064,7 @@ The surly nonetheless glutinous **nonfarm animal caretaker**, H______ begins tal
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"I'd rather consume motley formic acid than anatomical juice and mercury mixed with a tiny amount of wine!" snarls a surly drunk.
 The wary-cum-idiotic **power tool repairer**, S_____ begins talking about a past relationship with a orator of Kórnik
-, which ended lively. The innkeeper by the stairs next to some boxes, beside a jar partially obscuring some boxes looks dissaproving.
+, which ended lively. The innkeeper by the stairs next to some boxes, beside a jar partially obscuring some boxes looks disapproving.
 A small fight breaks out over by the rug.
 Presently the scullery-hand bounds over to take the troupe's orders. 
 
@@ -1175,7 +1175,7 @@ Presently the vinter dances over to take the company's orders.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "We're all out of food, sorry, you'll just have to order drinks. What'll it be?"
 
 
- The party look dissapointed, but order their drinks.
+ The party look disappointed, but order their drinks.
 
 
 The vinter is called away .
@@ -1268,7 +1268,7 @@ The surly nonetheless glutinous **nonfarm animal caretaker**, H______ listens ad
 
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Barkeep! What's in this food? It tastes like formic acid!" someone snarls loudly. A patron looks dissaproving.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Barkeep! What's in this food? It tastes like formic acid!" someone snarls loudly. A patron looks disapproving.
 The cook enters nicely from outside bearing a an amphora of aqua vitae and places it on top of a jar, beside an amphora of gin, next to the rocking chair.
 Presently the pastry-cook traipses over to take the party's orders. 
 
@@ -1326,7 +1326,7 @@ The group feels released as they approach the entrance to the inn.
 The grumpy but not so invigorated and arguably modest **set designer**, Q______, leads the party and enters the inn first, striding gallantly through the sturdy door. There are doing smells emanating from the nook. The **set designer** jokes 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"I'd like some of that!".
-A patron by the rug which looks as if it were designed in a collaboration between Tracy Emin and Elizabeth Báthory  while high on ash looks dissaproving
+A patron by the rug which looks as if it were designed in a collaboration between Tracy Emin and Elizabeth Báthory  while high on ash looks disapproving
 
 
 The interior of The F____'s N_______ suggests welcoming chasteness. Over by the bar next to a crate labelled "Piotrków Trybunalski
@@ -1379,7 +1379,7 @@ The assistant-manager enters usefully from outside bearing a some boxes and plac
 's unparalleled sheep's wool".
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Barkeep! What's in this food? It tastes like blood!" someone snarls loudly. The innkeeper looks dissaproving.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Barkeep! What's in this food? It tastes like blood!" someone snarls loudly. The innkeeper looks disapproving.
 Presently the attendant wait-server sprints over to take the cavalcade's orders. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Right, what do you lot want?".
@@ -1456,7 +1456,7 @@ Off in the distance, a crow makes an envious sound .
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"I'd rather consume dedicated rose-water than commissioned piss!" jokes the innkeeper by the landing.
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Barkeep! What's in this food? It tastes like rose-water!" someone laughs loudly. A patron looks dissaproving.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Barkeep! What's in this food? It tastes like rose-water!" someone laughs loudly. A patron looks disapproving.
 The group remark upon the rocking chair.
 One of the travellers is excused quirkily and charges tomorrow away past the storeroom towards the door.
 
@@ -1478,7 +1478,7 @@ Presently the inkeeper catapults over to take the travellers's orders.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "We're all out of food, sorry, you'll just have to order drinks. What'll it be?"
 
 
- The group look dissapointed, but order their drinks.
+ The group look disappointed, but order their drinks.
 
 
 
@@ -1537,9 +1537,9 @@ Seemingly emanating from an upstairs room, a falcon is heard by the company.
 The disposable but not so delightful **advertising sales agent**, Y______, starts talking about their interest in storied psycho-geography. A patron guffaws hysterically.
 Nearby an ox makes its presence felt .
 The caring-cum-callous-cum-unsophisticated **insurance underwriter**, H____ begins talking about a past relationship with a Duke of Lubsko
-, which ended frantically. A bystander looks dissaproving.
+, which ended frantically. A bystander looks disapproving.
 The young yet old-fashioned **parts salesperson**, D________ begins talking about a past relationship with a warrior of Krosno Odrzańskie
-, which ended honestly. A bystander by the architecturally interesting architecturally interesting corner by the landing looks dissaproving.
+, which ended honestly. A bystander by the architecturally interesting architecturally interesting corner by the landing looks disapproving.
 The wounded jaded but not so wonderful **chemical plant operator**, H______, starts talking about their interest in eradicated psycho-geography. .
 
 
@@ -1577,7 +1577,7 @@ Presently the inkeeper dances over to take the wanderers's orders.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "I don't think you lot'll have the stomach for our foreign fare, you'll just have to order drinks. What'll it be?"
 
 
- The travellers look dissapointed, but order their drinks.
+ The travellers look disappointed, but order their drinks.
 
 
 The vinter calls for attention.
@@ -1976,7 +1976,7 @@ Presently the inkeeper slithers over to take the company's orders.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "We're all out of food, sorry, you'll just have to order drinks. What'll it be?"
 
 
- The wanderers look dissapointed, but order their drinks.
+ The wanderers look disappointed, but order their drinks.
 
 
 A crow, sitting under a table next to the coat rack, gives itself an outlaw scratch as if it were lobster.
@@ -2020,7 +2020,7 @@ As they near their destination they notice  the Inn's sign depicts a very waved 
 The group feels punished as they approach the entrance to the inn.
 
 The infuriated but not so responsible **ordnance handling expert**, G________, leads the company and enters the inn first, impatiently beckoning the troupe to follow through the glass paned door. The **ordnance handling expert** stops briefly to admire their flowing robe in a mirror placed in the entranceway.
-The innkeeper looks dissaproving
+The innkeeper looks disapproving
 
 
 The interior of The F________ B________ suggests chaos. Over by the architecturally interesting portico lies a jar.
@@ -2485,7 +2485,7 @@ The innkeeper, W______ of J_______, has a uplifted face, and some and uppity mor
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Grab yourselves a table, I'll be with you shortly to take orders..."
 
 The weary travellers sit at the begotten table.
-The surly nonetheless glutinous **nonfarm animal caretaker**, H______, starts talking about their interest in eastern cuisine. A bystander looks dissaproving.
+The surly nonetheless glutinous **nonfarm animal caretaker**, H______, starts talking about their interest in eastern cuisine. A bystander looks disapproving.
 The surly nonetheless glutinous **nonfarm animal caretaker**, H______, insults the blah nonetheless dreary **training and development specialist**, D________'s voluminous bathing cosutme made of astounding cotton.
 The blah nonetheless dreary **training and development specialist**, D________, looks on and is jealous.
 
